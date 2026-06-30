@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Complete Your Profile{% endblock %}
+{% block body %}
+<div class="auth-shell">
+  <div class="auth-card">
+    <div class="naub-logo-badge">N</div>
+    <h1>Welcome, {{ user.first_name|default:user.username }}!</h1>
+    <p class="sub">Just a few details to personalize your experience.</p>
+    <form method="post" style="text-align:left;">
+      {% csrf_token %}
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted);">Matric Number (optional)</label>
+      <input type="text" name="matric_number" placeholder="NAUB/SCI/22/0001"
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; margin:0.4rem 0 1rem; font-family:inherit;">
+
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted);">Faculty (optional)</label>
+      <select name="faculty" style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; margin:0.4rem 0 1.4rem; font-family:inherit;">
+        <option value="">Select faculty</option>
+        <option>Faculty of Science</option>
+        <option>Faculty of Humanities</option>
+        <option>Faculty of Management Sciences</option>
+        <option>Faculty of Social Sciences</option>
+        <option>Faculty of Law</option>
+        <option>Prospective Student</option>
+      </select>
+
+      <button type="submit" class="btn-pill gold" style="width:100%; justify-content:center; padding:0.75rem; color:var(--naub-green-dark); background:var(--naub-gold);">Continue to Chat</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,262 @@
+[
+  {
+    "id": "greeting",
+    "questions": [
+      "hello", "hi", "hey", "good morning", "good afternoon", "good evening",
+      "greetings", "howdy", "what's up", "how are you", "hi there"
+    ],
+    "answer": "Hello! 👋 Welcome to the NAUB Enquiry Chatbot. I'm your virtual assistant for Nigerian Army University Biu. How can I help you today? You can ask me about admissions, fees, programmes, hostels, academic calendar, and more!"
+  },
+  {
+    "id": "about_naub",
+    "questions": [
+      "what is NAUB", "tell me about NAUB", "about Nigerian Army University Biu",
+      "history of NAUB", "when was NAUB established", "NAUB overview",
+      "what kind of university is NAUB", "is NAUB a federal university",
+      "naub background", "who owns naub"
+    ],
+    "answer": "Nigerian Army University Biu (NAUB) is a federal university established in 2018 by the Nigerian Army. It is located in Biu, Borno State, Nigeria. NAUB was founded to provide quality tertiary education and is fully accredited by the National Universities Commission (NUC). The university is headed by the Vice-Chancellor and is under the supervision of the Nigerian Army Council. It offers undergraduate and postgraduate programmes across multiple faculties."
+  },
+  {
+    "id": "naub_location",
+    "questions": [
+      "where is NAUB located", "NAUB address", "where is the university",
+      "how do I get to NAUB", "naub location", "which state is NAUB",
+      "NAUB campus location", "where is naub campus"
+    ],
+    "answer": "Nigerian Army University Biu (NAUB) is located in Biu, Borno State, Nigeria. The campus is situated along Maiduguri Road, Biu. Biu is a local government area in southern Borno State, accessible by road from Maiduguri (about 180km), Yola, and Gombe."
+  },
+  {
+    "id": "naub_contact",
+    "questions": [
+      "NAUB contact", "how to contact NAUB", "NAUB phone number",
+      "NAUB email", "NAUB website", "contact information", "naub office",
+      "registrar contact", "admission office contact", "ict unit contact"
+    ],
+    "answer": "Here are the key NAUB contact details:\n\n📞 **Main Switchboard:** +234-803-000-0000\n🌐 **Website:** www.naub.edu.ng\n📧 **General Email:** info@naub.edu.ng\n📧 **Admissions:** admissions@naub.edu.ng\n📧 **Bursary/Fees:** bursary@naub.edu.ng\n📧 **ICT Unit:** ict@naub.edu.ng\n📍 **Address:** NAUB Campus, Maiduguri Road, Biu, Borno State.\n\nOffice hours are Monday–Friday, 8:00 AM – 4:00 PM."
+  },
+  {
+    "id": "naub_faculties",
+    "questions": [
+      "faculties in NAUB", "what faculties does NAUB have", "naub departments",
+      "list of faculties", "naub schools", "colleges in naub",
+      "faculty of science naub", "faculty of humanities naub",
+      "faculty of management naub", "faculty of social science naub"
+    ],
+    "answer": "NAUB currently has the following Faculties:\n\n1. 🔬 **Faculty of Science** — Offers BSc programmes in Computer Science, Mathematics, Physics, Chemistry, Biology, and Microbiology.\n2. 📚 **Faculty of Humanities** — Includes English Language, History, Islamic Studies, and related disciplines.\n3. 📊 **Faculty of Management Sciences** — Offers Accounting, Business Administration, and Economics.\n4. 🏛️ **Faculty of Social Sciences** — Includes Mass Communication, Political Science, and Sociology.\n5. ⚖️ **Faculty of Law** — LLB programme in Law.\n6. 🎓 **Postgraduate School** — Masters and PhD programmes in select disciplines."
+  },
+  {
+    "id": "programmes_available",
+    "questions": [
+      "programmes offered in NAUB", "courses in NAUB", "what can I study at NAUB",
+      "available programmes", "list of courses", "undergraduate programmes",
+      "what programmes does NAUB offer", "courses offered naub",
+      "computer science naub", "law naub", "accounting naub",
+      "economics naub", "mass communication naub"
+    ],
+    "answer": "NAUB offers the following undergraduate programmes:\n\n**Faculty of Science:**\n• B.Sc Computer Science\n• B.Sc Mathematics\n• B.Sc Physics\n• B.Sc Chemistry\n• B.Sc Biology\n• B.Sc Microbiology\n\n**Faculty of Humanities:**\n• B.A English Language\n• B.A History & Diplomatic Studies\n• B.A Islamic Studies\n\n**Faculty of Management Sciences:**\n• B.Sc Accounting\n• B.Sc Business Administration\n• B.Sc Economics\n\n**Faculty of Social Sciences:**\n• B.Sc Mass Communication\n• B.Sc Political Science\n• B.Sc Sociology\n\n**Faculty of Law:**\n• LLB Law (5 years)\n\nAll programmes run for 4 years except Law (5 years). Postgraduate programmes are also available."
+  },
+  {
+    "id": "admission_requirements",
+    "questions": [
+      "admission requirements", "how to apply to NAUB", "NAUB admission",
+      "requirements for admission", "what do I need for NAUB admission",
+      "JAMB cutoff naub", "naub admission process", "how to get admission into naub",
+      "UTME naub", "O level requirements naub", "post utme naub"
+    ],
+    "answer": "To gain admission into NAUB, you need to meet the following requirements:\n\n**UTME (JAMB) Requirements:**\n• Minimum JAMB score: 140 (general)\n• Science-based courses: minimum 160\n• Law: minimum 180\n• NAUB JAMB Brochure Code: check www.naub.edu.ng\n\n**O'Level Requirements:**\n• Minimum of 5 credits in relevant subjects at WAEC/NECO/GCE\n• Must include English Language and Mathematics (except for some Humanities programmes)\n• Credits must be obtained in not more than 2 sittings\n\n**Post-UTME Screening:**\n• Purchase Post-UTME form on the NAUB portal (www.naub.edu.ng)\n• Screening is conducted on campus\n• Minimum JAMB score to qualify for screening: 140\n\n**Direct Entry:**\n• Holders of ND (Upper Credit), NCE, or A-Levels may apply via JAMB DE\n\nVisit www.naub.edu.ng/admissions for the current admission form and deadline."
+  },
+  {
+    "id": "admission_list",
+    "questions": [
+      "admission list", "check admission status", "have I been admitted",
+      "when will admission list be out", "provisional admission naub",
+      "supplementary admission list", "how to check admission list naub",
+      "merit list naub", "naub admission portal"
+    ],
+    "answer": "To check your NAUB admission status:\n\n1. Visit **www.naub.edu.ng**\n2. Click on **'Admissions'** then **'Check Admission Status'**\n3. Enter your **JAMB Registration Number**\n4. Your admission status will be displayed\n\nAlternatively, check the **JAMB CAPS portal** at caps.jamb.gov.ng to see if you have been offered admission and to accept or reject the offer.\n\nIf you have further questions, contact the Admissions Office at **admissions@naub.edu.ng**."
+  },
+  {
+    "id": "school_fees",
+    "questions": [
+      "school fees", "how much is fees at NAUB", "NAUB tuition fees",
+      "fees structure", "how much does NAUB cost", "acceptance fee naub",
+      "fresh student fees", "returning student fees", "naub fee payment",
+      "how much is school fees", "fees naub", "payment of fees"
+    ],
+    "answer": "NAUB school fees vary by faculty and student status. Below are approximate figures (verify at www.naub.edu.ng for current rates):\n\n**Fresh Students (100 Level):**\n• Science-based courses: ₦250,000 – ₦300,000 per session\n• Arts/Social Science/Management: ₦200,000 – ₦250,000 per session\n• Law: ₦300,000 – ₦350,000 per session\n\n**Returning Students (200–400 Level):**\n• Science-based: ₦200,000 – ₦250,000 per session\n• Arts/Management/Social Science: ₦180,000 – ₦220,000 per session\n\n**Acceptance Fee:** ₦50,000 (one-time, for newly admitted students)\n\n**Payment Method:**\n• Log in to the NAUB student portal at **portal.naub.edu.ng**\n• Generate a Remita invoice\n• Pay at any bank or via online banking\n\n⚠️ Fees are subject to change. Always confirm on the official portal."
+  },
+  {
+    "id": "hostel_accommodation",
+    "questions": [
+      "hostel", "accommodation at NAUB", "naub hostel fees",
+      "is accommodation available at NAUB", "where do students stay",
+      "hostel allocation naub", "naub hostel booking",
+      "how to get hostel at naub", "male hostel", "female hostel naub"
+    ],
+    "answer": "NAUB provides on-campus hostel accommodation for both male and female students.\n\n**Hostel Fees (per session):**\n• Approximately ₦40,000 – ₦60,000 depending on room type\n\n**How to Apply for Hostel:**\n1. Log in to the NAUB student portal\n2. Navigate to **'Accommodation'**\n3. Apply during the hostel allocation window (usually at the start of each session)\n4. Generate your Remita invoice and pay\n5. Collect your bed space allocation from the Student Affairs Division\n\n**Key Points:**\n• Hostel spaces are limited and allocated on a first-come, first-served basis\n• Priority is given to 100-level students and those with medical needs\n• Off-campus accommodation is available in Biu town for students who don't get hostel\n\nFor enquiries, contact the **Student Affairs Division** at the university administrative block."
+  },
+  {
+    "id": "academic_calendar",
+    "questions": [
+      "academic calendar", "resumption date", "when does school resume",
+      "registration date naub", "exam dates naub", "lecture period",
+      "semester naub", "naub session", "when does naub open",
+      "examination timetable naub", "naub calendar 2024", "2024 2025 academic calendar"
+    ],
+    "answer": "The NAUB Academic Calendar is published at the start of each session on the official website. For the 2024/2025 session, here is a general guide:\n\n📅 **First Semester:**\n• Resumption/Registration: October – November\n• Lectures: November – February\n• Semester Examinations: February – March\n\n📅 **Second Semester:**\n• Resumption/Registration: April\n• Lectures: April – July\n• Semester Examinations: July – August\n\n📅 **Long Vacation:** August – September\n\n⚠️ These are approximate dates. Always check the **official NAUB academic calendar** on www.naub.edu.ng or the notice boards on campus for the exact schedule."
+  },
+  {
+    "id": "course_registration",
+    "questions": [
+      "course registration", "how to register courses naub",
+      "course form naub", "add and drop courses naub",
+      "how to register for courses", "portal course registration",
+      "register my courses naub", "course reg"
+    ],
+    "answer": "Course registration at NAUB is done online through the student portal. Here's how:\n\n1. **Log in** to the student portal at **portal.naub.edu.ng**\n2. Ensure your school fees have been **fully paid** (course registration requires payment confirmation)\n3. Navigate to **'Course Registration'**\n4. Select your courses for the current semester\n5. Submit and **print your course registration form**\n6. Take the printed form to your **departmental office** for endorsement\n\n**Important:**\n• Register within the official registration period to avoid late registration fees\n• A late fee of approximately ₦5,000 applies for late registration\n• Maximum course load: 24 credit units per semester\n• Minimum course load: 15 credit units per semester\n\nFor help, visit your Faculty Officer or the Academic Registry."
+  },
+  {
+    "id": "student_portal",
+    "questions": [
+      "student portal", "naub portal", "how to log in to portal",
+      "portal login naub", "portal.naub.edu.ng", "online portal naub",
+      "how to access student portal", "forgot portal password naub"
+    ],
+    "answer": "The NAUB Student Portal is accessible at **portal.naub.edu.ng**.\n\n**How to log in:**\n• Username: Your **Matriculation Number** (e.g., NAUB/SCI/22/0001)\n• Password: Your default password is usually your **Date of Birth** (DDMMYYYY) for first-time login\n\n**If you forgot your password:**\n1. Click **'Forgot Password'** on the login page\n2. Enter your registered email address\n3. A password reset link will be sent to your email\n4. Alternatively, visit the **ICT Unit** on campus with your student ID for manual reset\n\n**Available on the portal:**\n• Course registration\n• Fee payment (Remita)\n• Hostel application\n• Exam timetable\n• Results (e-transcript)\n\nFor technical issues, contact the ICT Unit at **ict@naub.edu.ng**."
+  },
+  {
+    "id": "change_of_course",
+    "questions": [
+      "change of course", "how to change my course at NAUB",
+      "transfer to another department", "how to switch programme naub",
+      "change of department naub", "transfer naub", "course change procedure"
+    ],
+    "answer": "To change your course of study at NAUB, you must apply through the academic registry. Here is the procedure:\n\n**Steps:**\n1. Obtain a **Change of Course Form** from the Academic Registry\n2. Fill the form and obtain the signature/approval of:\n   • Your current **Head of Department (HOD)**\n   • The **HOD** of the new department\n   • The **Dean** of the faculty you are transferring to\n3. Submit the completed form to the **Academic Registry**\n4. Pay the prescribed **Change of Course fee** (approximately ₦5,000 – ₦10,000)\n5. Await approval and notification via your student portal\n\n**Eligibility:**\n• Change of course is usually allowed after **100 Level**\n• CGPA and O'Level requirements of the new course must be met\n• Changes are typically processed at the beginning of a new session\n\nContact the Academic Registry for the current processing fee and timeline."
+  },
+  {
+    "id": "result_verification",
+    "questions": [
+      "result verification", "how to verify my result", "transcript naub",
+      "verify result naub", "remark examination naub", "check result naub",
+      "naub result", "how to get transcript from naub"
+    ],
+    "answer": "**Result Checking:**\nResults are published on the NAUB student portal (portal.naub.edu.ng) after each examination. Log in with your matric number to view your semester results.\n\n**Result Verification/Official Transcript:**\n1. Write a formal letter to the **Registrar, NAUB** requesting verification or a transcript\n2. Attach a copy of your student ID and relevant results\n3. Pay the prescribed fee at the Bursary (approximately ₦5,000 per copy for transcripts)\n4. Submit your application to the **Academic Registry**\n5. Processing takes approximately **2–4 weeks**\n\n**Examination Remark:**\nIf you believe a result was wrongly graded:\n1. Apply for a remark within **4 weeks** of result publication\n2. Collect a **Remark Form** from the Registry\n3. Pay the remark fee (approximately ₦3,000 per course)\n4. Submit the form and payment receipt to the Registry"
+  },
+  {
+    "id": "gst_courses",
+    "questions": [
+      "GST courses", "general studies naub", "what are GST courses",
+      "how many GST courses in naub", "is GST compulsory naub",
+      "general studies requirement naub"
+    ],
+    "answer": "GST (General Studies) courses are compulsory for all NAUB students regardless of faculty. They are designed to provide a broad-based education.\n\n**Common GST Courses at NAUB:**\n• GST 101 – Use of English I\n• GST 102 – Use of English II\n• GST 111 – Logic and Scientific Reasoning\n• GST 112 – Nigerian Peoples and Culture\n• GST 121 – History and Philosophy of Science\n• GST 123 – Introduction to Computer Science\n• GST 211 – Entrepreneurship I\n• GST 212 – Entrepreneurship II\n• GST 221 – Peace Studies and Conflict Resolution\n• GST 222 – Introduction to Sociology\n\nAll GST courses carry 2 credit units each and are graded alongside your departmental courses."
+  },
+  {
+    "id": "naub_vc",
+    "questions": [
+      "who is the vice chancellor of naub", "naub vc", "vice chancellor naub",
+      "who is in charge of naub", "naub leadership", "rector naub",
+      "vice chancellor Nigerian Army University Biu"
+    ],
+    "answer": "The Vice-Chancellor of Nigerian Army University Biu (NAUB) is the chief academic and administrative officer of the university. For the current Vice-Chancellor's name and other principal officers, please visit the official NAUB website at **www.naub.edu.ng** under the **'About'** or **'Administration'** section, as this information is regularly updated."
+  },
+  {
+    "id": "postgraduate",
+    "questions": [
+      "postgraduate programmes naub", "masters degree naub", "phd naub",
+      "postgraduate school naub", "how to apply for masters naub",
+      "graduate school naub", "pg naub", "masters programmes available naub"
+    ],
+    "answer": "NAUB offers postgraduate programmes through the **Postgraduate School**. Available programmes include:\n\n**Masters Programmes (M.Sc / M.A / LLM):**\n• M.Sc Computer Science\n• M.Sc Mathematics\n• M.A English Language\n• M.Sc Economics\n• LLM Law (where available)\n\n**PhD Programmes:**\n• Available in select disciplines\n\n**Admission Requirements for Masters:**\n• A good Bachelor's degree (minimum Second Class Lower) in a relevant field\n• NYSC Discharge or Exemption Certificate\n• At least 2 referees (academic)\n• Entrance examination/interview may be required\n\n**Application:**\nVisit **www.naub.edu.ng/postgraduate** for the current application form and deadline. Contact the Postgraduate School directly for programme-specific requirements."
+  },
+  {
+    "id": "naub_library",
+    "questions": [
+      "library naub", "naub library location", "library hours naub",
+      "where is the library", "naub digital library", "library services naub"
+    ],
+    "answer": "The NAUB University Library is located at the center of the main campus, easily accessible from all faculties.\n\n**Library Hours:**\n• Monday – Friday: 8:00 AM – 9:00 PM\n• Saturday: 9:00 AM – 5:00 PM\n• Sunday: 12:00 PM – 6:00 PM\n\n**Services Available:**\n• Physical lending of books and journals\n• Digital/e-library resources\n• Postgraduate research room\n• Computer lab for student research\n• Periodicals and newspapers\n\nStudents must present their **valid student ID** to access the library and borrow resources. The library also provides access to online databases for academic research."
+  },
+  {
+    "id": "nysc",
+    "questions": [
+      "NYSC naub", "national youth service corps naub", "when do naub students serve",
+      "nysc mobilization naub", "when is nysc for naub graduates"
+    ],
+    "answer": "NYSC (National Youth Service Corps) mobilization for NAUB graduates typically occurs after the final Senate result ratification. Here's the process:\n\n1. **Results Ratification:** Senate approves your final results and certificate\n2. **Certificate Preparation:** The Academic Registry prepares your certificate and result\n3. **NYSC Senate List Upload:** NAUB uploads your name to the NYSC portal (enlist.nysc.gov.ng)\n4. **Personal Registration:** Log on to the NYSC portal and complete your registration\n5. **Batch Assignment:** You are assigned to a deployment batch\n\nThe Academic Registry or Student Affairs Division will notify students when mobilization lists are ready. Contact **registry@naub.edu.ng** for specific enquiries."
+  },
+  {
+    "id": "clearance",
+    "questions": [
+      "student clearance naub", "how to do clearance naub",
+      "graduation clearance naub", "final year clearance naub",
+      "how to clear naub"
+    ],
+    "answer": "Final year student clearance at NAUB involves visiting multiple offices to confirm no outstanding obligations. Here is the typical process:\n\n1. **Library:** Return all borrowed books and clear any fines\n2. **Bursary:** Clear all outstanding fees\n3. **Hostel/Student Affairs:** Return hostel keys (if applicable)\n4. **Departmental Office:** Get HOD clearance signature\n5. **Faculty Office:** Get Faculty Officer signature\n6. **Academic Registry:** Final clearance and collection of documents\n\nCollect the **Clearance Form** from the Registry, complete all stages, and return the signed form. Clearance is required before your results are processed and before NYSC mobilization."
+  },
+  {
+    "id": "ict_department",
+    "questions": [
+      "ict department naub", "computer science department naub",
+      "where is ict naub", "naub ict directorate", "ict unit naub",
+      "computer science building naub"
+    ],
+    "answer": "The **ICT Directorate** at NAUB is responsible for managing the university's IT infrastructure, student portal, and digital services. It is located near the Administrative Block on the main campus.\n\n**ICT Directorate Services:**\n• Student portal management and technical support\n• Campus internet services\n• Email and account setup for students/staff\n• Maintenance of computer labs\n\n**Contact:**\n📧 ict@naub.edu.ng\n🕐 Office Hours: Mon–Fri, 8:00 AM – 4:00 PM\n\nThe **Department of Computer Science** (for academic matters) is housed in the Faculty of Science building. For academic enquiries related to CS programmes, contact the HOD's office."
+  },
+  {
+    "id": "bursary",
+    "questions": [
+      "bursary naub", "finance office naub", "where to pay fees naub",
+      "bursary department naub", "school fees payment procedure"
+    ],
+    "answer": "The **Bursary Department** handles all financial transactions at NAUB, including school fees, acceptance fees, and other levies.\n\n**How to Pay:**\n1. Log in to your student portal at **portal.naub.edu.ng**\n2. Generate a **Remita Retrieval Reference (RRR)** number\n3. Pay online via internet banking or at any bank branch\n4. Return to the portal and confirm payment\n\n**Bursary Office Location:** Administrative Block, NAUB main campus\n**Email:** bursary@naub.edu.ng\n**Hours:** Mon–Fri, 8:00 AM – 4:00 PM\n\nAlways keep your payment receipt. For any payment discrepancies, visit the Bursary with your receipt and student ID."
+  },
+  {
+    "id": "student_union",
+    "questions": [
+      "student union naub", "student association naub", "sug naub",
+      "student union government naub", "naub students union"
+    ],
+    "answer": "The **Student Union Government (SUG)** is the recognized body representing all students at NAUB. SUG elections are conducted annually by the Independent National Electoral Commission of NAUB (INEC-NAUB).\n\nThe SUG advocates for students' rights, organizes social and academic activities, and liaises between students and university management. Their office is located at the Student Centre on campus.\n\nFor concerns or issues you'd like escalated to university management, you can approach your elected SUG representatives or submit a formal complaint to the **Student Affairs Division**."
+  },
+  {
+    "id": "jamb",
+    "questions": [
+      "JAMB naub", "jamb cutoff mark naub", "minimum jamb score naub",
+      "jamb brochure naub", "naub jamb subject combination",
+      "what subjects for computer science naub jamb"
+    ],
+    "answer": "For JAMB (UTME) to NAUB:\n\n**General Minimum Cut-off:** 140\n**Science/Computer Science/Mathematics/Physics/Chemistry:** 160+\n**Law:** 180+\n\n**Subject Combinations (examples):**\n• **Computer Science:** Mathematics, Physics, Chemistry (or Biology)\n• **Medicine (if available):** Biology, Chemistry, Physics\n• **Law:** Literature or Government, CRS/IRS, any Social Science subject\n• **Accounting/Business Admin:** Mathematics, Economics, Government/Commerce\n• **English Language:** Literature, CRS/IRS, Government or History\n\nAlways confirm your exact subject combination on the **JAMB Brochure** at www.jamb.gov.ng/Brochure and verify with NAUB at www.naub.edu.ng."
+  },
+  {
+    "id": "medical_center",
+    "questions": [
+      "naub clinic", "medical center naub", "health services naub",
+      "hospital naub", "sick bay naub", "where is the clinic at naub"
+    ],
+    "answer": "NAUB has a **Medical/Health Centre** on campus that provides basic health services to students and staff.\n\n**Services:**\n• Outpatient consultation\n• First aid and emergency stabilization\n• Dispensary (basic medications)\n• Referral to Biu General Hospital for complex cases\n\n**Location:** Near the Student Hostels\n**Hours:** 24 hours / 7 days a week for emergencies\n**Regular Clinic Hours:** 8:00 AM – 4:00 PM (Mon–Fri)\n\nAll registered students are entitled to basic health care on campus. Present your **student ID** at the clinic."
+  },
+  {
+    "id": "sports",
+    "questions": [
+      "sports at naub", "naub sports facilities", "naub football", "sport complex naub",
+      "extracurricular activities naub", "clubs and societies naub"
+    ],
+    "answer": "NAUB encourages sports and extracurricular activities among students. Available facilities and activities include:\n\n⚽ **Sports Facilities:**\n• Football pitch\n• Basketball court\n• Volleyball court\n• Table tennis hall\n• Athletics track\n\n🎯 **Clubs & Societies:**\n• NAUB Press Club\n• Law Students Association\n• Computer Science Students Association (CSSA)\n• NAUB Debate Club\n• Muslim Students Society (MSS)\n• Fellowship of Christian Students (FCS)\n• Medical Students Association (if applicable)\n\nFor information on joining a club or participating in inter-university competitions, contact the **Student Affairs Division**."
+  },
+  {
+    "id": "thanks_bye",
+    "questions": [
+      "thank you", "thanks", "bye", "goodbye", "that's all",
+      "I'm done", "ok thanks", "okay thanks", "cheers", "thank you so much",
+      "you have been helpful"
+    ],
+    "answer": "You're welcome! 😊 It was a pleasure assisting you. If you have more questions about NAUB in the future, don't hesitate to ask. Best of luck with your studies! 🎓\n\nFor urgent matters, remember you can always reach us at info@naub.edu.ng or visit the relevant office on campus."
+  },
+  {
+    "id": "no_answer",
+    "questions": [],
+    "answer": "I'm sorry, I don't have a specific answer to that question yet. Please try rephrasing your question, or contact the relevant NAUB office directly:\n\n📧 General: info@naub.edu.ng\n📧 Admissions: admissions@naub.edu.ng\n📞 Switchboard: +234-803-000-0000\n🌐 Website: www.naub.edu.ng\n\nYou can also visit the NAUB administrative block during office hours (Mon–Fri, 8:00 AM – 4:00 PM)."
+  }
+]

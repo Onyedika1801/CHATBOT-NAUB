@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}NAUB Enquiry Chatbot{% endblock %}
+
+{% block body %}
+<div class="chat-shell">
+
+  <header class="naub-topbar">
+    <div class="naub-brand">
+      <div class="naub-logo-badge">N</div>
+      <div class="naub-brand-text">
+        <h1>NAUB Enquiry Chatbot</h1>
+        <p>Nigerian Army University Biu &middot; Virtual Assistant</p>
+      </div>
+    </div>
+    <div class="naub-topbar-actions">
+      {% if user.is_authenticated and user.is_staff %}
+        <a href="{% url 'dashboard:home' %}" class="btn-pill">Admin Dashboard</a>
+      {% endif %}
+      <button id="newChatBtn" class="btn-pill">+ New Chat</button>
+      {% if user.is_authenticated %}
+        <a href="{% url 'account_logout' %}" class="btn-pill gold">Logout</a>
+      {% else %}
+        <a href="{% url 'account_login' %}" class="btn-pill gold">Sign In</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="chat-wrap">
+    <div class="chat-container">
+
+      <div id="chatMessages" class="chat-messages">
+        {% if not messages %}
+        <div class="welcome-card" id="welcomeCard">
+          <div class="welcome-icon">N</div>
+          <h2>Welcome to the NAUB Enquiry Chatbot</h2>
+          <p>Ask me anything about admissions, school fees, hostel accommodation, academic
+             calendar, course registration, and more. I'm available 24/7!</p>
+          <div class="suggestion-chips">
+            <button class="chip" data-q="What are the admission requirements?">Admission requirements</button>
+            <button class="chip" data-q="How much is school fees?">School fees</button>
+            <button class="chip" data-q="Tell me about hostel accommodation">Hostel accommodation</button>
+            <button class="chip" data-q="What faculties does NAUB have?">Faculties</button>
+            <button class="chip" data-q="What is the academic calendar?">Academic calendar</button>
+          </div>
+        </div>
+        {% else %}
+          {% for m in messages %}
+            <div class="msg-row user">
+              <div class="avatar user-avatar">{% if user.is_authenticated %}{{ user.username|first|upper }}{% else %}U{% endif %}</div>
+              <div>
+                <div class="bubble">{{ m.question }}</div>
+              </div>
+            </div>
+            <div class="msg-row bot">
+              <div class="avatar bot-avatar">N</div>
+              <div>
+                <div class="bubble {% if m.status == 'rejected' %}rejected{% endif %}">{% if m.status == 'answered' %}{{ m.answer_given }}{% elif m.status == 'rejected' %}{{ m.answer_given|default:"Please rephrase your question." }}{% else %}I don't have a confident answer for that yet. Your question has been forwarded to the NAUB support team.{% endif %}</div>
+                {% if m.status == 'answered' %}<div class="msg-meta">Match confidence: {{ m.similarity_score|floatformat:0 }}%</div>{% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="chat-input-area">
+        <form id="chatForm" autocomplete="off">
+          {% csrf_token %}
+          <div class="chat-input-box">
+            <textarea id="messageInput" rows="1" placeholder="Type your question here... e.g. 'How do I apply for hostel?'" maxlength="500"></textarea>
+            <button type="submit" class="send-btn" id="sendBtn" aria-label="Send">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+        </form>
+        <p class="input-footnote">NAUB Enquiry Chatbot can make mistakes. For urgent matters, contact info@naub.edu.ng</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const chatMessages = document.getElementById('chatMessages');
+const chatForm = document.getElementById('chatForm');
+const messageInput = document.getElementById('messageInput');
+const sendBtn = document.getElementById('sendBtn');
+const newChatBtn = document.getElementById('newChatBtn');
+const welcomeCard = document.getElementById('welcomeCard');
+
+function getCookie(name) {
+  const v = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+  return v ? v.pop() : '';
+}
+const csrftoken = getCookie('csrftoken');
+
+function scrollToBottom() {
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function appendMessage(role, text, opts = {}) {
+  if (welcomeCard) { welcomeCard.remove(); }
+  const row = document.createElement('div');
+  row.className = 'msg-row ' + (role === 'user' ? 'user' : 'bot');
+
+  const avatar = document.createElement('div');
+  avatar.className = 'avatar ' + (role === 'user' ? 'user-avatar' : 'bot-avatar');
+  avatar.textContent = role === 'user' ? 'U' : 'N';
+
+  const wrap = document.createElement('div');
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble' + (opts.rejected ? ' rejected' : '');
+  bubble.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
+  wrap.appendChild(bubble);
+
+  if (opts.meta) {
+    const meta = document.createElement('div');
+    meta.className = 'msg-meta';
+    meta.textContent = opts.meta;
+    wrap.appendChild(meta);
+  }
+
+  row.appendChild(avatar);
+  row.appendChild(wrap);
+  chatMessages.appendChild(row);
+  scrollToBottom();
+}
+
+function showTyping() {
+  const row = document.createElement('div');
+  row.className = 'msg-row bot';
+  row.id = 'typingRow';
+  row.innerHTML = `<div class="avatar bot-avatar">N</div>
+    <div class="bubble" style="padding:0.5rem 1rem;">
+      <div class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>`;
+  chatMessages.appendChild(row);
+  scrollToBottom();
+}
+function removeTyping() {
+  const row = document.getElementById('typingRow');
+  if (row) row.remove();
+}
+
+async function sendMessage(text) {
+  if (!text.trim()) return;
+  appendMessage('user', text);
+  messageInput.value = '';
+  messageInput.style.height = 'auto';
+  sendBtn.disabled = true;
+  showTyping();
+
+  try {
+    const res = await fetch("{% url 'chatbot:send_message' %}", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
+      body: JSON.stringify({ message: text })
+    });
+    const data = await res.json();
+    removeTyping();
+    if (data.error) {
+      appendMessage('bot', "Something went wrong. Please try again.", { rejected: true });
+    } else {
+      const meta = (data.status === 'answered' && data.similarity_score)
+        ? `Match confidence: ${Math.round(data.similarity_score * 100)}%`
+        : null;
+      appendMessage('bot', data.reply, { rejected: data.status === 'rejected', meta });
+    }
+  } catch (err) {
+    removeTyping();
+    appendMessage('bot', "Network error. Please check your connection and try again.", { rejected: true });
+  } finally {
+    sendBtn.disabled = false;
+    messageInput.focus();
+  }
+}
+
+chatForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  sendMessage(messageInput.value);
+});
+
+messageInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage(messageInput.value);
+  }
+});
+
+messageInput.addEventListener('input', () => {
+  messageInput.style.height = 'auto';
+  messageInput.style.height = Math.min(messageInput.scrollHeight, 120) + 'px';
+});
+
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => sendMessage(chip.dataset.q));
+});
+
+newChatBtn.addEventListener('click', async () => {
+  if (!confirm('Start a new chat? Your current conversation view will be cleared (but is saved for records).')) return;
+  try {
+    await fetch("{% url 'chatbot:new_chat' %}", {
+      method: 'POST',
+      headers: { 'X-CSRFToken': csrftoken }
+    });
+    window.location.reload();
+  } catch (err) {
+    alert('Could not start a new chat. Please try again.');
+  }
+});
+
+scrollToBottom();
+messageInput.focus();
+</script>
+{% endblock %}

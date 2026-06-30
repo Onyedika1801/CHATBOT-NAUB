@@ -1,0 +1,42 @@
+{% extends "dashboard/base_dash.html" %}
+{% block dash_content %}
+
+<div class="dash-header">
+  <div>
+    <h1>Knowledge Base</h1>
+    <p>All intents currently powering the chatbot's answers</p>
+  </div>
+</div>
+
+<div class="panel">
+  {% if entries %}
+  <table class="data-table">
+    <thead>
+      <tr><th>Intent</th><th>Category</th><th>Times Matched</th><th>Status</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for entry in entries %}
+      <tr>
+        <td>
+          <strong>{{ entry.intent_id }}</strong>
+          <div style="font-size:0.76rem; color:var(--naub-text-muted); margin-top:0.2rem; max-width:420px;">{{ entry.answer|truncatechars:110 }}</div>
+        </td>
+        <td>{{ entry.category }}</td>
+        <td>{{ entry.times_matched }}</td>
+        <td><span class="badge {% if entry.is_active %}answered{% else %}rejected{% endif %}">{% if entry.is_active %}Active{% else %}Disabled{% endif %}</span></td>
+        <td>
+          <form method="post" action="{% url 'dashboard:kb_toggle_active' entry.pk %}">
+            {% csrf_token %}
+            <button type="submit" class="btn-sm outline">{% if entry.is_active %}Disable{% else %}Enable{% endif %}</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="empty-state"><div class="icon">📚</div>No knowledge base entries yet. Run <code>python manage.py load_kb</code>.</div>
+  {% endif %}
+</div>
+
+{% endblock %}

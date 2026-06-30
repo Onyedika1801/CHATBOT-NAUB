@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="dash-shell">
+  <aside class="dash-sidebar">
+    <div class="naub-brand">
+      <div class="naub-logo-badge">N</div>
+      <div class="naub-brand-text">
+        <h1 style="font-size:0.95rem;">NAUB Admin</h1>
+        <p>Chatbot Dashboard</p>
+      </div>
+    </div>
+    <nav class="dash-nav">
+      <a href="{% url 'dashboard:home' %}" class="{% if active == 'home' %}active{% endif %}">📊 Overview</a>
+      <a href="{% url 'dashboard:unanswered_list' %}" class="{% if active == 'unanswered' %}active{% endif %}">❓ Unanswered Questions</a>
+      <a href="{% url 'dashboard:kb_list' %}" class="{% if active == 'kb' %}active{% endif %}">📚 Knowledge Base</a>
+      <a href="{% url 'dashboard:logs' %}" class="{% if active == 'logs' %}active{% endif %}">🗂 Conversation Logs</a>
+      <a href="{% url 'chatbot:chat' %}">💬 Back to Chatbot</a>
+      <a href="{% url 'account_logout' %}">🚪 Logout</a>
+    </nav>
+  </aside>
+  <main class="dash-main">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert-box {{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+    {% block dash_content %}{% endblock %}
+  </main>
+</div>
+{% endblock %}

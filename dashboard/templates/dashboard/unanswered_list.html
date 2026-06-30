@@ -1,0 +1,55 @@
+{% extends "dashboard/base_dash.html" %}
+{% block dash_content %}
+
+<div class="dash-header">
+  <div>
+    <h1>Unanswered Questions</h1>
+    <p>Provide answers so the chatbot can respond to these automatically next time</p>
+  </div>
+</div>
+
+<div class="filter-tabs">
+  <a href="?status=pending" class="{% if status_filter == 'pending' %}active{% endif %}">Pending</a>
+  <a href="?status=answered" class="{% if status_filter == 'answered' %}active{% endif %}">Answered</a>
+  <a href="?status=ignored" class="{% if status_filter == 'ignored' %}active{% endif %}">Ignored</a>
+  <a href="?status=all" class="{% if status_filter == 'all' %}active{% endif %}">All</a>
+</div>
+
+{% if unanswered_questions %}
+  {% for uq in unanswered_questions %}
+  <div class="panel">
+    <div class="panel-header">
+      <div>
+        <h3 style="margin-bottom:0.2rem;">{{ uq.question }}</h3>
+        <span style="font-size:0.76rem; color:var(--naub-text-muted);">
+          Asked {{ uq.times_asked }} time{{ uq.times_asked|pluralize }} &middot; First seen {{ uq.created_at|date:"M d, Y H:i" }}
+        </span>
+      </div>
+      <span class="badge {{ uq.status }}">{{ uq.get_status_display }}</span>
+    </div>
+
+    {% if uq.status == "pending" %}
+    <form method="post" action="{% url 'dashboard:answer_question' uq.pk %}" class="form-inline">
+      {% csrf_token %}
+      <textarea name="answer" rows="3" placeholder="Type the answer the chatbot should give for this question..."></textarea>
+      <button type="submit" class="btn-sm primary">Save Answer</button>
+    </form>
+    <form method="post" action="{% url 'dashboard:ignore_question' uq.pk %}" style="margin-top:0.5rem;">
+      {% csrf_token %}
+      <button type="submit" class="btn-sm danger">Ignore This Question</button>
+    </form>
+    {% elif uq.status == "answered" %}
+    <div style="background:var(--naub-cream); padding:0.8rem 1rem; border-radius:10px; font-size:0.85rem;">
+      <strong>Answer given:</strong> {{ uq.admin_answer }}
+      <div style="margin-top:0.3rem; font-size:0.74rem; color:var(--naub-text-muted);">
+        Answered by {{ uq.answered_by.username|default:"admin" }} on {{ uq.answered_at|date:"M d, Y H:i" }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="panel"><div class="empty-state"><div class="icon">✅</div>No questions in this category.</div></div>
+{% endif %}
+
+{% endblock %}

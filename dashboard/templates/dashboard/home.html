@@ -1,0 +1,118 @@
+{% extends "dashboard/base_dash.html" %}
+{% block dash_content %}
+
+<div class="dash-header">
+  <div>
+    <h1>Dashboard Overview</h1>
+    <p>Real-time insight into chatbot performance and accuracy</p>
+  </div>
+</div>
+
+<div class="stat-grid">
+  <div class="stat-card accent">
+    <div class="stat-label">Total Questions Logged</div>
+    <div class="stat-value">{{ total_questions }}</div>
+    <div class="stat-sub">All time, across all sessions</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Answered</div>
+    <div class="stat-value">{{ answered_count }}</div>
+    <div class="stat-sub pos">Successfully matched</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Unanswered</div>
+    <div class="stat-value">{{ unanswered_count }}</div>
+    <div class="stat-sub neg">Awaiting admin review</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Rejected (Gibberish)</div>
+    <div class="stat-value">{{ rejected_count }}</div>
+    <div class="stat-sub">Not stored as enquiries</div>
+  </div>
+  <div class="stat-card accent">
+    <div class="stat-label">Bot Accuracy</div>
+    <div class="stat-value">{{ accuracy }}%</div>
+    <div class="stat-sub">Answered ÷ total questions</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Avg. Match Confidence</div>
+    <div class="stat-value">{{ avg_similarity }}%</div>
+    <div class="stat-sub">Cosine similarity on answered queries</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Knowledge Base Entries</div>
+    <div class="stat-value">{{ total_kb_entries }}</div>
+    <div class="stat-sub">Active intents</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Chat Sessions</div>
+    <div class="stat-value">{{ total_sessions }}</div>
+    <div class="stat-sub">Total conversations started</div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-header">
+    <h3>Last 7 Days — Answered vs Unanswered</h3>
+    <span style="font-size:0.75rem; color:var(--naub-text-muted);">
+      <span style="color:var(--naub-green); font-weight:700;">■</span> Answered &nbsp;
+      <span style="color:var(--naub-gold); font-weight:700;">■</span> Unanswered
+    </span>
+  </div>
+  <div class="mini-bar-chart">
+    {% for day in trend %}
+      {% with total=day.answered|add:day.unanswered %}
+      <div class="mini-bar-col">
+        <div class="mini-bar-stack">
+          {% if total > 0 %}
+            <div class="mini-bar-unans" style="height: {% widthratio day.unanswered total 100 %}%;"></div>
+            <div class="mini-bar-ans" style="height: {% widthratio day.answered total 100 %}%;"></div>
+          {% endif %}
+        </div>
+        <div class="mini-bar-label">{{ day.label }}</div>
+      </div>
+      {% endwith %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-header">
+    <h3>Pending Unanswered Questions</h3>
+    <a href="{% url 'dashboard:unanswered_list' %}" class="btn-sm outline">View All →</a>
+  </div>
+  {% if pending_unanswered %}
+  <table class="data-table">
+    <thead><tr><th>Question</th><th>Times Asked</th><th>First Asked</th></tr></thead>
+    <tbody>
+      {% for uq in pending_unanswered|slice:":6" %}
+      <tr>
+        <td>{{ uq.question }}</td>
+        <td>{{ uq.times_asked }}</td>
+        <td>{{ uq.created_at|date:"M d, Y" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="empty-state"><div class="icon">✅</div>All caught up — no pending questions!</div>
+  {% endif %}
+</div>
+
+<div class="panel">
+  <div class="panel-header"><h3>Most Frequently Matched Topics</h3></div>
+  {% if top_intents %}
+  <table class="data-table">
+    <thead><tr><th>Intent</th><th>Category</th><th>Times Matched</th></tr></thead>
+    <tbody>
+      {% for entry in top_intents %}
+      <tr><td>{{ entry.intent_id }}</td><td>{{ entry.category }}</td><td>{{ entry.times_matched }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="empty-state"><div class="icon">📊</div>No matches recorded yet.</div>
+  {% endif %}
+</div>
+
+{% endblock %}
