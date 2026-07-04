@@ -117,4 +117,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Chatbot settings
 CHATBOT_SIMILARITY_THRESHOLD = 0.35
+CHATBOT_CLARIFICATION_MARGIN = 0.12
 CHATBOT_GIBBERISH_THRESHOLD = 0.4

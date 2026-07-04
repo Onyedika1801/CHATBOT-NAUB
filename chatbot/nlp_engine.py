@@ -260,36 +260,94 @@ class IntentMatcher:
         self.vectorizer = TfidfVectorizer()
         self.kb_vectors = self.vectorizer.fit_transform(corpus)
 
-    def match(self, raw_query: str):
+    def match(self, raw_query: str, top_n=4):
         """
-        Returns dict: {status, entry, answer, similarity_score}
-        status in {"answered", "unanswered"}
+        Returns dict: {status, entry, answer, similarity_score, candidates}
+        status in {"answered", "clarification", "unanswered"}
+
+        - "answered": a single confident match was found (score above threshold
+          AND clearly ahead of the next-best distinct intent).
+        - "clarification": multiple distinct intents scored close together
+          above the threshold -- too ambiguous to guess, so candidate
+          questions are returned for the user to pick from instead of risking
+          a wrong answer.
+        - "unanswered": nothing scored high enough to be worth showing.
         """
-        threshold = getattr(settings, "CHATBOT_SIMILARITY_THRESHOLD", 0.25)
+        threshold = getattr(settings, "CHATBOT_SIMILARITY_THRESHOLD", 0.35)
+        margin = getattr(settings, "CHATBOT_CLARIFICATION_MARGIN", 0.12)
+
+        empty = {"status": "unanswered", "entry": None, "answer": None,
+                 "similarity_score": 0.0, "candidates": []}
 
         if self.vectorizer is None or self.kb_vectors is None:
-            return {"status": "unanswered", "entry": None, "answer": None, "similarity_score": 0.0}
+            return empty
 
         processed_query = preprocess_text(raw_query)
         if not processed_query:
-            return {"status": "unanswered", "entry": None, "answer": None, "similarity_score": 0.0}
+            return empty
 
         query_vector = self.vectorizer.transform([processed_query])
         similarities = cosine_similarity(query_vector, self.kb_vectors)[0]
 
-        best_idx = similarities.argmax()
-        best_score = float(similarities[best_idx])
+        # Collapse to the best score per distinct KB entry (an entry can have
+        # many training questions, we only care about its best-scoring one).
+        best_per_entry = {}  # entry_idx -> (score, flat_question_idx)
+        for flat_idx, score in enumerate(similarities):
+            entry_idx = self.question_to_entry_idx[flat_idx]
+            if entry_idx not in best_per_entry or score > best_per_entry[entry_idx][0]:
+                best_per_entry[entry_idx] = (float(score), flat_idx)
 
-        if best_score >= threshold:
-            entry = self.kb_entries[self.question_to_entry_idx[best_idx]]
+        ranked = sorted(best_per_entry.items(), key=lambda kv: kv[1][0], reverse=True)
+
+        if not ranked or ranked[0][1][0] < threshold:
+            top_score = ranked[0][1][0] if ranked else 0.0
+            return {"status": "unanswered", "entry": None, "answer": None,
+                    "similarity_score": round(top_score, 4), "candidates": []}
+
+        best_entry_idx, (best_score, best_flat_idx) = ranked[0]
+        second_score = ranked[1][1][0] if len(ranked) > 1 else 0.0
+
+        if (best_score - second_score) >= margin:
+            entry = self.kb_entries[best_entry_idx]
             return {
                 "status": "answered",
                 "entry": entry,
                 "answer": entry.answer,
                 "similarity_score": round(best_score, 4),
+                "candidates": [],
             }
 
-        return {"status": "unanswered", "entry": None, "answer": None, "similarity_score": round(best_score, 4)}
+        # Ambiguous: gather the top-N distinct-intent candidates above threshold
+        # (or close enough to be plausible) to present as clickable options.
+        candidates = []
+        for entry_idx, (score, flat_idx) in ranked[:top_n]:
+            if score < (threshold - 0.05):
+                continue
+            entry = self.kb_entries[entry_idx]
+            candidates.append({
+                "intent_id": entry.intent_id,
+                "question": self.flat_questions[flat_idx],
+                "score": round(score, 4),
+            })
+
+        if len(candidates) < 2:
+            # Not actually ambiguous after filtering -- fall back to the best answer.
+            entry = self.kb_entries[best_entry_idx]
+            return {
+                "status": "answered",
+                "entry": entry,
+                "answer": entry.answer,
+                "similarity_score": round(best_score, 4),
+                "candidates": [],
+            }
+
+        return {
+            "status": "clarification",
+            "entry": None,
+            "answer": None,
+            "similarity_score": round(best_score, 4),
+            "candidates": candidates,
+        }
 
 
 _matcher_cache = {"matcher": None, "version": None}

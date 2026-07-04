@@ -47,7 +47,7 @@
             <div class="msg-row bot">
               <div class="avatar bot-avatar"><img src="{% static 'images/naub_logo.png' %}" alt="NAUB"></div>
               <div>
-                <div class="bubble {% if m.status == 'rejected' %}rejected{% endif %}">{% if m.status == 'answered' %}{{ m.answer_given }}{% elif m.status == 'rejected' %}{{ m.answer_given|default:"Please rephrase your question." }}{% else %}I don't have an answer for that right now. Please check back later.{% endif %}</div>
+                <div class="bubble {% if m.status == 'rejected' %}rejected{% endif %}">{% if m.status == 'answered' %}{{ m.answer_given }}{% elif m.status == 'rejected' %}{{ m.answer_given|default:"Please rephrase your question." }}{% elif m.status == 'clarification' %}I found a few things that might match. Which one did you mean?{% else %}I don't have an answer for that right now. Please check back later.{% endif %}</div>
                 {% if m.status == 'answered' %}<div class="msg-meta">Match confidence: {{ m.similarity_score|floatformat:0 }}%</div>{% endif %}
               </div>
             </div>
@@ -124,6 +124,22 @@ function appendMessage(role, text, opts = {}) {
     wrap.appendChild(meta);
   }
 
+  if (opts.candidates && opts.candidates.length) {
+    const chipsWrap = document.createElement('div');
+    chipsWrap.className = 'suggestion-chips';
+    chipsWrap.style.justifyContent = 'flex-start';
+    chipsWrap.style.marginTop = '0.6rem';
+    opts.candidates.forEach(c => {
+      const chip = document.createElement('button');
+      chip.className = 'chip';
+      chip.type = 'button';
+      chip.textContent = c.question;
+      chip.addEventListener('click', () => sendMessage(c.question));
+      chipsWrap.appendChild(chip);
+    });
+    wrap.appendChild(chipsWrap);
+  }
+
   row.appendChild(avatar);
   row.appendChild(wrap);
   chatMessages.appendChild(row);
@@ -168,7 +184,11 @@ async function sendMessage(text) {
       const meta = (data.status === 'answered' && data.similarity_score)
         ? `Match confidence: ${Math.round(data.similarity_score * 100)}%`
         : null;
-      appendMessage('bot', data.reply, { rejected: data.status === 'rejected', meta });
+      appendMessage('bot', data.reply, {
+        rejected: data.status === 'rejected',
+        meta,
+        candidates: data.candidates || []
+      });
     }
   } catch (err) {
     removeTyping();

@@ -441,6 +441,7 @@ table.data-table tr:last-child td { border-bottom: none; }
   letter-spacing: 0.3px;
 }
 .badge.answered { background: #e3f6e8; color: var(--naub-success); }
+.badge.clarification { background: #e6eef9; color: #2c5f9e; }
 .badge.unanswered { background: #fdf0e3; color: var(--naub-warning); }
 .badge.rejected { background: #fbe4e1; color: var(--naub-danger); }
 .badge.pending { background: #fdf0e3; color: var(--naub-warning); }

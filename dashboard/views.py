@@ -20,6 +20,7 @@ def is_staff_user(user):
 def dashboard_home(request):
     total_questions = ConversationLog.objects.count()
     answered_count = ConversationLog.objects.filter(status="answered").count()
+    clarification_count = ConversationLog.objects.filter(status="clarification").count()
     unanswered_count = ConversationLog.objects.filter(status="unanswered").count()
     rejected_count = ConversationLog.objects.filter(status="rejected").count()
 
@@ -54,6 +55,7 @@ def dashboard_home(request):
         "active": "home",
         "total_questions": total_questions,
         "answered_count": answered_count,
+        "clarification_count": clarification_count,
         "unanswered_count": unanswered_count,
         "rejected_count": rejected_count,
         "accuracy": accuracy,

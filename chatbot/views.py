@@ -89,11 +89,18 @@ def send_message(request):
         status=result["status"],
     )
 
+    candidates = []
+
     if result["status"] == "answered":
         entry = result["entry"]
         entry.times_matched += 1
         entry.save(update_fields=["times_matched"])
         reply_text = result["answer"]
+
+    elif result["status"] == "clarification":
+        reply_text = "I found a few things that might match. Which one did you mean?"
+        candidates = result["candidates"]
+
     else:
         reply_text = (
             "I don't have an answer for that right now. Please check back later."
@@ -113,6 +120,7 @@ def send_message(request):
         "reply": reply_text,
         "status": result["status"],
         "similarity_score": result["similarity_score"],
+        "candidates": candidates,
         "stored": True,
     })
 

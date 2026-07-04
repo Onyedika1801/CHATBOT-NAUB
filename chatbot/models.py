@@ -50,6 +50,7 @@ class ConversationLog(models.Model):
     """Permanent log of every valid question asked, regardless of chat session resets."""
     MATCH_STATUS_CHOICES = (
         ("answered", "Answered"),
+        ("clarification", "Clarification Requested"),
         ("unanswered", "Unanswered / Low Confidence"),
         ("rejected", "Rejected (Gibberish/Invalid)"),
     )
