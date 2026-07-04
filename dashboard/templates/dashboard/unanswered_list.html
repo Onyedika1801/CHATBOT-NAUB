@@ -29,10 +29,11 @@
     </div>
 
     {% if uq.status == "pending" %}
-    <form method="post" action="{% url 'dashboard:answer_question' uq.pk %}" class="form-inline">
+    <form method="post" action="{% url 'dashboard:answer_question' uq.pk %}" class="form-inline" style="flex-direction:column; align-items:stretch;">
       {% csrf_token %}
       <textarea name="answer" rows="3" placeholder="Type the answer the chatbot should give for this question..."></textarea>
-      <button type="submit" class="btn-sm primary">Save Answer</button>
+      <textarea name="alt_phrasings" rows="2" placeholder="Optional: other ways students might ask this (one per line), e.g. 'who is the dean of computing', 'FCOM dean' — helps the bot recognize paraphrased questions"></textarea>
+      <button type="submit" class="btn-sm primary" style="align-self:flex-start;">Save Answer</button>
     </form>
     <form method="post" action="{% url 'dashboard:ignore_question' uq.pk %}" style="margin-top:0.5rem;">
       {% csrf_token %}

@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 {% block body %}
 <div class="dash-shell">
   <aside class="dash-sidebar">
     <div class="naub-brand">
-      <div class="naub-logo-badge">N</div>
+      <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img">
       <div class="naub-brand-text">
         <h1 style="font-size:0.95rem;">NAUB Admin</h1>
         <p>Chatbot Dashboard</p>

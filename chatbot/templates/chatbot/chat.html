@@ -7,22 +7,14 @@
 
   <header class="naub-topbar">
     <div class="naub-brand">
-      <div class="naub-logo-badge">N</div>
+      <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img">
       <div class="naub-brand-text">
         <h1>NAUB Enquiry Chatbot</h1>
         <p>Nigerian Army University Biu &middot; Virtual Assistant</p>
       </div>
     </div>
     <div class="naub-topbar-actions">
-      {% if user.is_authenticated and user.is_staff %}
-        <a href="{% url 'dashboard:home' %}" class="btn-pill">Admin Dashboard</a>
-      {% endif %}
       <button id="newChatBtn" class="btn-pill">+ New Chat</button>
-      {% if user.is_authenticated %}
-        <a href="{% url 'account_logout' %}" class="btn-pill gold">Logout</a>
-      {% else %}
-        <a href="{% url 'account_login' %}" class="btn-pill gold">Sign In</a>
-      {% endif %}
     </div>
   </header>
 
@@ -32,7 +24,7 @@
       <div id="chatMessages" class="chat-messages">
         {% if not messages %}
         <div class="welcome-card" id="welcomeCard">
-          <div class="welcome-icon">N</div>
+          <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="welcome-icon-img">
           <h2>Welcome to the NAUB Enquiry Chatbot</h2>
           <p>Ask me anything about admissions, school fees, hostel accommodation, academic
              calendar, course registration, and more. I'm available 24/7!</p>
@@ -47,15 +39,15 @@
         {% else %}
           {% for m in messages %}
             <div class="msg-row user">
-              <div class="avatar user-avatar">{% if user.is_authenticated %}{{ user.username|first|upper }}{% else %}U{% endif %}</div>
+              <div class="avatar user-avatar">U</div>
               <div>
                 <div class="bubble">{{ m.question }}</div>
               </div>
             </div>
             <div class="msg-row bot">
-              <div class="avatar bot-avatar">N</div>
+              <div class="avatar bot-avatar"><img src="{% static 'images/naub_logo.png' %}" alt="NAUB"></div>
               <div>
-                <div class="bubble {% if m.status == 'rejected' %}rejected{% endif %}">{% if m.status == 'answered' %}{{ m.answer_given }}{% elif m.status == 'rejected' %}{{ m.answer_given|default:"Please rephrase your question." }}{% else %}I don't have a confident answer for that yet. Your question has been forwarded to the NAUB support team.{% endif %}</div>
+                <div class="bubble {% if m.status == 'rejected' %}rejected{% endif %}">{% if m.status == 'answered' %}{{ m.answer_given }}{% elif m.status == 'rejected' %}{{ m.answer_given|default:"Please rephrase your question." }}{% else %}I don't have an answer for that right now. Please check back later.{% endif %}</div>
                 {% if m.status == 'answered' %}<div class="msg-meta">Match confidence: {{ m.similarity_score|floatformat:0 }}%</div>{% endif %}
               </div>
             </div>
@@ -113,7 +105,11 @@ function appendMessage(role, text, opts = {}) {
 
   const avatar = document.createElement('div');
   avatar.className = 'avatar ' + (role === 'user' ? 'user-avatar' : 'bot-avatar');
-  avatar.textContent = role === 'user' ? 'U' : 'N';
+  if (role === 'user') {
+    avatar.textContent = 'U';
+  } else {
+    avatar.innerHTML = '<img src="{% static "images/naub_logo.png" %}" alt="NAUB">';
+  }
 
   const wrap = document.createElement('div');
   const bubble = document.createElement('div');
@@ -138,7 +134,7 @@ function showTyping() {
   const row = document.createElement('div');
   row.className = 'msg-row bot';
   row.id = 'typingRow';
-  row.innerHTML = `<div class="avatar bot-avatar">N</div>
+  row.innerHTML = `<div class="avatar bot-avatar"><img src="{% static 'images/naub_logo.png' %}" alt="NAUB"></div>
     <div class="bubble" style="padding:0.5rem 1rem;">
       <div class="typing-indicator"><span></span><span></span><span></span></div>
     </div>`;

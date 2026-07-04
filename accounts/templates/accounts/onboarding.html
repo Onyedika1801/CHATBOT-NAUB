@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Complete Your Profile{% endblock %}
 {% block body %}
 <div class="auth-shell">
   <div class="auth-card">
-    <div class="naub-logo-badge">N</div>
+    <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img" style="width:60px;height:60px;margin:0 auto 1.1rem;display:block;">
     <h1>Welcome, {{ user.first_name|default:user.username }}!</h1>
     <p class="sub">Just a few details to personalize your experience.</p>
     <form method="post" style="text-align:left;">

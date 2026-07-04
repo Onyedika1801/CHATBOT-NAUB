@@ -96,10 +96,7 @@ def send_message(request):
         reply_text = result["answer"]
     else:
         reply_text = (
-            "I don't have a confident answer for that yet. I've forwarded your "
-            "question to the NAUB support team for review, and the knowledge base "
-            "will be updated soon. In the meantime, you can contact the relevant "
-            "office directly at info@naub.edu.ng."
+            "I don't have an answer for that right now. Please check back later."
         )
         uq, created = UnansweredQuestion.objects.get_or_create(
             question__iexact=question,

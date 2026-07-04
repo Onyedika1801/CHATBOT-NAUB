@@ -96,6 +96,8 @@ def answer_question(request, pk):
     uq = get_object_or_404(UnansweredQuestion, pk=pk)
     answer_text = request.POST.get("answer", "").strip()
     link_to_existing = request.POST.get("link_to_existing_id")
+    alt_phrasings_raw = request.POST.get("alt_phrasings", "").strip()
+    alt_phrasings = [p.strip() for p in alt_phrasings_raw.splitlines() if p.strip()]
 
     if not answer_text and not link_to_existing:
         django_messages.error(request, "Please provide an answer or link to an existing topic.")
@@ -103,8 +105,8 @@ def answer_question(request, pk):
 
     if link_to_existing:
         kb_entry = get_object_or_404(KnowledgeBaseEntry, pk=link_to_existing)
-        existing_questions = kb_entry.questions
-        kb_entry.questions = existing_questions + "\n" + uq.question
+        extra_lines = [uq.question] + alt_phrasings
+        kb_entry.questions = kb_entry.questions + "\n" + "\n".join(extra_lines)
         kb_entry.save(update_fields=["questions"])
     else:
         base_slug = _slugify_intent(uq.question[:40])
@@ -114,9 +116,10 @@ def answer_question(request, pk):
             counter += 1
             slug = f"{base_slug}-{counter}"
 
+        all_questions = "\n".join([uq.question] + alt_phrasings)
         kb_entry = KnowledgeBaseEntry.objects.create(
             intent_id=slug,
-            questions=uq.question,
+            questions=all_questions,
             answer=answer_text,
             category="admin-added",
             is_active=True,

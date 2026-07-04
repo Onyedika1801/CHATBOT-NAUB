@@ -66,12 +66,72 @@ def get_stopwords():
 _STOPWORDS = get_stopwords()
 
 
+# ---------------------------------------------------------------------------
+# Synonym / acronym normalization
+# ---------------------------------------------------------------------------
+# Maps common abbreviations, acronyms, and alternate phrasings used by NAUB
+# students to a canonical expanded form. This runs BEFORE tokenization so that
+# e.g. "Dean of FCOM" and "Dean of the faculty of computing" both reduce to
+# the same underlying tokens and match the same knowledge base entry.
+#
+# Keys are matched as whole words/phrases (case-insensitive). Add new entries
+# here whenever a new acronym or alternate phrasing surfaces in real usage.
+SYNONYM_MAP = {
+    # Faculty acronyms / alternate names
+    "fcom": "faculty of computing",
+    "faculty of comp sci": "faculty of computing",
+    "computing faculty": "faculty of computing",
+    "fss": "faculty of social sciences",
+    "faculty of socsci": "faculty of social sciences",
+    "fms": "faculty of management sciences",
+    "management faculty": "faculty of management sciences",
+    "foh": "faculty of humanities",
+    "humanities faculty": "faculty of humanities",
+    "fsc": "faculty of science",
+    "science faculty": "faculty of science",
+    "fol": "faculty of law",
+    "law faculty": "faculty of law",
+    # Common role/title abbreviations
+    "vc": "vice chancellor",
+    "hod": "head of department",
+    "reg": "registrar",
+    "dvc": "deputy vice chancellor",
+    # Common institutional abbreviations
+    "sug": "student union government",
+    "gst": "general studies",
+    "utme": "jamb",
+    "de": "direct entry",
+    "nysc": "national youth service corps",
+    "ict": "information communication technology",
+    # Frequent shorthand
+    "uni": "university",
+    "naub": "nigerian army university biu",
+    "dept": "department",
+    "acct": "accounting",
+    "cs": "computer science",
+}
+
+# Sort longer phrases first so multi-word keys are replaced before any
+# single-word substrings inside them could be.
+_SYNONYM_KEYS_SORTED = sorted(SYNONYM_MAP.keys(), key=len, reverse=True)
+
+
+def expand_synonyms(text: str) -> str:
+    """Replace known acronyms/abbreviations/alternate phrasings with their
+    canonical expanded form using whole-word/phrase boundaries."""
+    for key in _SYNONYM_KEYS_SORTED:
+        pattern = r"\b" + re.escape(key) + r"\b"
+        text = re.sub(pattern, SYNONYM_MAP[key], text, flags=re.IGNORECASE)
+    return text
+
+
 def preprocess_text(text: str) -> str:
     """
     Phase 1 - Text Pre-processing (Chapter 3, Section 3.6):
     (i) lowercase, (ii) tokenize, (iii) stop-word removal, (iv) stemming.
     """
     text = text.lower().strip()
+    text = expand_synonyms(text)
     text = re.sub(r"[^\w\s']", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
 

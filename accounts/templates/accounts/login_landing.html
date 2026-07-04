@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Sign In - NAUB Chatbot{% endblock %}
 {% block body %}
 <div class="auth-shell">
   <div class="auth-card">
-    <div class="naub-logo-badge">N</div>
+    <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img" style="width:60px;height:60px;margin:0 auto 1.1rem;display:block;">
     <h1>NAUB Enquiry Chatbot</h1>
     <p class="sub">Sign in to save your conversation history, or continue as a guest.</p>
 
