@@ -2,261 +2,803 @@
   {
     "id": "greeting",
     "questions": [
-      "hello", "hi", "hey", "good morning", "good afternoon", "good evening",
-      "greetings", "howdy", "what's up", "how are you", "hi there"
+      "hello",
+      "hi",
+      "hey",
+      "good morning",
+      "good afternoon",
+      "good evening",
+      "greetings",
+      "howdy",
+      "what's up",
+      "how are you",
+      "hi there"
     ],
-    "answer": "Hello! 👋 Welcome to the NAUB Enquiry Chatbot. I'm your virtual assistant for Nigerian Army University Biu. How can I help you today? You can ask me about admissions, fees, programmes, hostels, academic calendar, and more!"
-  },
-  {
-    "id": "about_naub",
-    "questions": [
-      "what is NAUB", "tell me about NAUB", "about Nigerian Army University Biu",
-      "history of NAUB", "when was NAUB established", "NAUB overview",
-      "what kind of university is NAUB", "is NAUB a federal university",
-      "naub background", "who owns naub"
-    ],
-    "answer": "Nigerian Army University Biu (NAUB) is a federal university established in 2018 by the Nigerian Army. It is located in Biu, Borno State, Nigeria. NAUB was founded to provide quality tertiary education and is fully accredited by the National Universities Commission (NUC). The university is headed by the Vice-Chancellor and is under the supervision of the Nigerian Army Council. It offers undergraduate and postgraduate programmes across multiple faculties."
-  },
-  {
-    "id": "naub_location",
-    "questions": [
-      "where is NAUB located", "NAUB address", "where is the university",
-      "how do I get to NAUB", "naub location", "which state is NAUB",
-      "NAUB campus location", "where is naub campus"
-    ],
-    "answer": "Nigerian Army University Biu (NAUB) is located in Biu, Borno State, Nigeria. The campus is situated along Maiduguri Road, Biu. Biu is a local government area in southern Borno State, accessible by road from Maiduguri (about 180km), Yola, and Gombe."
-  },
-  {
-    "id": "naub_contact",
-    "questions": [
-      "NAUB contact", "how to contact NAUB", "NAUB phone number",
-      "NAUB email", "NAUB website", "contact information", "naub office",
-      "registrar contact", "admission office contact", "ict unit contact"
-    ],
-    "answer": "Here are the key NAUB contact details:\n\n📞 **Main Switchboard:** +234-803-000-0000\n🌐 **Website:** www.naub.edu.ng\n📧 **General Email:** info@naub.edu.ng\n📧 **Admissions:** admissions@naub.edu.ng\n📧 **Bursary/Fees:** bursary@naub.edu.ng\n📧 **ICT Unit:** ict@naub.edu.ng\n📍 **Address:** NAUB Campus, Maiduguri Road, Biu, Borno State.\n\nOffice hours are Monday–Friday, 8:00 AM – 4:00 PM."
-  },
-  {
-    "id": "naub_faculties",
-    "questions": [
-      "faculties in NAUB", "what faculties does NAUB have", "naub departments",
-      "list of faculties", "naub schools", "colleges in naub",
-      "faculty of science naub", "faculty of humanities naub",
-      "faculty of management naub", "faculty of social science naub"
-    ],
-    "answer": "NAUB currently has the following Faculties:\n\n1. 🔬 **Faculty of Science** — Offers BSc programmes in Computer Science, Mathematics, Physics, Chemistry, Biology, and Microbiology.\n2. 📚 **Faculty of Humanities** — Includes English Language, History, Islamic Studies, and related disciplines.\n3. 📊 **Faculty of Management Sciences** — Offers Accounting, Business Administration, and Economics.\n4. 🏛️ **Faculty of Social Sciences** — Includes Mass Communication, Political Science, and Sociology.\n5. ⚖️ **Faculty of Law** — LLB programme in Law.\n6. 🎓 **Postgraduate School** — Masters and PhD programmes in select disciplines."
-  },
-  {
-    "id": "programmes_available",
-    "questions": [
-      "programmes offered in NAUB", "courses in NAUB", "what can I study at NAUB",
-      "available programmes", "list of courses", "undergraduate programmes",
-      "what programmes does NAUB offer", "courses offered naub",
-      "computer science naub", "law naub", "accounting naub",
-      "economics naub", "mass communication naub"
-    ],
-    "answer": "NAUB offers the following undergraduate programmes:\n\n**Faculty of Science:**\n• B.Sc Computer Science\n• B.Sc Mathematics\n• B.Sc Physics\n• B.Sc Chemistry\n• B.Sc Biology\n• B.Sc Microbiology\n\n**Faculty of Humanities:**\n• B.A English Language\n• B.A History & Diplomatic Studies\n• B.A Islamic Studies\n\n**Faculty of Management Sciences:**\n• B.Sc Accounting\n• B.Sc Business Administration\n• B.Sc Economics\n\n**Faculty of Social Sciences:**\n• B.Sc Mass Communication\n• B.Sc Political Science\n• B.Sc Sociology\n\n**Faculty of Law:**\n• LLB Law (5 years)\n\nAll programmes run for 4 years except Law (5 years). Postgraduate programmes are also available."
-  },
-  {
-    "id": "admission_requirements",
-    "questions": [
-      "admission requirements", "how to apply to NAUB", "NAUB admission",
-      "requirements for admission", "what do I need for NAUB admission",
-      "JAMB cutoff naub", "naub admission process", "how to get admission into naub",
-      "UTME naub", "O level requirements naub", "post utme naub"
-    ],
-    "answer": "To gain admission into NAUB, you need to meet the following requirements:\n\n**UTME (JAMB) Requirements:**\n• Minimum JAMB score: 140 (general)\n• Science-based courses: minimum 160\n• Law: minimum 180\n• NAUB JAMB Brochure Code: check www.naub.edu.ng\n\n**O'Level Requirements:**\n• Minimum of 5 credits in relevant subjects at WAEC/NECO/GCE\n• Must include English Language and Mathematics (except for some Humanities programmes)\n• Credits must be obtained in not more than 2 sittings\n\n**Post-UTME Screening:**\n• Purchase Post-UTME form on the NAUB portal (www.naub.edu.ng)\n• Screening is conducted on campus\n• Minimum JAMB score to qualify for screening: 140\n\n**Direct Entry:**\n• Holders of ND (Upper Credit), NCE, or A-Levels may apply via JAMB DE\n\nVisit www.naub.edu.ng/admissions for the current admission form and deadline."
-  },
-  {
-    "id": "admission_list",
-    "questions": [
-      "admission list", "check admission status", "have I been admitted",
-      "when will admission list be out", "provisional admission naub",
-      "supplementary admission list", "how to check admission list naub",
-      "merit list naub", "naub admission portal"
-    ],
-    "answer": "To check your NAUB admission status:\n\n1. Visit **www.naub.edu.ng**\n2. Click on **'Admissions'** then **'Check Admission Status'**\n3. Enter your **JAMB Registration Number**\n4. Your admission status will be displayed\n\nAlternatively, check the **JAMB CAPS portal** at caps.jamb.gov.ng to see if you have been offered admission and to accept or reject the offer.\n\nIf you have further questions, contact the Admissions Office at **admissions@naub.edu.ng**."
-  },
-  {
-    "id": "school_fees",
-    "questions": [
-      "school fees", "how much is fees at NAUB", "NAUB tuition fees",
-      "fees structure", "how much does NAUB cost", "acceptance fee naub",
-      "fresh student fees", "returning student fees", "naub fee payment",
-      "how much is school fees", "fees naub", "payment of fees"
-    ],
-    "answer": "NAUB school fees vary by faculty and student status. Below are approximate figures (verify at www.naub.edu.ng for current rates):\n\n**Fresh Students (100 Level):**\n• Science-based courses: ₦250,000 – ₦300,000 per session\n• Arts/Social Science/Management: ₦200,000 – ₦250,000 per session\n• Law: ₦300,000 – ₦350,000 per session\n\n**Returning Students (200–400 Level):**\n• Science-based: ₦200,000 – ₦250,000 per session\n• Arts/Management/Social Science: ₦180,000 – ₦220,000 per session\n\n**Acceptance Fee:** ₦50,000 (one-time, for newly admitted students)\n\n**Payment Method:**\n• Log in to the NAUB student portal at **portal.naub.edu.ng**\n• Generate a Remita invoice\n• Pay at any bank or via online banking\n\n⚠️ Fees are subject to change. Always confirm on the official portal."
-  },
-  {
-    "id": "hostel_accommodation",
-    "questions": [
-      "hostel", "accommodation at NAUB", "naub hostel fees",
-      "is accommodation available at NAUB", "where do students stay",
-      "hostel allocation naub", "naub hostel booking",
-      "how to get hostel at naub", "male hostel", "female hostel naub"
-    ],
-    "answer": "NAUB provides on-campus hostel accommodation for both male and female students.\n\n**Hostel Fees (per session):**\n• Approximately ₦40,000 – ₦60,000 depending on room type\n\n**How to Apply for Hostel:**\n1. Log in to the NAUB student portal\n2. Navigate to **'Accommodation'**\n3. Apply during the hostel allocation window (usually at the start of each session)\n4. Generate your Remita invoice and pay\n5. Collect your bed space allocation from the Student Affairs Division\n\n**Key Points:**\n• Hostel spaces are limited and allocated on a first-come, first-served basis\n• Priority is given to 100-level students and those with medical needs\n• Off-campus accommodation is available in Biu town for students who don't get hostel\n\nFor enquiries, contact the **Student Affairs Division** at the university administrative block."
-  },
-  {
-    "id": "academic_calendar",
-    "questions": [
-      "academic calendar", "resumption date", "when does school resume",
-      "registration date naub", "exam dates naub", "lecture period",
-      "semester naub", "naub session", "when does naub open",
-      "examination timetable naub", "naub calendar 2024", "2024 2025 academic calendar"
-    ],
-    "answer": "The NAUB Academic Calendar is published at the start of each session on the official website. For the 2024/2025 session, here is a general guide:\n\n📅 **First Semester:**\n• Resumption/Registration: October – November\n• Lectures: November – February\n• Semester Examinations: February – March\n\n📅 **Second Semester:**\n• Resumption/Registration: April\n• Lectures: April – July\n• Semester Examinations: July – August\n\n📅 **Long Vacation:** August – September\n\n⚠️ These are approximate dates. Always check the **official NAUB academic calendar** on www.naub.edu.ng or the notice boards on campus for the exact schedule."
-  },
-  {
-    "id": "course_registration",
-    "questions": [
-      "course registration", "how to register courses naub",
-      "course form naub", "add and drop courses naub",
-      "how to register for courses", "portal course registration",
-      "register my courses naub", "course reg"
-    ],
-    "answer": "Course registration at NAUB is done online through the student portal. Here's how:\n\n1. **Log in** to the student portal at **portal.naub.edu.ng**\n2. Ensure your school fees have been **fully paid** (course registration requires payment confirmation)\n3. Navigate to **'Course Registration'**\n4. Select your courses for the current semester\n5. Submit and **print your course registration form**\n6. Take the printed form to your **departmental office** for endorsement\n\n**Important:**\n• Register within the official registration period to avoid late registration fees\n• A late fee of approximately ₦5,000 applies for late registration\n• Maximum course load: 24 credit units per semester\n• Minimum course load: 15 credit units per semester\n\nFor help, visit your Faculty Officer or the Academic Registry."
-  },
-  {
-    "id": "student_portal",
-    "questions": [
-      "student portal", "naub portal", "how to log in to portal",
-      "portal login naub", "portal.naub.edu.ng", "online portal naub",
-      "how to access student portal", "forgot portal password naub"
-    ],
-    "answer": "The NAUB Student Portal is accessible at **portal.naub.edu.ng**.\n\n**How to log in:**\n• Username: Your **Matriculation Number** (e.g., NAUB/SCI/22/0001)\n• Password: Your default password is usually your **Date of Birth** (DDMMYYYY) for first-time login\n\n**If you forgot your password:**\n1. Click **'Forgot Password'** on the login page\n2. Enter your registered email address\n3. A password reset link will be sent to your email\n4. Alternatively, visit the **ICT Unit** on campus with your student ID for manual reset\n\n**Available on the portal:**\n• Course registration\n• Fee payment (Remita)\n• Hostel application\n• Exam timetable\n• Results (e-transcript)\n\nFor technical issues, contact the ICT Unit at **ict@naub.edu.ng**."
-  },
-  {
-    "id": "change_of_course",
-    "questions": [
-      "change of course", "how to change my course at NAUB",
-      "transfer to another department", "how to switch programme naub",
-      "change of department naub", "transfer naub", "course change procedure"
-    ],
-    "answer": "To change your course of study at NAUB, you must apply through the academic registry. Here is the procedure:\n\n**Steps:**\n1. Obtain a **Change of Course Form** from the Academic Registry\n2. Fill the form and obtain the signature/approval of:\n   • Your current **Head of Department (HOD)**\n   • The **HOD** of the new department\n   • The **Dean** of the faculty you are transferring to\n3. Submit the completed form to the **Academic Registry**\n4. Pay the prescribed **Change of Course fee** (approximately ₦5,000 – ₦10,000)\n5. Await approval and notification via your student portal\n\n**Eligibility:**\n• Change of course is usually allowed after **100 Level**\n• CGPA and O'Level requirements of the new course must be met\n• Changes are typically processed at the beginning of a new session\n\nContact the Academic Registry for the current processing fee and timeline."
-  },
-  {
-    "id": "result_verification",
-    "questions": [
-      "result verification", "how to verify my result", "transcript naub",
-      "verify result naub", "remark examination naub", "check result naub",
-      "naub result", "how to get transcript from naub"
-    ],
-    "answer": "**Result Checking:**\nResults are published on the NAUB student portal (portal.naub.edu.ng) after each examination. Log in with your matric number to view your semester results.\n\n**Result Verification/Official Transcript:**\n1. Write a formal letter to the **Registrar, NAUB** requesting verification or a transcript\n2. Attach a copy of your student ID and relevant results\n3. Pay the prescribed fee at the Bursary (approximately ₦5,000 per copy for transcripts)\n4. Submit your application to the **Academic Registry**\n5. Processing takes approximately **2–4 weeks**\n\n**Examination Remark:**\nIf you believe a result was wrongly graded:\n1. Apply for a remark within **4 weeks** of result publication\n2. Collect a **Remark Form** from the Registry\n3. Pay the remark fee (approximately ₦3,000 per course)\n4. Submit the form and payment receipt to the Registry"
-  },
-  {
-    "id": "gst_courses",
-    "questions": [
-      "GST courses", "general studies naub", "what are GST courses",
-      "how many GST courses in naub", "is GST compulsory naub",
-      "general studies requirement naub"
-    ],
-    "answer": "GST (General Studies) courses are compulsory for all NAUB students regardless of faculty. They are designed to provide a broad-based education.\n\n**Common GST Courses at NAUB:**\n• GST 101 – Use of English I\n• GST 102 – Use of English II\n• GST 111 – Logic and Scientific Reasoning\n• GST 112 – Nigerian Peoples and Culture\n• GST 121 – History and Philosophy of Science\n• GST 123 – Introduction to Computer Science\n• GST 211 – Entrepreneurship I\n• GST 212 – Entrepreneurship II\n• GST 221 – Peace Studies and Conflict Resolution\n• GST 222 – Introduction to Sociology\n\nAll GST courses carry 2 credit units each and are graded alongside your departmental courses."
-  },
-  {
-    "id": "naub_vc",
-    "questions": [
-      "who is the vice chancellor of naub", "naub vc", "vice chancellor naub",
-      "who is in charge of naub", "naub leadership", "rector naub",
-      "vice chancellor Nigerian Army University Biu"
-    ],
-    "answer": "The Vice-Chancellor of Nigerian Army University Biu (NAUB) is the chief academic and administrative officer of the university. For the current Vice-Chancellor's name and other principal officers, please visit the official NAUB website at **www.naub.edu.ng** under the **'About'** or **'Administration'** section, as this information is regularly updated."
-  },
-  {
-    "id": "postgraduate",
-    "questions": [
-      "postgraduate programmes naub", "masters degree naub", "phd naub",
-      "postgraduate school naub", "how to apply for masters naub",
-      "graduate school naub", "pg naub", "masters programmes available naub"
-    ],
-    "answer": "NAUB offers postgraduate programmes through the **Postgraduate School**. Available programmes include:\n\n**Masters Programmes (M.Sc / M.A / LLM):**\n• M.Sc Computer Science\n• M.Sc Mathematics\n• M.A English Language\n• M.Sc Economics\n• LLM Law (where available)\n\n**PhD Programmes:**\n• Available in select disciplines\n\n**Admission Requirements for Masters:**\n• A good Bachelor's degree (minimum Second Class Lower) in a relevant field\n• NYSC Discharge or Exemption Certificate\n• At least 2 referees (academic)\n• Entrance examination/interview may be required\n\n**Application:**\nVisit **www.naub.edu.ng/postgraduate** for the current application form and deadline. Contact the Postgraduate School directly for programme-specific requirements."
-  },
-  {
-    "id": "naub_library",
-    "questions": [
-      "library naub", "naub library location", "library hours naub",
-      "where is the library", "naub digital library", "library services naub"
-    ],
-    "answer": "The NAUB University Library is located at the center of the main campus, easily accessible from all faculties.\n\n**Library Hours:**\n• Monday – Friday: 8:00 AM – 9:00 PM\n• Saturday: 9:00 AM – 5:00 PM\n• Sunday: 12:00 PM – 6:00 PM\n\n**Services Available:**\n• Physical lending of books and journals\n• Digital/e-library resources\n• Postgraduate research room\n• Computer lab for student research\n• Periodicals and newspapers\n\nStudents must present their **valid student ID** to access the library and borrow resources. The library also provides access to online databases for academic research."
-  },
-  {
-    "id": "nysc",
-    "questions": [
-      "NYSC naub", "national youth service corps naub", "when do naub students serve",
-      "nysc mobilization naub", "when is nysc for naub graduates"
-    ],
-    "answer": "NYSC (National Youth Service Corps) mobilization for NAUB graduates typically occurs after the final Senate result ratification. Here's the process:\n\n1. **Results Ratification:** Senate approves your final results and certificate\n2. **Certificate Preparation:** The Academic Registry prepares your certificate and result\n3. **NYSC Senate List Upload:** NAUB uploads your name to the NYSC portal (enlist.nysc.gov.ng)\n4. **Personal Registration:** Log on to the NYSC portal and complete your registration\n5. **Batch Assignment:** You are assigned to a deployment batch\n\nThe Academic Registry or Student Affairs Division will notify students when mobilization lists are ready. Contact **registry@naub.edu.ng** for specific enquiries."
-  },
-  {
-    "id": "clearance",
-    "questions": [
-      "student clearance naub", "how to do clearance naub",
-      "graduation clearance naub", "final year clearance naub",
-      "how to clear naub"
-    ],
-    "answer": "Final year student clearance at NAUB involves visiting multiple offices to confirm no outstanding obligations. Here is the typical process:\n\n1. **Library:** Return all borrowed books and clear any fines\n2. **Bursary:** Clear all outstanding fees\n3. **Hostel/Student Affairs:** Return hostel keys (if applicable)\n4. **Departmental Office:** Get HOD clearance signature\n5. **Faculty Office:** Get Faculty Officer signature\n6. **Academic Registry:** Final clearance and collection of documents\n\nCollect the **Clearance Form** from the Registry, complete all stages, and return the signed form. Clearance is required before your results are processed and before NYSC mobilization."
-  },
-  {
-    "id": "ict_department",
-    "questions": [
-      "ict department naub", "computer science department naub",
-      "where is ict naub", "naub ict directorate", "ict unit naub",
-      "computer science building naub"
-    ],
-    "answer": "The **ICT Directorate** at NAUB is responsible for managing the university's IT infrastructure, student portal, and digital services. It is located near the Administrative Block on the main campus.\n\n**ICT Directorate Services:**\n• Student portal management and technical support\n• Campus internet services\n• Email and account setup for students/staff\n• Maintenance of computer labs\n\n**Contact:**\n📧 ict@naub.edu.ng\n🕐 Office Hours: Mon–Fri, 8:00 AM – 4:00 PM\n\nThe **Department of Computer Science** (for academic matters) is housed in the Faculty of Science building. For academic enquiries related to CS programmes, contact the HOD's office."
-  },
-  {
-    "id": "bursary",
-    "questions": [
-      "bursary naub", "finance office naub", "where to pay fees naub",
-      "bursary department naub", "school fees payment procedure"
-    ],
-    "answer": "The **Bursary Department** handles all financial transactions at NAUB, including school fees, acceptance fees, and other levies.\n\n**How to Pay:**\n1. Log in to your student portal at **portal.naub.edu.ng**\n2. Generate a **Remita Retrieval Reference (RRR)** number\n3. Pay online via internet banking or at any bank branch\n4. Return to the portal and confirm payment\n\n**Bursary Office Location:** Administrative Block, NAUB main campus\n**Email:** bursary@naub.edu.ng\n**Hours:** Mon–Fri, 8:00 AM – 4:00 PM\n\nAlways keep your payment receipt. For any payment discrepancies, visit the Bursary with your receipt and student ID."
-  },
-  {
-    "id": "student_union",
-    "questions": [
-      "student union naub", "student association naub", "sug naub",
-      "student union government naub", "naub students union"
-    ],
-    "answer": "The **Student Union Government (SUG)** is the recognized body representing all students at NAUB. SUG elections are conducted annually by the Independent National Electoral Commission of NAUB (INEC-NAUB).\n\nThe SUG advocates for students' rights, organizes social and academic activities, and liaises between students and university management. Their office is located at the Student Centre on campus.\n\nFor concerns or issues you'd like escalated to university management, you can approach your elected SUG representatives or submit a formal complaint to the **Student Affairs Division**."
-  },
-  {
-    "id": "jamb",
-    "questions": [
-      "JAMB naub", "jamb cutoff mark naub", "minimum jamb score naub",
-      "jamb brochure naub", "naub jamb subject combination",
-      "what subjects for computer science naub jamb"
-    ],
-    "answer": "For JAMB (UTME) to NAUB:\n\n**General Minimum Cut-off:** 140\n**Science/Computer Science/Mathematics/Physics/Chemistry:** 160+\n**Law:** 180+\n\n**Subject Combinations (examples):**\n• **Computer Science:** Mathematics, Physics, Chemistry (or Biology)\n• **Medicine (if available):** Biology, Chemistry, Physics\n• **Law:** Literature or Government, CRS/IRS, any Social Science subject\n• **Accounting/Business Admin:** Mathematics, Economics, Government/Commerce\n• **English Language:** Literature, CRS/IRS, Government or History\n\nAlways confirm your exact subject combination on the **JAMB Brochure** at www.jamb.gov.ng/Brochure and verify with NAUB at www.naub.edu.ng."
-  },
-  {
-    "id": "medical_center",
-    "questions": [
-      "naub clinic", "medical center naub", "health services naub",
-      "hospital naub", "sick bay naub", "where is the clinic at naub"
-    ],
-    "answer": "NAUB has a **Medical/Health Centre** on campus that provides basic health services to students and staff.\n\n**Services:**\n• Outpatient consultation\n• First aid and emergency stabilization\n• Dispensary (basic medications)\n• Referral to Biu General Hospital for complex cases\n\n**Location:** Near the Student Hostels\n**Hours:** 24 hours / 7 days a week for emergencies\n**Regular Clinic Hours:** 8:00 AM – 4:00 PM (Mon–Fri)\n\nAll registered students are entitled to basic health care on campus. Present your **student ID** at the clinic."
-  },
-  {
-    "id": "sports",
-    "questions": [
-      "sports at naub", "naub sports facilities", "naub football", "sport complex naub",
-      "extracurricular activities naub", "clubs and societies naub"
-    ],
-    "answer": "NAUB encourages sports and extracurricular activities among students. Available facilities and activities include:\n\n⚽ **Sports Facilities:**\n• Football pitch\n• Basketball court\n• Volleyball court\n• Table tennis hall\n• Athletics track\n\n🎯 **Clubs & Societies:**\n• NAUB Press Club\n• Law Students Association\n• Computer Science Students Association (CSSA)\n• NAUB Debate Club\n• Muslim Students Society (MSS)\n• Fellowship of Christian Students (FCS)\n• Medical Students Association (if applicable)\n\nFor information on joining a club or participating in inter-university competitions, contact the **Student Affairs Division**."
+    "answer": "Hello! 👋 Welcome to the NAUB Enquiry Chatbot. I'm your virtual assistant for Nigerian Army University Biu. How can I help you today? You can ask me about admissions, faculties, hostel accommodation, examinations, discipline rules, and more!",
+    "category": "general"
   },
   {
     "id": "thanks_bye",
     "questions": [
-      "thank you", "thanks", "bye", "goodbye", "that's all",
-      "I'm done", "ok thanks", "okay thanks", "cheers", "thank you so much",
+      "thank you",
+      "thanks",
+      "bye",
+      "goodbye",
+      "that's all",
+      "I'm done",
+      "ok thanks",
+      "okay thanks",
+      "cheers",
+      "thank you so much",
       "you have been helpful"
     ],
-    "answer": "You're welcome! 😊 It was a pleasure assisting you. If you have more questions about NAUB in the future, don't hesitate to ask. Best of luck with your studies! 🎓\n\nFor urgent matters, remember you can always reach us at info@naub.edu.ng or visit the relevant office on campus."
+    "answer": "You're welcome! 😊 It was a pleasure assisting you. If you have more questions about NAUB in the future, don't hesitate to ask. Best of luck with your studies! 🎓",
+    "category": "general"
+  },
+  {
+    "id": "about_naub",
+    "questions": [
+      "what is NAUB",
+      "tell me about NAUB",
+      "about Nigerian Army University Biu",
+      "history of NAUB",
+      "NAUB overview",
+      "what kind of university is NAUB",
+      "naub background",
+      "who owns naub",
+      "who established naub"
+    ],
+    "answer": "Nigerian Army University Biu (NAUB) was established by the Federal Government of Nigeria through an Act of the National Assembly (the Nigerian Army University Biu Establishment Act) as a solution centre for the technological and other operational problems of the Nigerian Army, the military, and the nation. It is designed to serve as a centre of excellence for learning while also creating the critical mass for research, innovation, testing and development in a 21st century setting. NAUB is known as Africa's First Green University and combines both military and civilian student populations.\n\nMission: To develop highly skilled military and civilian manpower with distinctive competence capable of providing technological solutions to the problems of the Nigerian Army, the military, and the nation.\n\nVision: To become a solution centre in technology, research and development for the promotion of self-reliance, creativity and innovation in addressing the challenges of the Nigerian Army, the military, and the nation.\n\nMotto: Knowledge, Creativity and Innovation for National Self-Reliance.",
+    "category": "general"
+  },
+  {
+    "id": "naub_history_biu",
+    "questions": [
+      "history of biu town",
+      "brief history of biu",
+      "where does the name biu come from",
+      "biu emirate history",
+      "biu kingdom"
+    ],
+    "answer": "Biu is a Local Government Area in southern Borno State, Nigeria, and the administrative centre of the LGA. It was once the capital of the Biu Kingdom, which became established around 1670. The name 'Biu' was initially called 'Viu', which in the Babur and Bura languages means 'high'. The Emir's palace is situated in the town. With British rule, Biu Division was created in 1918, and the area became the Biu Emirate/Federation. The inhabitants of the region are mainly Pabir, Bura, Marghi, Kanuri, and Fulani speaking peoples, among others. Biu has a small mining industry (iron ore, gravel, feldspar, mica, granite and more) and a mixed agricultural economy, making the location historically and economically significant for hosting NAUB.",
+    "category": "general"
+  },
+  {
+    "id": "naub_location",
+    "questions": [
+      "where is NAUB located",
+      "NAUB address",
+      "where is the university",
+      "how do I get to NAUB",
+      "naub location",
+      "which state is NAUB",
+      "NAUB campus location",
+      "where is naub campus"
+    ],
+    "answer": "Nigerian Army University Biu (NAUB) is located in Biu, Borno State, Nigeria. The University occupies an area bounded by the Biu–Gombe and Biu–Numan roads, covering approximately 5,000 hectares. Official address: No 1, Gombe Road, PMB 1500, Biu, Borno State, Nigeria. NAUB also has a Liaison Office at the Nigerian Army Resource Centre, Mambilla Barracks Junction, Asokoro, Abuja.",
+    "category": "general"
+  },
+  {
+    "id": "naub_contact",
+    "questions": [
+      "NAUB contact",
+      "how to contact NAUB",
+      "NAUB phone number",
+      "NAUB email",
+      "NAUB website",
+      "contact information",
+      "naub office",
+      "registrar contact",
+      "admission office contact"
+    ],
+    "answer": "Here are NAUB's official contact details:\n\n📞 Mobile: +234 806 649 2828\n🌐 Website: www.naub.edu.ng\n📧 General enquiries: info@naub.edu.ng\n📧 Support: support@naub.edu.ng\n📧 Vice Chancellor's office: vc@naub.edu.ng\n📧 Registrar: registrar@naub.edu.ng\n📧 Bursar: bursar@naub.edu.ng\n📧 Library: library@naub.edu.ng\n📍 Address: No 1, Gombe Road, PMB 1500, Biu, Borno State, Nigeria.\n📍 Abuja Liaison Office: Nigerian Army Resource Centre, Mambilla Barracks Junction, Asokoro, Abuja.",
+    "category": "general"
+  },
+  {
+    "id": "naub_governance_structure",
+    "questions": [
+      "how is naub governed",
+      "naub governance",
+      "principal officers naub",
+      "university organs naub",
+      "who runs naub"
+    ],
+    "answer": "NAUB's principal organs, as specified in the Nigerian Army University Biu (Establishment) Act, are: the Council, the Senate, the Congregation, the Convocation, and the University's Principal Officers.\n\n• The Council is the highest policy-making body, managing administration and finances, and meets at least four times a year.\n• The Senate, presided over by the Vice-Chancellor, has supreme responsibility for the University's academic work — admissions, examinations, discipline, and research.\n• The Congregation discusses matters of interest (academic and non-academic) to members of the University community.\n• The Convocation, made up of all degree-holding staff and all graduates/students, holds the annual Convocation Ceremony where degrees, diplomas and prizes are awarded.",
+    "category": "general"
+  },
+  {
+    "id": "naub_visitor",
+    "questions": [
+      "who is the visitor of naub",
+      "naub visitor",
+      "who is the chancellor of naub"
+    ],
+    "answer": "The Visitor to Nigerian Army University Biu is the President and Commander-in-Chief of the Armed Forces of the Federal Republic of Nigeria, as specified in the NAUB Establishment Act.",
+    "category": "general"
+  },
+  {
+    "id": "naub_governing_council",
+    "questions": [
+      "who is the chairman of the governing council",
+      "naub governing council chairman",
+      "who chairs naub council",
+      "governing council naub"
+    ],
+    "answer": "The Chairman of the Governing Council of Nigerian Army University Biu is Dr. Awwal Bawa Moriki. The Council is the highest policy-making body of the University, managing administration and finance matters, and meets at least four times a year. Membership includes the Pro-Chancellor (Chairman), the Vice-Chancellor, the Deputy Vice-Chancellor, a representative of the Federal Ministry of Education, a representative from the Ministry of Defence, the Chief of Army Staff or representative, and other appointed and elected members representing the Senate, Congregation, Convocation, the public, and the host community. The Registrar serves as Secretary to the Council.",
+    "category": "general"
+  },
+  {
+    "id": "naub_vc",
+    "questions": [
+      "who is the vice chancellor of naub",
+      "naub vc",
+      "vice chancellor naub",
+      "who is in charge of naub",
+      "naub leadership",
+      "vice chancellor Nigerian Army University Biu",
+      "current vc naub"
+    ],
+    "answer": "The Vice-Chancellor of Nigerian Army University Biu (NAUB) is Professor Lawan Bala Buratai, who assumed office in April 2025 as the third substantive Vice-Chancellor. He is a Professor of Biochemistry who earned his PhD from Ahmadu Bello University (ABU). He succeeded Professor Kyari Mohammed, who completed a single five-year term as Vice-Chancellor (2020–2025); the pioneer Vice-Chancellor was Professor David Iliya Malgwi (appointed 2019). The Vice-Chancellor acts as the chief executive and academic head of the University, presiding over the Senate and managing day-to-day operations.",
+    "category": "general"
+  },
+  {
+    "id": "naub_dvc_military",
+    "questions": [
+      "who is the deputy vice chancellor military naub",
+      "dvc military naub",
+      "deputy vice chancellor naub"
+    ],
+    "answer": "The Deputy Vice-Chancellor (Military) at NAUB oversees the integration of regimental standards into campus life and curriculum. This role is currently held (in an acting capacity) by Lieutenant Colonel A.Y. Bello, PhD, who assumed duty on 2 December 2025, succeeding Brigadier General J.T. Aun.",
+    "category": "general"
+  },
+  {
+    "id": "naub_registrar",
+    "questions": [
+      "who is the registrar of naub",
+      "naub registrar",
+      "registrar naub contact",
+      "acting registrar naub"
+    ],
+    "answer": "The Acting Registrar of Nigerian Army University Biu is Lieutenant Colonel Oyono Stephen Job, who assumed duty on 21 November 2025. He is a senior officer of the Nigerian Army Education Corps, holding a BSc in Physics (University of Calabar), a PGDE (Usmanu Danfodiyo University, Sokoto), and postgraduate degrees in International Affairs and Diplomacy, Peace and Strategic Studies, and Leadership and Strategic Studies. The Registrar's office can be reached at registrar@naub.edu.ng. The Registrar is also the Secretary to the University Council.",
+    "category": "general"
+  },
+  {
+    "id": "naub_librarian",
+    "questions": [
+      "who is the university librarian naub",
+      "naub librarian",
+      "university librarian contact"
+    ],
+    "answer": "The Acting University Librarian of NAUB is Lieutenant Colonel Bello Ahmadu, who assumed duty on 15 April 2024. He has served in several instructional and library-related roles across the Nigerian Army, including as College Librarian at the Nigerian Army School of Education, Ilorin, and Senior Librarian at the Nigerian Defence Academy, Kaduna. The library can be reached at library@naub.edu.ng.",
+    "category": "general"
+  },
+  {
+    "id": "naub_chief_security_officer",
+    "questions": [
+      "who is the chief security officer naub",
+      "naub chief security officer",
+      "csa naub security head"
+    ],
+    "answer": "The Chief Security Officer of Nigerian Army University Biu is Brigadier General A. Ahmed (Rtd). The Security Services Division operates under the Office of the Vice-Chancellor and is headed by the Chief Security Officer, working with the Security Committee to maintain law and order, protect lives and property, and investigate criminal activity on campus.",
+    "category": "general"
+  },
+  {
+    "id": "naub_faculties",
+    "questions": [
+      "faculties in NAUB",
+      "what faculties does NAUB have",
+      "naub faculties list",
+      "list of faculties",
+      "naub schools",
+      "colleges in naub",
+      "how many faculties does naub have"
+    ],
+    "answer": "NAUB currently has six (6) Faculties:\n\n1. 🎓 Faculty of Arts and Management Sciences\n2. 💻 Faculty of Computing\n3. ⚙️ Faculty of Engineering & Technology\n4. 🌳 Faculty of Environmental Sciences\n5. 🔬 Faculty of Natural & Applied Sciences\n6. 🏛️ Faculty of Social Sciences\n\nEach faculty houses several departments offering accredited undergraduate programmes. Ask me about a specific faculty's departments and programmes for more detail!",
+    "category": "general"
+  },
+  {
+    "id": "faculty_arts_management",
+    "questions": [
+      "departments in faculty of arts and management sciences",
+      "what courses are in faculty of arts and management sciences",
+      "accounting department naub",
+      "history department naub",
+      "languages department naub",
+      "management department naub"
+    ],
+    "answer": "The Faculty of Arts and Management Sciences has the following departments and programmes:\n\n• Department of Accounting — BSc Accounting\n• Department of History — BA Military History\n• Department of Languages — BA Arabic, BA English\n• Department of Management — BSc Management, BSc Transport & Logistics Management",
+    "category": "general"
+  },
+  {
+    "id": "faculty_computing",
+    "questions": [
+      "departments in faculty of computing",
+      "fcom departments",
+      "courses in faculty of computing",
+      "computer science department naub",
+      "cyber security department naub",
+      "software engineering department naub",
+      "information technology department naub"
+    ],
+    "answer": "The Faculty of Computing has the following departments and programmes:\n\n• Department of Computer Science — BSc Computer Science\n• Department of Cyber Security — BSc Cyber Security\n• Department of Information Systems — BSc Information Systems\n• Department of Information Technology — BSc Information Technology\n• Department of Software Engineering — BSc Software Engineering",
+    "category": "general"
+  },
+  {
+    "id": "faculty_engineering_technology",
+    "questions": [
+      "departments in faculty of engineering and technology",
+      "engineering courses naub",
+      "civil engineering department naub",
+      "electrical engineering department naub",
+      "mechanical engineering department naub"
+    ],
+    "answer": "The Faculty of Engineering & Technology has the following departments and programmes:\n\n• Department of Civil Engineering — B.Eng. Civil Engineering\n• Department of Electrical & Electronics Engineering — B.Eng. Electrical & Electronics Engineering\n• Department of Mechanical Engineering — B.Eng. Mechanical Engineering\n\nEngineering programmes (B.Eng.) run for five (5) years for UTME entry.",
+    "category": "general"
+  },
+  {
+    "id": "faculty_environmental_sciences",
+    "questions": [
+      "departments in faculty of environmental sciences",
+      "environmental sciences courses naub",
+      "building technology department naub",
+      "estate management department naub",
+      "surveying department naub",
+      "urban and regional planning naub"
+    ],
+    "answer": "The Faculty of Environmental Sciences has the following departments and programmes:\n\n• Department of Building Technology — B.Tech. Building\n• Department of Environmental Management — B.Tech. Environmental Management\n• Department of Estate Management — B.Tech. Estate Management\n• Department of Surveying & Geo-informatics — B.Tech. Surveying & Geo-informatics\n• Department of Urban & Regional Planning — B.Tech. Urban & Regional Planning\n\nB.Tech. programmes in this faculty run for five (5) years for UTME entry.",
+    "category": "general"
+  },
+  {
+    "id": "faculty_natural_applied_sciences",
+    "questions": [
+      "departments in faculty of natural and applied sciences",
+      "science courses naub",
+      "biology department naub",
+      "chemistry department naub",
+      "mathematics department naub",
+      "physics department naub"
+    ],
+    "answer": "The Faculty of Natural & Applied Sciences has the following departments and programmes:\n\n• Department of Biology — BSc Biology\n• Department of Chemistry — BSc Chemistry\n• Department of Mathematics — BSc Mathematics\n• Department of Physics — BSc Physics, BSc Electronics\n\nThese are four (4) year programmes for UTME entry.",
+    "category": "general"
+  },
+  {
+    "id": "faculty_social_sciences",
+    "questions": [
+      "departments in faculty of social sciences",
+      "social sciences courses naub",
+      "economics department naub",
+      "political science department naub",
+      "sociology department naub",
+      "geography department naub"
+    ],
+    "answer": "The Faculty of Social Sciences has the following departments and programmes:\n\n• Department of Economics — BSc Economics\n• Department of Political Science — BSc International Relations, BSc Peace Studies & Conflict Resolution, BSc Political Science\n• Department of Sociology — BSc Criminology & Security Studies, BSc Psychology, BSc Sociology\n• Department of Geography — BSc Geography",
+    "category": "general"
+  },
+  {
+    "id": "programmes_available",
+    "questions": [
+      "programmes offered in NAUB",
+      "courses in NAUB",
+      "what can I study at NAUB",
+      "available programmes",
+      "list of courses",
+      "undergraduate programmes",
+      "what programmes does NAUB offer",
+      "courses offered naub"
+    ],
+    "answer": "NAUB offers undergraduate programmes across six faculties: Arts and Management Sciences, Computing, Engineering & Technology, Environmental Sciences, Natural & Applied Sciences, and Social Sciences. Degree titles awarded include BSc, BA, B.Eng., and B.Tech. Ask me about a specific faculty (e.g. 'departments in Faculty of Computing') for the full list of departments and programmes in that faculty.",
+    "category": "general"
+  },
+  {
+    "id": "admission_requirements",
+    "questions": [
+      "admission requirements",
+      "how to apply to NAUB",
+      "NAUB admission",
+      "requirements for admission",
+      "what do I need for NAUB admission",
+      "naub admission process",
+      "how to get admission into naub",
+      "UTME naub",
+      "O level requirements naub"
+    ],
+    "answer": "To gain admission into NAUB through UTME, you need:\n\na. Five credit passes in O'Level (WAEC/NECO/GCE) in the relevant field, including English Language and Mathematics, in not more than two sittings.\nb. Four relevant subject combinations in JAMB with the required grade points.\nc. Candidates must not be below 16 years of age.\n\nFor Direct Entry (DE) admission:\na. Five credit passes in O'Level in the relevant field, including English Language and Mathematics, in not more than two sittings.\nb. An A-Level certificate at minimum of lower credit in ND, or 10 points in NCE, in a relevant discipline.\n\nAdmission is processed through JAMB CAPS and NAUB's own Post-UTME/DE screening exercise. Visit www.naub.edu.ng for the current admission form and deadlines.",
+    "category": "general"
+  },
+  {
+    "id": "degree_duration",
+    "questions": [
+      "how long is a degree at naub",
+      "duration of programmes naub",
+      "how many years is computer science at naub",
+      "how many years is engineering at naub"
+    ],
+    "answer": "Programme durations at NAUB (for UTME entry) are:\n• Four (4) years — for most programmes, except Engineering and Environmental Sciences.\n• Five (5) years — for programmes in the Faculty of Engineering & Technology and the Faculty of Environmental Sciences.\n\nFor Direct Entry students, durations are three (3) years, except Engineering and Environmental Sciences programmes which are four (4) years.\n\nStudents are not permitted to exceed an additional 50% of the minimum programme duration if they fail to graduate within the standard number of years.",
+    "category": "general"
+  },
+  {
+    "id": "degree_titles",
+    "questions": [
+      "what degree titles does naub award",
+      "types of degrees naub",
+      "bsc ba beng btech naub"
+    ],
+    "answer": "NAUB awards the following degree titles: Bachelor of Science (B.Sc.), Bachelor of Arts (B.A.), Bachelor of Engineering (B.Eng.), and Bachelor of Technology (B.Tech.), depending on the faculty and programme.",
+    "category": "general"
+  },
+  {
+    "id": "graduation_requirements",
+    "questions": [
+      "graduation requirements naub",
+      "how to graduate from naub",
+      "what do I need to graduate",
+      "minimum credit units to graduate"
+    ],
+    "answer": "To qualify for a degree at NAUB, a student must:\ni. Attain at least 75% attendance for each course.\nii. Effectively participate in tutorials in their discipline.\niii. Complete continuous assessment and practical work, which forms part of the degree assessment.\niv. Undertake a properly supervised and graded project.\nv. Take and pass the end-of-course examinations.\n\nThe minimum number of credit units for the award of a degree is 120 units, subject to Departmental and Faculty requirements.",
+    "category": "general"
+  },
+  {
+    "id": "degree_classification",
+    "questions": [
+      "degree classification naub",
+      "cgpa classes naub",
+      "first class cgpa naub",
+      "second class cgpa naub",
+      "what cgpa is first class"
+    ],
+    "answer": "NAUB degree classifications are based on CGPA as follows:\n\n• 4.50 – 5.00 → First Class\n• 3.50 – 4.49 → Second Class Honours (Upper Division)\n• 2.40 – 3.49 → Second Class Honours (Lower Division)\n• 1.50 – 2.39 → Third Class Honours\n• 1.00 – 1.49 → Pass\n• Less than 1.00 → Fail (no degree awarded)\n\nGrades from ALL courses (compulsory or optional, passed or failed, including repeated courses) are included in the CGPA computation.",
+    "category": "general"
+  },
+  {
+    "id": "grading_system",
+    "questions": [
+      "grading system naub",
+      "letter grades naub",
+      "marks and grades naub",
+      "how is cgpa calculated"
+    ],
+    "answer": "NAUB's grading scale is:\n\n• 70–100% → A (5 points)\n• 60–69% → B (4 points)\n• 50–59% → C (3 points)\n• 45–49% → D (2 points)\n• 40–44% → E (1 point)\n• Below 40% → F (0 points)\n\nGrade Point Average (GPA) is the weighted average of grade points earned in courses taken during a semester. Cumulative Grade Point Average (CGPA) is the up-to-date mean of grade points earned across a student's entire programme.",
+    "category": "general"
+  },
+  {
+    "id": "change_of_course",
+    "questions": [
+      "change of course",
+      "how to change my course at NAUB",
+      "transfer to another department",
+      "how to switch programme naub",
+      "change of department naub",
+      "course change procedure"
+    ],
+    "answer": "Students who wish to change their programme of study may do so if:\ni. A vacancy exists in the desired course of study, and all admission requirements for it are satisfied.\nii. The student meets the required CGPA as determined by the receiving department.\niii. The student has registered for and passed the 100 or 200 level core courses of the desired programme.\n\nAny change of course is subject to Senate approval.",
+    "category": "general"
+  },
+  {
+    "id": "inter_university_transfer",
+    "questions": [
+      "inter university transfer naub",
+      "transfer from another university to naub",
+      "can I transfer to naub"
+    ],
+    "answer": "Students currently registered in a full-time programme at another University may transfer to NAUB at the beginning of a new session, provided they have a CGPA of at least 2.40 in the programme being offered at NAUB. Applications must be submitted with transcripts to the Registrar at least two months before commencement of the session, based on Senate recommendation, and must include an attestation that the applicant was not dismissed for misconduct from their previous institution. A processing fee applies.",
+    "category": "general"
+  },
+  {
+    "id": "deferment",
+    "questions": [
+      "deferment naub",
+      "how to defer my studies",
+      "defer admission naub",
+      "postpone semester naub"
+    ],
+    "answer": "A student may apply for deferment of studies through the Senate Business Committee, via the Dean and Head of Department. Deferment applications are subject to Senate approval and are valid for only one academic year, unless otherwise approved by the Senate.",
+    "category": "general"
+  },
+  {
+    "id": "course_credit_system",
+    "questions": [
+      "course credit system naub",
+      "what is a credit unit",
+      "how are credit units calculated"
+    ],
+    "answer": "NAUB uses a Course Credit System where subject areas are broken into unit courses. One Credit Unit equals one hour of lecture or tutorial per week per semester (or equivalent practical/lab time). The minimum credit load requirement varies by level and programme; students must satisfy minimum and maximum credit limits set by their department and faculty each semester.",
+    "category": "general"
+  },
+  {
+    "id": "add_drop_courses",
+    "questions": [
+      "add drop courses naub",
+      "how to add or drop a course",
+      "course registration changes naub"
+    ],
+    "answer": "Students may make minor changes to registered courses (adding/dropping) at the beginning of the second semester. To do this:\na. Collect the Drop/Add form from the Academic Affairs Division after paying the prescribed fee at the Bursary/designated banks.\nb. Discuss proposed changes with your Level Coordinator.\nc. Obtain endorsement from all concerned departments and faculties.\nd. Complete the process within three weeks of the commencement of lectures.\n\nA course cannot be added or dropped once more than 25% of it has been covered.",
+    "category": "general"
+  },
+  {
+    "id": "repeating_failed_courses",
+    "questions": [
+      "carry over naub",
+      "repeating failed courses naub",
+      "what happens if i fail a course",
+      "withdrawal from naub"
+    ],
+    "answer": "A student who fails a required course must register for it as a 'carry-over' in subsequent sessions until cleared. A student with six (6) or more carry-overs must repeat the level and register for all courses, whether previously passed or failed. A student repeating twice at the same level will be withdrawn from the University, although consideration may be given for a transfer to another programme within NAUB if entry requirements are met.",
+    "category": "general"
+  },
+  {
+    "id": "examination_rules_general",
+    "questions": [
+      "examination rules naub",
+      "exam regulations naub",
+      "what can I bring into the exam hall",
+      "exam conduct rules"
+    ],
+    "answer": "Key examination rules at NAUB include:\n• Students must arrive at least 30 minutes before the scheduled exam time.\n• A candidate may not be admitted more than 30 minutes after the exam has started.\n• Students must sign the attendance form and bring their examination/identity card, displayed prominently on the desk.\n• No unauthorized books, papers, or aids are allowed in the exam hall.\n• No handbags or briefcases may be brought into the examination room.\n• Students must not assist or accept assistance from other candidates.\n• Scripts must be submitted directly to the invigilator before leaving.",
+    "category": "general"
+  },
+  {
+    "id": "examination_materials_allowed",
+    "questions": [
+      "what can I bring to the exam",
+      "materials allowed in exam hall naub",
+      "can I bring a calculator to exam"
+    ],
+    "answer": "Students are allowed to bring the following into the Examination Hall: Biro pens, pencils, erasers, sharpeners, rulers, mathematical sets (where necessary), calculators (non-programmable only), drawing instruments (where applicable), and any other material specified by the Examinations Committee. Borrowing or lending items during an examination is not permitted.",
+    "category": "general"
+  },
+  {
+    "id": "examination_misconduct_penalties",
+    "questions": [
+      "examination malpractice punishment naub",
+      "cheating in exam punishment naub",
+      "what happens if I cheat in exam",
+      "exam offences naub"
+    ],
+    "answer": "NAUB categorizes examination offences by severity:\n\nWarning offences (Warning Form): attempting to enter with unauthorized materials, writing your name instead of registration number, misconduct as deemed by the committee, talking during exams.\n\nExpulsion offences: impersonation, exchanging identification/answer scripts, introducing unauthorized materials with intent to use, theft/illegal removal of scripts, causing fire/flooding/violence, destroying exhibits, or a repeated rustication-level offence.\n\nRustication offences (one session): facilitating or aiding cheating, or being caught with (but not using) unauthorized materials.\n\nThese categories are not exhaustive — the Senate's Examination Misconduct Committee may treat other cases on their merit.",
+    "category": "general"
+  },
+  {
+    "id": "examination_appeal",
+    "questions": [
+      "how to appeal exam result naub",
+      "exam complaint procedure naub",
+      "petition against exam result"
+    ],
+    "answer": "A student with a complaint about an examination or result should submit it in writing to the Vice-Chancellor, through the Head of Department and Dean, with a copy to the Dean of Student Affairs. An appropriate fee must be paid to the Bursary and the payment receipt attached to the complaint letter. If the student is vindicated after investigation, the fee is refunded; if the complaint is found to be based on falsehood, the student may be rusticated or expelled.",
+    "category": "general"
+  },
+  {
+    "id": "result_verification",
+    "questions": [
+      "result verification",
+      "how to verify my result",
+      "transcript naub",
+      "verify result naub",
+      "check result naub",
+      "naub result",
+      "how to get transcript from naub"
+    ],
+    "answer": "Results are approved by the Senate and published via notice boards or online within one week. Semester statements of results are signed by the respective Head of Department; the final statement of results is signed by the Registrar (or the Academic Secretary on their behalf). Transcripts of academic records are issued to institutions/organizations on request, upon payment of the prescribed fee to the Bursary Department.",
+    "category": "general"
+  },
+  {
+    "id": "student_affairs_division",
+    "questions": [
+      "student affairs division naub",
+      "dean of student affairs naub",
+      "who handles student welfare naub"
+    ],
+    "answer": "The Student Affairs Division is in charge of all non-academic student services at NAUB. It is headed by a Dean, appointed by the Vice-Chancellor, and is responsible for student welfare, discipline, accommodation in Halls of Residence, and general student wellbeing. The Division includes the Office of the Dean, Central Administration (Student Affairs Officer), Guidance and Counselling Unit, Student's Relations Officer/Hall Administration, and the Sports and Recreation Unit.",
+    "category": "general"
+  },
+  {
+    "id": "guidance_counselling",
+    "questions": [
+      "guidance and counselling naub",
+      "student counselling naub",
+      "who can I talk to about personal problems naub"
+    ],
+    "answer": "NAUB's Guidance and Counselling Unit is headed by the Student Counselor, who reports to the Dean of Student Affairs through the Student Affairs Officer. The Unit provides confidential, face-to-face counselling on academic, social, emotional, and career matters, and organizes orientation lectures for new students. Consultations are always confidential unless the student expresses otherwise. Students can visit the Counselling Unit located in the Student Affairs Division for assistance.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_accommodation",
+    "questions": [
+      "hostel",
+      "accommodation at NAUB",
+      "is accommodation available at NAUB",
+      "where do students stay",
+      "hostel allocation naub",
+      "how to get hostel at naub"
+    ],
+    "answer": "Hostel accommodation at NAUB is a privilege, not a right, and is voluntary. The University provides accommodation to eligible and interested students, subject to its rules. Key conditions:\n• Bed spaces are allocated for one academic session only; full accommodation charges are payable in advance at the Bursary.\n• Rooms are occupied on a shared basis, as determined by the University.\n• Students who withdraw from their hall will not be refunded, in whole or in part.\n• Bed spaces are not transferable, and squatting or subletting is a serious offence that can lead to expulsion from the hostel.\n• Allocated bed spaces must be occupied within two weeks or the allocation is revoked.\n\nFor current hostel fees and application procedures, check the student portal or the Student Affairs Division, as charges are reviewed by the University from time to time.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_visiting_hours",
+    "questions": [
+      "hostel visiting hours naub",
+      "when can visitors come to hostel",
+      "hall of residence visiting hours"
+    ],
+    "answer": "Visiting hours in NAUB Halls of Residence are:\n• Mondays – Fridays: 5pm to 7pm\n• Saturdays & Sundays: 11am to 8pm\n• Public Holidays: 11am to 8pm\n\nVisitors must sign the visitors' register with the Porter before entering and sign out on departure. Violating visiting hours can lead to expulsion from the hostel.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_prohibited_items",
+    "questions": [
+      "what is not allowed in the hostel",
+      "can I keep pets in hostel naub",
+      "can I cook in the hostel",
+      "electrical appliances hostel naub"
+    ],
+    "answer": "NAUB hostel rules prohibit:\n• Keeping pets in or around Halls of Residence.\n• Cooking with stoves/cookers in rooms — cooking is only allowed in designated areas.\n• Using candles (battery flashlights only during blackouts).\n• Using unregistered electrical appliances — only small transistor radios, tape recorders, and small TVs are allowed, and must be registered (free) at the hall office.\n• Squatting (having another person share your single bed space) — this leads to ejection from the hostel and a Disciplinary Committee hearing.",
+    "category": "general"
+  },
+  {
+    "id": "dress_code",
+    "questions": [
+      "naub dress code",
+      "what can students wear at naub",
+      "dress code rules naub",
+      "what is not allowed to wear at naub"
+    ],
+    "answer": "NAUB has an approved dress code for students. Acceptable dress must be opaque (not see-through), loose (not tight), cover the stomach, back, shoulders, chest, and legs to at least the knee, with shoulder straps at least 5cm wide, and trousers/shorts worn at the natural waistline.\n\nUnacceptable dress includes: transparent or see-through clothing, dresses exposing the stomach or indecent body parts, slit skirts/dresses above the knee, sleeveless 'spaghetti strap' tops, very tight body-hugging clothes, unbuttoned/open shirts, clothing with drug/alcohol/weapon-related or offensive imagery, tattered jeans, and low-waisted or hipster trousers.\n\nViolators may be barred from classrooms, lecture theatres, and examination halls, and persistent offenders may be disciplined or rusticated.",
+    "category": "general"
+  },
+  {
+    "id": "general_conduct_offences",
+    "questions": [
+      "gross misconduct naub",
+      "what counts as misconduct naub",
+      "student discipline rules naub",
+      "offences and punishment naub"
+    ],
+    "answer": "NAUB categorizes student offences into three levels:\n\nGross Misconduct (attracts expulsion): riotous/disorderly behaviour, possession of dangerous weapons/explosives, rape and gender-based violence, use of dangerous drugs (e.g. hemp, tramadol, cocaine) and assault causing grievous bodily harm, cultism/secret societies, stealing, and document forgery/impersonation.\n\nMisconduct (attracts one semester's rustication): furnishing false information, wilful damage to property, aiding/inciting others to commit the above.\n\nMisdemeanour (attracts a warning): failure to comply with directives, insubordination to authority; repeated misdemeanours attract rustication.",
+    "category": "general"
+  },
+  {
+    "id": "disciplinary_procedure",
+    "questions": [
+      "how does student discipline work at naub",
+      "disciplinary process naub",
+      "can I appeal a rustication naub"
+    ],
+    "answer": "Where the Vice-Chancellor is satisfied a student has been guilty of misconduct, they may (without prejudice to other powers) direct that the student be restricted from certain activities/facilities, be rusticated, or be expelled from the University. A student may appeal such a direction to the Senate within the prescribed period; the appeal does not suspend the direction while pending. The Vice-Chancellor may delegate disciplinary powers to a disciplinary board.",
+    "category": "general"
+  },
+  {
+    "id": "security_services_division",
+    "questions": [
+      "security services division naub",
+      "campus security naub",
+      "who handles security at naub",
+      "naub security hotline"
+    ],
+    "answer": "The Security Services Division operates under the Office of the Vice-Chancellor, headed by the Chief Security Officer, working with the Security Committee. Its responsibilities include maintaining law and order, protecting lives and property, issuing identity cards and gate passes, investigating criminal activity, and effective campus patrols. Services are available 24/7. Students in the hostels can reach the NAUB Student Affairs security line at 09021849055 or 07026655097 for emergencies.",
+    "category": "general"
+  },
+  {
+    "id": "university_clinic",
+    "questions": [
+      "naub clinic",
+      "medical center naub",
+      "health services naub",
+      "hospital naub",
+      "medical insurance naub",
+      "where is the clinic at naub"
+    ],
+    "answer": "NAUB's University Clinic provides medical and nursing services to students on a permanent site, headed by the Director of University Medical Services. The University also provides a Medical Insurance cover for students, funded partly by student contribution, covering two semesters per session. Coverage includes emergency evacuation, emergency room stabilization, general medicine consultations and medications, and obstetrics/gynecology services (subject to exceptions available from the medical centre). Students in hostels can call the NAUB-SAS emergency lines: 09021849055 or 07026655097.",
+    "category": "general"
+  },
+  {
+    "id": "naub_library",
+    "questions": [
+      "library naub",
+      "naub library location",
+      "library hours naub",
+      "where is the library",
+      "library membership naub"
+    ],
+    "answer": "The NAUB University Library requires all students to register (upon proof of school fees payment) each year. Opening hours:\n\nSemester period:\n• Mon–Fri: 8:00am – 9:00pm\n• Saturdays: 9:00am – 3:00pm\n• Sundays: 10:00am – 2:00pm\n• Closed on public holidays\n\nVacation period:\n• Mon–Fri: 8:00am – 5:00pm\n• Closed weekends/public holidays\n\nBorrowing limits depend on membership category — academic/senior staff can borrow up to 5 books (one month loan), other categories up to 3 books (two weeks loan). The University Librarian oversees all library operations.",
+    "category": "general"
+  },
+  {
+    "id": "library_penalties",
+    "questions": [
+      "library fines naub",
+      "what happens if I don't return a library book",
+      "library rules naub"
+    ],
+    "answer": "NAUB library penalties include: daily fines for overdue books (open access materials), higher hourly fines for overdue closed-access/recalled materials, and a fine of four times the item's cost for lost/damaged/mutilated materials. Students who fail to return library materials will not be issued a clearance certificate and may be suspended for a semester (first offence) or a full session/withdrawal (repeat offences). Smoking, eating, drinking, and bringing children/pets into the library are also prohibited and can result in a semester ban.",
+    "category": "general"
+  },
+  {
+    "id": "nelfund",
+    "questions": [
+      "NELFund naub",
+      "student loan naub",
+      "nigerian education loan fund",
+      "how to apply for nelfund",
+      "education loan naub"
+    ],
+    "answer": "The Nigerian Education Loan Fund (NELFund) is a Federal Government initiative providing interest-free, collateral-free loans to students in approved public tertiary institutions, including NAUB. It covers tuition fees, accommodation/hostel fees, learning materials (including laptops), and living/transport expenses.\n\nEligibility: Nigerian citizen enrolled in a public tertiary institution, with a valid Admission Number, BVN, and NIN, and a commercial bank account (Opay/PalmPay/Moniepoint are NOT eligible).\n\nApplication: Apply online via the official NELFund portal at nelf.gov.ng, using your institution name, matriculation number, JAMB registration number, and other required documents. NAUB's NELFund Desk Office is located within the Directorate of ICT for support with portal access and disbursement issues.",
+    "category": "general"
+  },
+  {
+    "id": "student_id_cards",
+    "questions": [
+      "student identity card naub",
+      "how to get id card naub",
+      "lost id card naub"
+    ],
+    "answer": "NAUB Identity Cards are issued to all students attending courses lasting more than three months, upon payment of the appropriate fee. Students must always carry their ID cards, as they may be required by security and staff. If lost, students must obtain a police report, submit it to the security office, and pay the appropriate replacement fee to the Bursary.",
+    "category": "general"
+  },
+  {
+    "id": "loss_of_property",
+    "questions": [
+      "is naub responsible for lost property",
+      "who is liable for stolen items naub",
+      "care of university property naub"
+    ],
+    "answer": "NAUB is not responsible for loss or damage to any property belonging to students or their visitors resulting from negligence. All fixtures, fittings, and furniture in Halls of Residence, lecture rooms, and laboratories are University property and must not be tampered with. Students will be surcharged for carelessness, misuse, or wilful damage to University property.",
+    "category": "general"
+  },
+  {
+    "id": "nysc",
+    "questions": [
+      "NYSC naub",
+      "national youth service corps naub",
+      "when do naub students serve nysc"
+    ],
+    "answer": "Under the National Youth Service Corps Decree No. 24 of 1973, every Nigerian citizen who has completed a first degree (and is under 30) is called to serve in the NYSC. NAUB uploads graduating students' names to the NYSC portal after Senate ratifies final results. Students should register their personal details on the NYSC portal (enlist.nysc.gov.ng) once mobilized. The Academic Registry/Student Affairs Division will notify students when the mobilization list is ready.",
+    "category": "general"
+  },
+  {
+    "id": "convocation_alumni",
+    "questions": [
+      "naub convocation",
+      "how to join naub alumni",
+      "graduation ceremony naub"
+    ],
+    "answer": "The Convocation Ceremony at NAUB takes place every session, presided over by the Chancellor (or the Vice-Chancellor in their absence). Graduating students are notified through the Student Affairs Division, and must report to campus prior to the ceremony for rehearsal. Academic gowns are available on loan from Faculty Officers on payment of a prescribed amount. Graduates are entitled to join the NAUB Alumni Association by applying for registration and paying the prescribed fee — contact the Student Affairs Division for details.",
+    "category": "general"
+  },
+  {
+    "id": "academic_excellence_tips",
+    "questions": [
+      "how to succeed academically at naub",
+      "tips for new students naub",
+      "how to do well at naub",
+      "academic advice naub"
+    ],
+    "answer": "NAUB's tips for academic excellence include:\n• Meet your Advisor and Head of Department early to review your academic goals.\n• Know your Dean's office — it's your first point of contact for difficulties.\n• Don't hesitate to ask for help from lecturers, advisors, or department heads.\n• Use academic support resources — the ICT centre, laboratories, counselling services, and tutorial assistance.\n• Read all NAUB publications carefully (handbook, bulletins, notice boards) to stay informed of policies and deadlines.\n• Plan and manage your time, balancing academics with campus activities.\n• Stay in touch with family — support increases your chances of success.",
+    "category": "general"
+  },
+  {
+    "id": "student_portal",
+    "questions": [
+      "student portal",
+      "naub portal",
+      "how to log in to portal",
+      "portal login naub",
+      "how to access student portal",
+      "forgot portal password naub"
+    ],
+    "answer": "The NAUB Student Portal is used for course registration, fee payment, and checking results. Log in with your Matriculation Number, and if you've forgotten your password, use the portal's password reset option or visit the ICT Directorate on campus with your student ID for assistance. For technical issues, contact NAUB's ICT support.",
+    "category": "general"
+  },
+  {
+    "id": "course_registration",
+    "questions": [
+      "course registration",
+      "how to register courses naub",
+      "course form naub",
+      "add and drop courses naub",
+      "how to register for courses",
+      "portal course registration"
+    ],
+    "answer": "Course registration at NAUB is done through the student portal once school fees are confirmed as paid. Courses must be registered sequentially — a student must register for Level II courses before Level III courses, and failed/not-taken lower-level courses must be entered before higher-level ones. After registering online, print your course form and have it endorsed by your Departmental office.",
+    "category": "general"
+  },
+  {
+    "id": "ict_department",
+    "questions": [
+      "ict department naub",
+      "where is ict naub",
+      "naub ict directorate",
+      "ict unit naub"
+    ],
+    "answer": "The ICT Directorate at NAUB manages the University's IT infrastructure, student portal, campus internet, and digital services, including the NELFund Desk Office for loan-related support. For academic Computer Science matters, contact the Department of Computer Science within the Faculty of Computing.",
+    "category": "general"
+  },
+  {
+    "id": "bursary",
+    "questions": [
+      "bursary naub",
+      "finance office naub",
+      "where to pay fees naub",
+      "bursary department naub"
+    ],
+    "answer": "The Bursary Department handles all financial transactions at NAUB, including school fees, hostel charges, and other levies, typically processed through the student portal (Remita). For current fee amounts (which are reviewed by the University from time to time), check your student portal or contact the Bursary directly at bursar@naub.edu.ng.",
+    "category": "general"
+  },
+  {
+    "id": "school_fees",
+    "questions": [
+      "school fees",
+      "how much is fees at NAUB",
+      "NAUB tuition fees",
+      "fees structure",
+      "how much does NAUB cost",
+      "how much is school fees",
+      "fees naub"
+    ],
+    "answer": "NAUB school fees vary by faculty, programme, and student level (fresh vs. returning), and are reviewed by the University from time to time. For the current, official fee schedule, please check your student portal or contact the Bursary at bursar@naub.edu.ng. Eligible students can also apply for support through the Nigerian Education Loan Fund (NELFund), which covers tuition, accommodation, and learning materials — ask me about NELFund for details.",
+    "category": "general"
+  },
+  {
+    "id": "admission_list",
+    "questions": [
+      "admission list",
+      "check admission status",
+      "have I been admitted",
+      "provisional admission naub",
+      "how to check admission list naub",
+      "naub admission portal"
+    ],
+    "answer": "To check your NAUB admission status: visit www.naub.edu.ng, navigate to Admissions, and enter your JAMB Registration Number. You should also check the JAMB CAPS portal (caps.jamb.gov.ng) to confirm and accept/reject any admission offer.",
+    "category": "general"
+  },
+  {
+    "id": "postgraduate",
+    "questions": [
+      "postgraduate programmes naub",
+      "masters degree naub",
+      "phd naub",
+      "postgraduate school naub",
+      "how to apply for masters naub"
+    ],
+    "answer": "NAUB offers postgraduate programmes through its Postgraduate School in select disciplines linked to its six faculties. Admission generally requires a good Bachelor's degree (minimum Second Class Lower) in a relevant field, an NYSC discharge/exemption certificate, and academic referees. Visit www.naub.edu.ng or contact the Postgraduate School directly for current programme offerings and application deadlines.",
+    "category": "general"
+  },
+  {
+    "id": "student_union",
+    "questions": [
+      "student union naub",
+      "student association naub",
+      "sug naub",
+      "student union government naub"
+    ],
+    "answer": "The Student Union Government (SUG) represents NAUB students, advocating for student rights and organizing academic and social activities. If you have concerns to escalate to University management, you can approach your elected SUG representatives or the Student Affairs Division.",
+    "category": "general"
+  },
+  {
+    "id": "jamb",
+    "questions": [
+      "JAMB naub",
+      "jamb subject combination naub",
+      "what subjects for computer science naub jamb"
+    ],
+    "answer": "For UTME admission into NAUB, candidates need four relevant subject combinations in JAMB with the required grade points, plus five O'Level credits (including English and Mathematics) in not more than two sittings, and must be at least 16 years old. Exact subject combinations vary by department — always confirm your specific combination using the JAMB Brochure (jamb.gov.ng) and NAUB's official admission requirements at www.naub.edu.ng.",
+    "category": "general"
+  },
+  {
+    "id": "gst_courses",
+    "questions": [
+      "GST courses",
+      "general studies naub",
+      "what are GST courses",
+      "is GST compulsory naub"
+    ],
+    "answer": "General Studies (GST) courses are part of NAUB's broad-based curriculum requirements alongside departmental courses. For the specific GST courses and credit units required for your programme and level, check your departmental student handbook or the Academic Registry.",
+    "category": "general"
   },
   {
     "id": "no_answer",
     "questions": [],
-    "answer": "I'm sorry, I don't have a specific answer to that question yet. Please try rephrasing your question, or contact the relevant NAUB office directly:\n\n📧 General: info@naub.edu.ng\n📧 Admissions: admissions@naub.edu.ng\n📞 Switchboard: +234-803-000-0000\n🌐 Website: www.naub.edu.ng\n\nYou can also visit the NAUB administrative block during office hours (Mon–Fri, 8:00 AM – 4:00 PM)."
+    "answer": "I'm sorry, I don't have a specific answer to that question yet. Please try rephrasing your question, or contact the relevant NAUB office directly at info@naub.edu.ng or www.naub.edu.ng.",
+    "category": "general"
   }
 ]
