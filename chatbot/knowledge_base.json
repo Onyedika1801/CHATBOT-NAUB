@@ -585,7 +585,6 @@
       "medical center naub",
       "health services naub",
       "hospital naub",
-      "medical insurance naub",
       "where is the clinic at naub"
     ],
     "answer": "NAUB's University Clinic provides medical and nursing services to students on a permanent site, headed by the Director of University Medical Services. The University also provides a Medical Insurance cover for students, funded partly by student contribution, covering two semesters per session. Coverage includes emergency evacuation, emergency room stabilization, general medicine consultations and medications, and obstetrics/gynecology services (subject to exceptions available from the medical centre). Students in hostels can call the NAUB-SAS emergency lines: 09021849055 or 07026655097.",
@@ -619,7 +618,6 @@
       "NELFund naub",
       "student loan naub",
       "nigerian education loan fund",
-      "how to apply for nelfund",
       "education loan naub"
     ],
     "answer": "The Nigerian Education Loan Fund (NELFund) is a Federal Government initiative providing interest-free, collateral-free loans to students in approved public tertiary institutions, including NAUB. It covers tuition fees, accommodation/hostel fees, learning materials (including laptops), and living/transport expenses.\n\nEligibility: Nigerian citizen enrolled in a public tertiary institution, with a valid Admission Number, BVN, and NIN, and a commercial bank account (Opay/PalmPay/Moniepoint are NOT eligible).\n\nApplication: Apply online via the official NELFund portal at nelf.gov.ng, using your institution name, matriculation number, JAMB registration number, and other required documents. NAUB's NELFund Desk Office is located within the Directorate of ICT for support with portal access and disbursement issues.",
@@ -799,6 +797,516 @@
     "id": "no_answer",
     "questions": [],
     "answer": "I'm sorry, I don't have a specific answer to that question yet. Please try rephrasing your question, or contact the relevant NAUB office directly at info@naub.edu.ng or www.naub.edu.ng.",
+    "category": "general"
+  },
+  {
+    "id": "naub_council_composition",
+    "questions": [
+      "who is on the university council naub",
+      "council members naub",
+      "composition of governing council naub",
+      "how many members are on naub council"
+    ],
+    "answer": "The NAUB Council consists of: the Pro-Chancellor (Chairman), the Vice-Chancellor, the Deputy Vice-Chancellor, a representative of the Federal Ministry of Education, a representative of the Ministry of Defence, the Chief of Army Staff or representative, the Corps Commander Nigerian Army Engineers or representative, the Director of Legal Services (Army) or representative, four persons representing the public (two of whom must be female, appointed by the Visitor), four persons appointed by the Senate from among its members, one person appointed by Congregation, one person appointed by Convocation, and one person representing the host community. The Registrar serves as Secretary to the Council. Council members must be of proven integrity and familiar with university affairs and traditions.",
+    "category": "general"
+  },
+  {
+    "id": "naub_senate_composition",
+    "questions": [
+      "who is on the naub senate",
+      "senate members naub",
+      "what is the senate composition naub"
+    ],
+    "answer": "The Senate of NAUB is presided over by the Vice-Chancellor and comprises the Deans of Faculties, Heads of Department, all Professors, the University Librarian, elected representatives of Faculties, and other persons appointed by the Vice-Chancellor as specified in the University Act. The Senate has supreme responsibility for all the University's academic work, and reviews recommendations from the Board of Faculties and its own committees.",
+    "category": "general"
+  },
+  {
+    "id": "naub_senate_functions",
+    "questions": [
+      "what does the senate do at naub",
+      "functions of the senate naub",
+      "senate powers naub"
+    ],
+    "answer": "Under Section 12 of the Nigerian Army University Biu (Establishment) Act, 2020, the Senate's general function is to organize and control teaching, regulate admissions, oversee student discipline, and promote research at the University. Specific Senate powers include: establishing/organizing faculties, departments, schools, and institutes; organizing courses of study and examinations (including appointment of examiners); recommending the award of degrees and honorary degrees to Council; determining academic dress; and (subject to appeal to Council) the power to withdraw degrees, diplomas, or other academic awards for cause. The Senate cannot establish a new campus, college, faculty, or department without Council's approval.",
+    "category": "general"
+  },
+  {
+    "id": "naub_establishment_act",
+    "questions": [
+      "what act established naub",
+      "naub establishment act",
+      "when was naub act signed",
+      "legal basis of naub"
+    ],
+    "answer": "Nigerian Army University Biu (NAUB) was established under the Nigerian Army University Biu (Establishment) Act, 2020, an Act of the National Assembly of the Federal Republic of Nigeria. The Act specifies the University's principal organs (Council, Senate, Congregation, Convocation and Principal Officers) and their respective powers.",
+    "category": "general"
+  },
+  {
+    "id": "academic_dress_regulation",
+    "questions": [
+      "academic dress naub",
+      "convocation gown rules naub",
+      "what is academic dress"
+    ],
+    "answer": "The Senate determines what descriptions of dress constitute 'academic dress' for the University and regulates its use, as provided under the NAUB Establishment Act. Academic gowns for Convocation are always available on loan to graduating students, obtainable from Faculty Officers upon payment of a prescribed fee.",
+    "category": "general"
+  },
+  {
+    "id": "student_welfare_committee",
+    "questions": [
+      "student welfare committee naub",
+      "who handles student welfare policy naub",
+      "student welfare committee members"
+    ],
+    "answer": "The Student Welfare Committee is charged with the overall welfare of students, advising on non-academic policy matters, appraising student needs, and making recommendations regarding feeding services in the Halls of Residence. Its members include: the Vice-Chancellor or representative (Chairman), the Registrar or representative, the Dean of Student Affairs, the Bursar or representative, the Director of Works or representative, the Chief Security Officer or representative, the Medical Officer or representative, Hall Masters/Mistresses and Wardens, two Senate representatives, two students (male and female), and the Student Affairs Officer as Secretary.",
+    "category": "general"
+  },
+  {
+    "id": "hall_wardens_committee",
+    "questions": [
+      "committee of hall wardens naub",
+      "hall masters committee naub"
+    ],
+    "answer": "The Committee of Hall Wardens and Hall Masters/Mistresses makes recommendations to the Vice-Chancellor and Senate on students' general welfare and discipline in the Halls of Residence, and the organization of sporting activities within the halls. Its members are: the Vice-Chancellor or representative (Chairman), the Dean of Student Affairs, all Hall Masters, Deputy Hall Masters, Wardens and Assistant Hall Wardens, with the Student Affairs Officer as Secretary.",
+    "category": "general"
+  },
+  {
+    "id": "students_discipline_committee",
+    "questions": [
+      "students discipline committee naub",
+      "who handles student discipline cases naub",
+      "discipline committee members naub"
+    ],
+    "answer": "The Students Discipline Committee handles all matters relating to student discipline in the University. Its members include: the Vice-Chancellor or representative (Chairman), the Registrar or representative, the Dean of Student Affairs, two Senate representatives, the Chief Security Officer, the University Legal Officer, and the Student Affairs Officer as Secretary.",
+    "category": "general"
+  },
+  {
+    "id": "counselling_orientation_services",
+    "questions": [
+      "orientation services naub counselling",
+      "how does naub help new students adjust",
+      "adaptive services for new students naub"
+    ],
+    "answer": "NAUB's Guidance and Counselling Unit provides orientation/adaptive services at the beginning of each academic year to help new students adjust socially and psychologically to university life. This is particularly aimed at helping newly admitted students who may feel lost in a new environment.",
+    "category": "general"
+  },
+  {
+    "id": "counselling_information_services",
+    "questions": [
+      "information services counselling naub",
+      "how does counselling help with career choices naub"
+    ],
+    "answer": "The Counselling Unit's information services equip students with knowledge of educational, vocational, and social opportunities so they can make informed choices and decisions. This includes information on social issues such as the effects of drug abuse, alcoholism, truancy, and rioting.",
+    "category": "general"
+  },
+  {
+    "id": "counselling_planning_placement",
+    "questions": [
+      "planning and placement services naub",
+      "job placement help naub counselling"
+    ],
+    "answer": "The Counselling Unit's planning and placement services aim to help students secure employment or appropriate treatment/hospitalization for health conditions requiring specialist attention. The Unit also arranges lectures from renowned professionals in psychological rehabilitation, including psychiatrists and clinical psychologists.",
+    "category": "general"
+  },
+  {
+    "id": "hall_student_relations_officer",
+    "questions": [
+      "student relations officer naub",
+      "who manages hostel administration naub",
+      "hall administration naub"
+    ],
+    "answer": "The Student's Relations Officer, reporting to the Dean of Student Affairs through the Student Affairs Officer, manages Hall Administration. Responsibilities include: liaising with the Works and Maintenance Department for hostel repairs; overseeing hostel sanitation; enforcing hall accommodation rules; overseeing student publications and related activities; serving as liaison between Hall Masters/Wardens and students; and keeping up-to-date accommodation records.",
+    "category": "general"
+  },
+  {
+    "id": "sports_recreation_unit",
+    "questions": [
+      "sports and recreation naub",
+      "sports facilities naub",
+      "who coordinates sports at naub",
+      "director of sports naub"
+    ],
+    "answer": "The Sports and Recreation Unit is responsible for providing and maintaining sporting facilities and equipment for NAUB students. The Director of Sports, working through the Chief Coach, coordinates sporting activities among students and between student programmes, and organizes intra-mural competitions within the University.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_room_allocation_rules",
+    "questions": [
+      "how are hostel rooms allocated naub",
+      "hostel bed space rules naub",
+      "can I reject my hostel allocation"
+    ],
+    "answer": "Hostel rooms are acquired for one academic session, from the official resumption date to a day after the session ends. Bed spaces are allocated for one session only, and full accommodation charges must be paid in advance at the Bursary, with official receipts obtained. A student who rejects an allocated bed space loses their right to any other hostel accommodation for that session. It is an offence to exchange, sell, or give out your allocated room to another student — this leads to cancellation and forceful ejection for both parties involved.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_visitor_overnight_rule",
+    "questions": [
+      "can I have someone stay overnight in my hostel room naub",
+      "overnight guests in hostel naub"
+    ],
+    "answer": "Accommodating a visitor, fellow student, or any other person overnight (or for a long period) in your hostel room without written permission from the hall officer is an offence that leads to expulsion from the Hall of Residence, without prejudice to any further disciplinary action the University may take.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_checkout_procedure",
+    "questions": [
+      "how do I check out of hostel naub",
+      "end of session hostel procedure naub",
+      "returning hostel keys naub"
+    ],
+    "answer": "At the end of each session, students must return all keys and other University property to the hall officer. The hall officer may conduct a room inspection before clearing students of financial responsibility for the room's final condition. Students must also cross-check facilities on their room card with the porter at checkout, and pay for anything missing, damaged, or not functioning.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_temporary_absence",
+    "questions": [
+      "leaving hostel room empty temporarily naub",
+      "can someone use my room while im away naub"
+    ],
+    "answer": "Students vacating their rooms temporarily must not allow anyone else to use the room or bed space in their absence, without the written permission of the hall officer.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_cleanliness_rules",
+    "questions": [
+      "hostel cleanliness rules naub",
+      "who cleans the hostel toilets naub",
+      "laundry facilities hostel naub"
+    ],
+    "answer": "University cleaners clean student toilets and common surroundings in the Halls of Residence, but students are responsible for cleaning their own rooms. Facilities are provided for students to launder their own clothes. Students must make their beds and keep rooms clean and tidy at all times; rooms are subject to periodic inspection. Toilet rolls (not paper) must be used to prevent blockage, and female students must dispose of sanitary towels in the bins provided, not in toilets.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_electrical_appliances",
+    "questions": [
+      "what electrical appliances are allowed in hostel naub",
+      "registering appliances hostel naub",
+      "can I use my own electrician naub"
+    ],
+    "answer": "All electrical equipment owned by students must be registered with the hall porter/hall master, and may only be installed with the authority of the Dean of Student Affairs. Non-University electricians are not permitted to carry out electrical work in the hostel. Only small transistor radios, tape recorders, and small televisions are allowed and must be registered (free of charge) at the hall office each session.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_noise_rules",
+    "questions": [
+      "can I play loud music in the hostel naub",
+      "noise rules hostel naub"
+    ],
+    "answer": "Radios, cassette players, and other musical/audio instruments must not be used in a manner that disturbs other students, whether in the hostels or academic areas.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_squatting_rule",
+    "questions": [
+      "what is squatting hostel naub",
+      "penalty for squatting naub"
+    ],
+    "answer": "Each student is entitled to only one bed space. Any student found squatting (sharing their allocated bed space with another person) will be ejected from the hostel and must appear before the Students Discipline Committee for further action.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_exit_form",
+    "questions": [
+      "how to leave campus overnight naub",
+      "exit form naub hostel",
+      "permission to travel out of school naub"
+    ],
+    "answer": "Any student wishing to be absent from the hostel overnight or longer must inform the hall porter and obtain an Exit Form from the hall warden. If the absence involves missing lectures, tutorials, or practicals, approval from the Head of Department and the relevant lecturer is also required. Exit forms are filled in triplicate, recommended by the hall officer, and approved by the student's Head of Department. Students going on vacation must surrender their keys, mattresses, and other University property to the porter before leaving.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_vacation_accommodation",
+    "questions": [
+      "can I stay in hostel during long vacation naub",
+      "holiday accommodation naub"
+    ],
+    "answer": "Students who wish to remain in the hostel during a long vacation must be authorized in writing by the Dean of Student Affairs. At the end of each session, rooms must be vacated unless special written permission has been granted.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_misconduct_penalty",
+    "questions": [
+      "what happens if there is fighting in the hostel naub",
+      "hostel serious misconduct naub"
+    ],
+    "answer": "Serious misconduct in the hostel — such as fighting, theft, burglary, rape, or other social vices — is severely punished and can lead to suspension or expulsion from the University. A student expelled for such misconduct loses any right to University accommodation until they graduate (if permitted to continue their studies at all).",
+    "category": "general"
+  },
+  {
+    "id": "special_examination_types",
+    "questions": [
+      "what is a special examination naub",
+      "open book exam naub",
+      "oral examination rules naub",
+      "practical exam naub"
+    ],
+    "answer": "Special examinations at NAUB include open book examinations, oral examinations, practical work, laboratory tests, surveying, field work, open-air work, and drawing exams. For these, students must comply with the Examiner's specific instructions on the number, nature, and type of books, instruments, papers, or work aids permitted, to ensure the exam is conducted under fair conditions.",
+    "category": "general"
+  },
+  {
+    "id": "examination_script_submission",
+    "questions": [
+      "how do I submit my exam script naub",
+      "can I leave the exam hall early naub",
+      "exam script rules naub"
+    ],
+    "answer": "Students must submit their answer scripts by hand to the invigilator and sign an attendance sheet confirming they sat the exam and submitted their script. It is misconduct to remove any answer booklets, scripts, or exam materials from the hall. A student may submit their script and leave no earlier than one hour after the exam begins, but must leave their question paper with the invigilator (collectible after the exam). Once a script is submitted, students cannot re-enter the exam hall.",
+    "category": "general"
+  },
+  {
+    "id": "student_petition_grievance",
+    "questions": [
+      "how do I raise a complaint at naub",
+      "student grievance procedure naub",
+      "how to escalate an issue to management naub"
+    ],
+    "answer": "Students are encouraged to address grievances with University Management through dialogue rather than riots or demonstrations that could breach the peace. For examination-specific complaints, write to the Vice-Chancellor through your HOD and Dean, copying the Dean of Student Affairs. For general welfare issues, students can also raise concerns through their Student Union Government representatives or the Student Affairs Division.",
+    "category": "general"
+  },
+  {
+    "id": "personal_safety_tips",
+    "questions": [
+      "safety tips for students naub",
+      "how to stay safe on campus naub",
+      "security advice for students naub"
+    ],
+    "answer": "NAUB's safety tips for students include:\n• Avoid bringing expensive or costly items to school, as they attract thieves.\n• Keep your money in the bank and retain only pocket money with you.\n• Always keep your room door locked, even when going to the bathroom or while sleeping.\n• Do not join secret societies or groups that hold meetings in secret.\n• Address grievances with Management through dialogue, not riots or demonstrations.\n• Report any suspicious movement or individuals promptly to security.\n• Always submit to a search when security staff demand it — refusal can create problems.\n• Practise good time management — allocate more time to academics than to other activities.",
+    "category": "general"
+  },
+  {
+    "id": "report_suspicious_activity",
+    "questions": [
+      "how do I report suspicious activity naub",
+      "security hotline naub",
+      "who to call for security emergency naub"
+    ],
+    "answer": "Students should promptly report any suspicious movement or individuals on campus to the Security Services Division. In hostels, students can call the NAUB Student Affairs security/emergency lines: 09021849055 or 07026655097.",
+    "category": "general"
+  },
+  {
+    "id": "std_health_awareness",
+    "questions": [
+      "information on STDs naub",
+      "sexually transmitted diseases awareness naub",
+      "HIV AIDS awareness naub"
+    ],
+    "answer": "NAUB's student handbook includes health awareness information on Sexually Transmitted Diseases (STDs) such as HIV/AIDS, Gonorrhoea, Syphilis, and Staphylococcus infections, which can cause serious health complications. The handbook encourages abstinence, use of properly sterilized tools in salons/barbershops, and consulting the University Counselling Services or University Clinic for concerns or further information on STDs and related health matters.",
+    "category": "general"
+  },
+  {
+    "id": "drug_alcohol_abuse_effects",
+    "questions": [
+      "effects of drug abuse naub",
+      "alcohol abuse effects naub",
+      "substance abuse awareness naub"
+    ],
+    "answer": "According to NAUB's student handbook, drug and alcohol abuse (including marijuana, cocaine, tramadol, and codeine) is linked to serious health complications, academic decline (poor grades, absenteeism), and emotional effects such as mood swings and depression. Students are encouraged to avoid substance abuse and to seek support from the University Counselling Services or University Clinic if they or someone they know is affected.",
+    "category": "general"
+  },
+  {
+    "id": "cultism_effects",
+    "questions": [
+      "effects of cultism naub",
+      "consequences of joining a cult naub",
+      "why should I avoid cultism"
+    ],
+    "answer": "NAUB's handbook lists the consequences of cultism as: untimely death, loss of moral values, incomplete education, behavioural disorders, unrealizable life ambitions, and possible loss of family members. Cultism and secret society membership is also classified as Gross Misconduct under NAUB's disciplinary rules and can lead to expulsion.",
+    "category": "general"
+  },
+  {
+    "id": "student_publications",
+    "questions": [
+      "student publications naub",
+      "campus newsletter naub",
+      "student press naub"
+    ],
+    "answer": "Student publications and related activities at NAUB fall under the oversight of the Student's Relations Officer within the Student Affairs Division's Hall Administration unit.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_repairs_reporting",
+    "questions": [
+      "how do I report a hostel repair naub",
+      "broken fixtures in hostel naub",
+      "report damaged electrical fault naub"
+    ],
+    "answer": "Damage to fixtures, fittings, or any electrical/structural faults in the hostel should be reported promptly on the appropriate form to the Hall Supervisor/Porter on duty. Students will be surcharged for any carelessness, misuse, or wilful damage to University property.",
+    "category": "general"
+  },
+  {
+    "id": "medical_insurance_detail",
+    "questions": [
+      "how does medical insurance work at naub",
+      "student medical insurance naub",
+      "who pays for medical insurance naub"
+    ],
+    "answer": "NAUB Management introduced a Medical Insurance scheme covering full-time and part-time students and staff. Coverage runs for two semesters per session, and a portion of the insurance amount is contributed by students, with the amount determined by the University. Coverage includes emergency evacuation, emergency room stabilization, general consultations and medications, and obstetrics/gynecology services (subject to some exceptions available from the medical centre).",
+    "category": "general"
+  },
+  {
+    "id": "nelfund_eligibility",
+    "questions": [
+      "am I eligible for nelfund",
+      "who can apply for nelfund naub",
+      "nelfund requirements"
+    ],
+    "answer": "To be eligible for the Nigerian Education Loan Fund (NELFund), you must be a Nigerian citizen enrolled in a public tertiary institution (such as NAUB), and have a valid Admission Number, BVN, and NIN, plus a commercial bank account. Note: mobile money accounts like Opay, PalmPay, and Moniepoint are NOT eligible for NELFund disbursement — you need a traditional commercial bank account.",
+    "category": "general"
+  },
+  {
+    "id": "nelfund_how_to_apply",
+    "questions": [
+      "how to apply for nelfund naub",
+      "nelfund application steps",
+      "nelfund portal naub"
+    ],
+    "answer": "To apply for NELFund: visit the official portal at nelf.gov.ng and complete the application using your institution name (Nigerian Army University Biu), matriculation number, JAMB registration number, and other required documents (BVN, NIN, bank details). NAUB's NELFund Desk Office, based within the Directorate of ICT, can assist with portal access issues and disbursement queries.",
+    "category": "general"
+  },
+  {
+    "id": "naub_congregation",
+    "questions": [
+      "what is the congregation naub",
+      "congregation members naub",
+      "who is in the congregation"
+    ],
+    "answer": "The Congregation of NAUB is constituted by the Vice-Chancellor (Chairman), the Deputy Vice-Chancellor, the Registrar, the Bursar, all members of the University's academic staff, and administrative/technical staff holding qualifications recognized by the University. Its main purpose is to discuss matters of interest (both academic and non-academic) to members of the University community. The Registrar serves as Secretary to the Congregation.",
+    "category": "general"
+  },
+  {
+    "id": "naub_convocation_ceremony",
+    "questions": [
+      "convocation ceremony naub",
+      "when is naub convocation",
+      "how do I get my certificate at convocation naub"
+    ],
+    "answer": "The Convocation is made up of all degree-holding staff (academic and non-academic) and all graduates and students of the University. The Convocation Ceremony usually takes place every session, presided over by the Chancellor or, in their absence, the Vice-Chancellor. At the ceremony, degrees, diploma certificates, and prizes are awarded, and honorary degrees may be conferred on distinguished personalities. Graduating students are notified of the date through the Student Affairs Division. All graduates must report to campus prior to the ceremony for rehearsal and further instructions.",
+    "category": "general"
+  },
+  {
+    "id": "naub_mission_vision_detail",
+    "questions": [
+      "what is naub's mission",
+      "what is naub's vision",
+      "naub aspiration",
+      "naub guiding principles"
+    ],
+    "answer": "NAUB's Mission is to develop highly skilled military and civilian manpower with distinctive competence capable of providing technological solutions to the problems of the Nigerian Army, the military, and the nation.\n\nNAUB's Vision is to become a solution centre in technology, research and development for the promotion of self-reliance, creativity and innovation.\n\nNAUB's Aspiration is to become a leading University in Nigeria and a centre of excellence spearheading scientific and technological breakthroughs for military and national problems.\n\nGuiding Principle: producing distinctive, competent graduates who use creativity and innovation for national development, with emphasis on ethics, sustainability, diversity, patriotism, loyalty and devotion.",
+    "category": "general"
+  },
+  {
+    "id": "naub_objectives",
+    "questions": [
+      "objectives of naub",
+      "what are naub's aims",
+      "why was naub founded"
+    ],
+    "answer": "NAUB's objectives are to:\na. Provide facilities for learning and instruction so students obtain the advantage of a liberal education.\nb. Promote research and practical application of knowledge to military hardware/software and social, cultural, economic, scientific and technological situations.\nc. Stimulate interest in and appreciation of military policy, logistics and strategy through teaching and research.\nd. Encourage scholarship and research, including entrepreneurship skills.\ne. Secure the diffusion of knowledge throughout Nigeria and the Nigerian Army in particular.\nf. Undertake any other activities appropriate for a University.",
+    "category": "general"
+  },
+  {
+    "id": "naub_philosophy",
+    "questions": [
+      "philosophy of naub",
+      "naub founding philosophy"
+    ],
+    "answer": "The philosophy of NAUB's founders is to utilize scientific and technological knowledge to develop credible and creative capacity for proffering innovative solutions to the problems of the Nigerian Army, the military, and the nation. The University emphasizes scholarship, inspirational teaching, and collaboration/knowledge exchange with academics and leaders in science, engineering, industry, government, and business, with a focus on engineering, science, technology, and defence/military technology.",
+    "category": "general"
+  },
+  {
+    "id": "naub_first_degree_philosophy",
+    "questions": [
+      "philosophy of degree programmes naub",
+      "why study at naub"
+    ],
+    "answer": "NAUB's general philosophy of its disciplines is that training develops the mind, imparts theoretical and practical knowledge, builds self-confidence, and fosters innovation and self-reliance in Administration, Management, Science, and Technology. Degree programme objectives include providing basic knowledge for analyzing organizational/management problems, equipping students with decision-making and analytical skills, and developing leadership and interpersonal relations skills.",
+    "category": "general"
+  },
+  {
+    "id": "naub_green_university",
+    "questions": [
+      "why is naub called africa's green university",
+      "green university naub meaning"
+    ],
+    "answer": "NAUB is known as Africa's First Green University, reflecting its focus on environmental sustainability alongside its core mission of technological solutions for the Nigerian Army, the military, and the nation.",
+    "category": "general"
+  },
+  {
+    "id": "hostel_general_facilities",
+    "questions": [
+      "what facilities are provided in the hostel naub",
+      "hostel amenities naub"
+    ],
+    "answer": "Hostel facilities at NAUB include shared rooms (number determined by the University based on availability), laundry facilities for students to wash their own clothes, and cleaning of toilets/common surroundings by University cleaners (students clean their own rooms). Each room's furnishing and facilities are recorded on a card by the porter at allocation, and checked again at checkout.",
+    "category": "general"
+  },
+  {
+    "id": "misconduct_offence_penalty_table",
+    "questions": [
+      "specific penalties for offences naub",
+      "punishment for stealing naub",
+      "punishment for fighting naub",
+      "punishment for drug abuse naub"
+    ],
+    "answer": "Under NAUB's disciplinary rules, specific offences and their penalties (for a first offender) include: drug abuse/possession of hard drugs → rustication (with escalating penalties for repeat offenders, up to expulsion). More broadly, offences are grouped as Gross Misconduct (expulsion) — including violence, weapons possession, rape/gender-based violence, hard drug use, cultism, stealing, and forgery; Misconduct (one semester's rustication) — including furnishing false information or wilful property damage; and Misdemeanour (warning) — including insubordination, with repeated misdemeanours escalating to rustication.",
+    "category": "general"
+  },
+  {
+    "id": "naub_pioneer_vc",
+    "questions": [
+      "who was the first vice chancellor of naub",
+      "pioneer vc naub",
+      "who founded naub as vc"
+    ],
+    "answer": "The pioneer (first) Vice-Chancellor of Nigerian Army University Biu was Professor David Iliya Malgwi, appointed in 2019 when the University was newly established.",
+    "category": "general"
+  },
+  {
+    "id": "naub_second_vc",
+    "questions": [
+      "who was the second vice chancellor of naub",
+      "previous vc naub before buratai"
+    ],
+    "answer": "Professor Kyari Mohammed served as NAUB's second Vice-Chancellor, completing a single five-year term from 2020 to 2025. He was succeeded by the current Vice-Chancellor, Professor Lawan Bala Buratai, in April 2025.",
+    "category": "general"
+  },
+  {
+    "id": "care_of_university_property",
+    "questions": [
+      "how should I treat university property naub",
+      "damage to university property naub",
+      "illegal structures naub"
+    ],
+    "answer": "All fixtures, fittings, and furniture in Halls of Residence, common rooms, lecture rooms, laboratories, and workshops are NAUB's property and must not be tampered with or removed. Illegal structures are also prohibited. Damage to fixtures or electrical/structural faults should be reported promptly to the Hall Supervisor/Porter on duty. Students will be surcharged for any carelessness, misuse, or wilful damage to University property.",
+    "category": "general"
+  },
+  {
+    "id": "id_card_replacement",
+    "questions": [
+      "how to replace lost id card naub",
+      "lost student id procedure naub"
+    ],
+    "answer": "If your NAUB Identity Card is lost, you must first obtain a police report, then submit it to the University's security office, and pay the appropriate replacement fee to the Bursary to receive a new ID card.",
+    "category": "general"
+  },
+  {
+    "id": "naub_dvc_predecessor",
+    "questions": [
+      "who was dvc military before bello naub",
+      "previous deputy vice chancellor military naub"
+    ],
+    "answer": "Before Lieutenant Colonel A.Y. Bello, PhD assumed the role of Acting Deputy Vice-Chancellor (Military) at NAUB on 2 December 2025, the position was held by Brigadier General J.T. Aun.",
+    "category": "general"
+  },
+  {
+    "id": "naub_liaison_office",
+    "questions": [
+      "naub abuja office",
+      "naub liaison office location",
+      "does naub have an office in abuja"
+    ],
+    "answer": "NAUB maintains a Liaison Office in Abuja, located at the Nigerian Army Resource Centre, Mambilla Barracks Junction, Asokoro, Abuja, in addition to its main campus in Biu, Borno State.",
     "category": "general"
   }
 ]
