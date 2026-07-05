@@ -1,0 +1,26 @@
+# Render.com deployment config -- Render reads this file automatically.
+# Replit and any other host ignore it completely.
+databases:
+  - name: naub-chatbot-db
+    plan: free
+
+services:
+  - type: web
+    name: naub-chatbot
+    runtime: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn naub_chatbot.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: naub-chatbot-db
+          property: connectionString
+      - key: PYTHON_VERSION
+        value: "3.12.0"

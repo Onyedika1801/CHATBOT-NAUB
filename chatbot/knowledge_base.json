@@ -1308,5 +1308,19 @@
     ],
     "answer": "NAUB maintains a Liaison Office in Abuja, located at the Nigerian Army Resource Centre, Mambilla Barracks Junction, Asokoro, Abuja, in addition to its main campus in Biu, Borno State.",
     "category": "general"
+  },
+  {
+    "id": "academic_calendar",
+    "questions": [
+      "academic calendar naub",
+      "resumption date naub",
+      "when does school resume",
+      "when does naub open",
+      "semester dates naub",
+      "naub calendar",
+      "when is registration naub"
+    ],
+    "answer": "NAUB's academic calendar (semester start/end dates, registration windows, and exam periods) is published separately each session, since it changes from year to year, rather than being fixed in the student handbook. For the current session's official dates, check the student portal (portal.naub.edu.ng), the notice boards on campus, or www.naub.edu.ng.",
+    "category": "general"
   }
 ]
