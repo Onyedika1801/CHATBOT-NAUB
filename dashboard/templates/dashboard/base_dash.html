@@ -15,6 +15,9 @@
       <a href="{% url 'dashboard:unanswered_list' %}" class="{% if active == 'unanswered' %}active{% endif %}">❓ Unanswered Questions</a>
       <a href="{% url 'dashboard:kb_list' %}" class="{% if active == 'kb' %}active{% endif %}">📚 Knowledge Base</a>
       <a href="{% url 'dashboard:logs' %}" class="{% if active == 'logs' %}active{% endif %}">🗂 Conversation Logs</a>
+      {% if user.is_superuser %}
+      <a href="{% url 'dashboard:manage_admins' %}" class="{% if active == 'admins' %}active{% endif %}">🔑 Manage Admins</a>
+      {% endif %}
       <a href="{% url 'chatbot:chat' %}">💬 Back to Chatbot</a>
       <a href="{% url 'account_logout' %}">🚪 Logout</a>
     </nav>

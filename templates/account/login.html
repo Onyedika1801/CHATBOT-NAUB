@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sign In - NAUB Chatbot{% endblock %}
+{% block body %}
+<div class="auth-shell">
+  <div class="auth-card">
+    <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img" style="width:60px;height:60px;margin:0 auto 1.1rem;display:block;">
+    <h1>Admin Sign In</h1>
+    <p class="sub">Sign in to access the NAUB Enquiry Chatbot admin dashboard.</p>
+
+    {% if form.non_field_errors %}
+      <div class="alert-box error" style="text-align:left;">
+        {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+      </div>
+    {% endif %}
+
+    <form method="post" action="{% url 'account_login' %}" style="text-align:left;">
+      {% csrf_token %}
+
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted);">Username or Email</label>
+      <input type="text" name="login" required autofocus
+        value="{{ form.login.value|default:'' }}"
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; margin:0.4rem 0 1rem; font-family:inherit; box-sizing:border-box;">
+      {% for error in form.login.errors %}
+        <p style="color:var(--naub-danger); font-size:0.78rem; margin-top:-0.7rem; margin-bottom:0.8rem;">{{ error }}</p>
+      {% endfor %}
+
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted);">Password</label>
+      <input type="password" name="password" required
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; margin:0.4rem 0 1rem; font-family:inherit; box-sizing:border-box;">
+      {% for error in form.password.errors %}
+        <p style="color:var(--naub-danger); font-size:0.78rem; margin-top:-0.7rem; margin-bottom:0.8rem;">{{ error }}</p>
+      {% endfor %}
+
+      {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+      {% endif %}
+
+      <button type="submit" class="btn-pill gold" style="width:100%; justify-content:center; padding:0.75rem; color:var(--naub-green-dark); background:var(--naub-gold); border:none; font-size:0.92rem; margin-top:0.4rem;">Sign In</button>
+    </form>
+
+    <a href="{% url 'chatbot:chat' %}" class="btn-guest" style="display:block; margin-top:0.8rem; text-align:center;">← Back to Chatbot</a>
+  </div>
+</div>
+{% endblock %}

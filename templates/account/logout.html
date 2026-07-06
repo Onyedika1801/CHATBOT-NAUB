@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sign Out - NAUB Chatbot{% endblock %}
+{% block body %}
+<div class="auth-shell">
+  <div class="auth-card">
+    <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img" style="width:60px;height:60px;margin:0 auto 1.1rem;display:block;">
+    <h1>Sign Out</h1>
+    <p class="sub">Are you sure you want to sign out of the admin dashboard?</p>
+
+    <form method="post" action="{% url 'account_logout' %}">
+      {% csrf_token %}
+      {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+      {% endif %}
+      <button type="submit" class="btn-pill gold" style="width:100%; justify-content:center; padding:0.75rem; color:var(--naub-green-dark); background:var(--naub-gold); border:none; font-size:0.92rem;">Sign Out</button>
+    </form>
+
+    <a href="{% url 'dashboard:home' %}" class="btn-guest" style="display:block; margin-top:0.8rem; text-align:center;">← Cancel, stay signed in</a>
+  </div>
+</div>
+{% endblock %}

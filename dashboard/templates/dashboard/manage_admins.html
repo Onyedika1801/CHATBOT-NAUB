@@ -1,0 +1,70 @@
+{% extends "dashboard/base_dash.html" %}
+{% block dash_content %}
+
+<div class="dash-header">
+  <div>
+    <h1>Manage Admins</h1>
+    <p>{{ slots_used }} of {{ max_admins }} admin slots used</p>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-header"><h3>Current Admins</h3></div>
+  <table class="data-table">
+    <thead><tr><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+      {% for admin in admins %}
+      <tr>
+        <td>{{ admin.username }}{% if admin.pk == request.user.pk %} <span style="color:var(--naub-text-muted); font-size:0.75rem;">(you)</span>{% endif %}</td>
+        <td>{{ admin.email }}</td>
+        <td>{% if admin.is_superuser %}<span class="badge answered">Superuser</span>{% else %}<span class="badge pending">Staff</span>{% endif %}</td>
+        <td>{% if admin.is_active %}<span class="badge answered">Active</span>{% else %}<span class="badge rejected">Deactivated</span>{% endif %}</td>
+        <td>
+          {% if admin.pk != request.user.pk %}
+          <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="toggle_active">
+            <input type="hidden" name="user_id" value="{{ admin.pk }}">
+            <button type="submit" class="btn-sm outline">{% if admin.is_active %}Deactivate{% else %}Activate{% endif %}</button>
+          </form>
+          <form method="post" style="display:inline;" onsubmit="return confirm('Revoke admin access for {{ admin.username }}? They will become a regular user.');">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="revoke">
+            <input type="hidden" name="user_id" value="{{ admin.pk }}">
+            <button type="submit" class="btn-sm danger">Revoke</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="panel">
+  <div class="panel-header"><h3>Add New Admin</h3></div>
+  {% if slots_used >= max_admins %}
+    <div class="alert-box error">Admin accounts are capped at {{ max_admins }}. Revoke or deactivate an existing admin first to free a slot.</div>
+  {% else %}
+  <form method="post" class="form-inline" style="flex-direction:column; align-items:stretch; max-width:420px;">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="create">
+    <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); margin-bottom:0.3rem;">Username</label>
+    <input type="text" name="username" required style="padding:0.6rem 0.8rem; border-radius:10px; border:1.5px solid var(--naub-border); margin-bottom:0.8rem;">
+
+    <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); margin-bottom:0.3rem;">Email</label>
+    <input type="email" name="email" required style="padding:0.6rem 0.8rem; border-radius:10px; border:1.5px solid var(--naub-border); margin-bottom:0.8rem;">
+
+    <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); margin-bottom:0.3rem;">Password</label>
+    <input type="password" name="password" required minlength="8" style="padding:0.6rem 0.8rem; border-radius:10px; border:1.5px solid var(--naub-border); margin-bottom:0.8rem;">
+
+    <label style="font-size:0.83rem; display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+      <input type="checkbox" name="is_superuser"> Grant full superuser access (can manage other admins)
+    </label>
+
+    <button type="submit" class="btn-sm primary" style="align-self:flex-start;">Create Admin</button>
+  </form>
+  {% endif %}
+</div>
+
+{% endblock %}

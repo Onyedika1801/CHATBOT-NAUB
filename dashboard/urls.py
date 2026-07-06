@@ -5,6 +5,7 @@ app_name = "dashboard"
 
 urlpatterns = [
     path('', views.dashboard_home, name='home'),
+    path('admins/', views.manage_admins, name='manage_admins'),
     path('unanswered/', views.unanswered_list, name='unanswered_list'),
     path('unanswered/<int:pk>/answer/', views.answer_question, name='answer_question'),
     path('unanswered/<int:pk>/ignore/', views.ignore_question, name='ignore_question'),

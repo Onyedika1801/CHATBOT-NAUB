@@ -1,5 +1,7 @@
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages as django_messages
+from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Count, Avg, Q
 from django.utils import timezone
@@ -10,10 +12,96 @@ import re
 
 from chatbot.models import ConversationLog, UnansweredQuestion, KnowledgeBaseEntry, ChatSession
 from chatbot.nlp_engine import get_matcher
+from accounts.signals import MAX_ADMIN_ACCOUNTS
 
 
 def is_staff_user(user):
     return user.is_active and user.is_staff
+
+
+def is_superuser(user):
+    return user.is_active and user.is_superuser
+
+
+@user_passes_test(is_superuser, login_url='/accounts/login/')
+def manage_admins(request):
+    """Superuser-only page to view current admin accounts and create new
+    ones, without needing to know about Django's separate /admin/ panel.
+    Enforces the same 3-admin cap and unique-email rule as everywhere else."""
+    if request.method == "POST":
+        action = request.POST.get("action")
+
+        if action == "create":
+            username = request.POST.get("username", "").strip()
+            email = request.POST.get("email", "").strip().lower()
+            password = request.POST.get("password", "")
+            make_superuser = request.POST.get("is_superuser") == "on"
+
+            errors = []
+            if not username or not email or not password:
+                errors.append("Username, email, and password are all required.")
+            if len(password) < 8:
+                errors.append("Password must be at least 8 characters.")
+            if username and User.objects.filter(username__iexact=username).exists():
+                errors.append(f"The username '{username}' is already taken.")
+            if email and User.objects.filter(email__iexact=email).exists():
+                errors.append(f"An account with the email '{email}' already exists.")
+
+            current_admin_count = User.objects.filter(is_staff=True).count()
+            if current_admin_count >= MAX_ADMIN_ACCOUNTS:
+                errors.append(
+                    f"Admin accounts are capped at {MAX_ADMIN_ACCOUNTS}. "
+                    f"Demote or delete an existing admin first."
+                )
+
+            if errors:
+                for e in errors:
+                    django_messages.error(request, e)
+            else:
+                try:
+                    new_admin = User(
+                        username=username,
+                        email=email,
+                        is_staff=True,
+                        is_superuser=make_superuser,
+                        is_active=True,
+                    )
+                    new_admin.set_password(password)
+                    new_admin.full_clean()
+                    new_admin.save()
+                    django_messages.success(request, f"Admin account '{username}' created successfully.")
+                except ValidationError as e:
+                    for msg in e.messages:
+                        django_messages.error(request, msg)
+
+        elif action == "toggle_active":
+            target = get_object_or_404(User, pk=request.POST.get("user_id"))
+            if target.pk == request.user.pk:
+                django_messages.error(request, "You cannot deactivate your own account.")
+            else:
+                target.is_active = not target.is_active
+                target.save(update_fields=["is_active"])
+                django_messages.success(request, f"{target.username} is now {'active' if target.is_active else 'deactivated'}.")
+
+        elif action == "revoke":
+            target = get_object_or_404(User, pk=request.POST.get("user_id"))
+            if target.pk == request.user.pk:
+                django_messages.error(request, "You cannot revoke your own admin access.")
+            else:
+                target.is_staff = False
+                target.is_superuser = False
+                target.save(update_fields=["is_staff", "is_superuser"])
+                django_messages.success(request, f"Admin access revoked for {target.username}.")
+
+        return redirect('dashboard:manage_admins')
+
+    admins = User.objects.filter(is_staff=True).order_by("-is_superuser", "username")
+    return render(request, "dashboard/manage_admins.html", {
+        "active": "admins",
+        "admins": admins,
+        "max_admins": MAX_ADMIN_ACCOUNTS,
+        "slots_used": admins.count(),
+    })
 
 
 @user_passes_test(is_staff_user, login_url='/accounts/login/')
