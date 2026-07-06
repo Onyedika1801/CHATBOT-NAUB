@@ -250,6 +250,56 @@ def knowledge_base_list(request):
     return render(request, "dashboard/kb_list.html", {"active": "kb", "entries": entries})
 
 
+@user_passes_test(is_superuser, login_url='/accounts/login/')
+def kb_create(request):
+    """Lets a superuser add a brand-new knowledge base entry directly,
+    without needing a student to have asked it first (unlike the
+    Unanswered Questions flow, which only surfaces questions after
+    someone actually asks them)."""
+    if request.method == "POST":
+        questions_raw = request.POST.get("questions", "").strip()
+        answer = request.POST.get("answer", "").strip()
+        category = request.POST.get("category", "").strip() or "general"
+
+        questions = [q.strip() for q in questions_raw.splitlines() if q.strip()]
+
+        errors = []
+        if not questions:
+            errors.append("Please provide at least one training question.")
+        if not answer:
+            errors.append("Please provide the answer.")
+
+        if errors:
+            for e in errors:
+                django_messages.error(request, e)
+            return render(request, "dashboard/kb_create.html", {
+                "active": "kb",
+                "questions_raw": questions_raw,
+                "answer": answer,
+                "category": category,
+            })
+
+        base_slug = _slugify_intent(questions[0][:40])
+        slug = base_slug
+        counter = 1
+        while KnowledgeBaseEntry.objects.filter(intent_id=slug).exists():
+            counter += 1
+            slug = f"{base_slug}-{counter}"
+
+        KnowledgeBaseEntry.objects.create(
+            intent_id=slug,
+            questions="\n".join(questions),
+            answer=answer,
+            category=category,
+            is_active=True,
+        )
+        get_matcher(force_rebuild=True)
+        django_messages.success(request, f"New knowledge base entry '{slug}' created.")
+        return redirect('dashboard:kb_list')
+
+    return render(request, "dashboard/kb_create.html", {"active": "kb"})
+
+
 @user_passes_test(is_staff_user, login_url='/accounts/login/')
 @require_POST
 def kb_toggle_active(request, pk):

@@ -10,6 +10,7 @@ urlpatterns = [
     path('unanswered/<int:pk>/answer/', views.answer_question, name='answer_question'),
     path('unanswered/<int:pk>/ignore/', views.ignore_question, name='ignore_question'),
     path('knowledge-base/', views.knowledge_base_list, name='kb_list'),
+    path('knowledge-base/create/', views.kb_create, name='kb_create'),
     path('knowledge-base/<int:pk>/toggle/', views.kb_toggle_active, name='kb_toggle_active'),
     path('logs/', views.conversation_logs, name='logs'),
 ]

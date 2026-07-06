@@ -1,0 +1,49 @@
+{% extends "dashboard/base_dash.html" %}
+{% block dash_content %}
+
+<div class="dash-header">
+  <div>
+    <h1>Add New Knowledge Base Entry</h1>
+    <p>Create a new answer the chatbot can give, without waiting for a student to ask it first</p>
+  </div>
+</div>
+
+<div class="panel">
+  <form method="post" style="display:flex; flex-direction:column; gap:1rem; max-width:640px;">
+    {% csrf_token %}
+
+    <div>
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); display:block; margin-bottom:0.4rem;">
+        Training Questions (one per line)
+      </label>
+      <textarea name="questions" rows="5" required placeholder="e.g.&#10;how do I get a bed space&#10;hostel allocation process&#10;can I choose my roommate"
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; font-family:inherit; font-size:0.88rem; box-sizing:border-box; resize:vertical;">{{ questions_raw|default:"" }}</textarea>
+      <p style="font-size:0.74rem; color:var(--naub-text-muted); margin-top:0.3rem;">
+        Add several different ways students might phrase this question — the more variety, the better the chatbot recognizes paraphrases.
+      </p>
+    </div>
+
+    <div>
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); display:block; margin-bottom:0.4rem;">
+        Answer
+      </label>
+      <textarea name="answer" rows="6" required placeholder="Type the full answer the chatbot should give for this question..."
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; font-family:inherit; font-size:0.88rem; box-sizing:border-box; resize:vertical;">{{ answer|default:"" }}</textarea>
+    </div>
+
+    <div>
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); display:block; margin-bottom:0.4rem;">
+        Category <span style="font-weight:400; color:var(--naub-text-muted);">(optional)</span>
+      </label>
+      <input type="text" name="category" value="{{ category|default:'' }}" placeholder="e.g. hostel, admissions, examinations"
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; font-family:inherit; font-size:0.88rem; box-sizing:border-box;">
+    </div>
+
+    <div style="display:flex; gap:0.6rem;">
+      <button type="submit" class="btn-sm primary">Create Entry</button>
+      <a href="{% url 'dashboard:kb_list' %}" class="btn-sm outline" style="text-decoration:none; display:inline-flex; align-items:center;">Cancel</a>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

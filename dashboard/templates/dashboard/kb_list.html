@@ -6,6 +6,11 @@
     <h1>Knowledge Base</h1>
     <p>All intents currently powering the chatbot's answers</p>
   </div>
+  {% if user.is_superuser %}
+  <a href="{% url 'dashboard:kb_create' %}" class="btn-pill gold" style="color:var(--naub-green-dark); text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem;">
+    <span style="font-size:1.1rem; line-height:1;">＋</span> Add New Answer
+  </a>
+  {% endif %}
 </div>
 
 <div class="panel">
