@@ -49,6 +49,12 @@
               <div>
                 <div class="bubble {% if m.status == 'rejected' %}rejected{% endif %}">{% if m.status == 'answered' %}{{ m.answer_given }}{% elif m.status == 'rejected' %}{{ m.answer_given|default:"Please rephrase your question." }}{% elif m.status == 'clarification' %}I found a few things that might match. Which one did you mean?{% else %}I don't have an answer for that right now. Please check back later.{% endif %}</div>
                 {% if m.status == 'answered' %}<div class="msg-meta">Match confidence: {{ m.similarity_score|floatformat:0 }}%</div>{% endif %}
+                {% if m.status == 'answered' and m.matched_intent.map_query %}
+                <div class="map-embed-wrap">
+                  <iframe class="map-embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q={{ m.matched_intent.map_query|urlencode }}&output=embed"></iframe>
+                </div>
+                {% endif %}
               </div>
             </div>
           {% endfor %}
@@ -140,6 +146,18 @@ function appendMessage(role, text, opts = {}) {
     wrap.appendChild(chipsWrap);
   }
 
+  if (opts.mapQuery) {
+    const mapWrap = document.createElement('div');
+    mapWrap.className = 'map-embed-wrap';
+    const iframe = document.createElement('iframe');
+    iframe.className = 'map-embed';
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.src = 'https://www.google.com/maps?q=' + encodeURIComponent(opts.mapQuery) + '&output=embed';
+    mapWrap.appendChild(iframe);
+    wrap.appendChild(mapWrap);
+  }
+
   row.appendChild(avatar);
   row.appendChild(wrap);
   chatMessages.appendChild(row);
@@ -187,7 +205,8 @@ async function sendMessage(text) {
       appendMessage('bot', data.reply, {
         rejected: data.status === 'rejected',
         meta,
-        candidates: data.candidates || []
+        candidates: data.candidates || [],
+        mapQuery: data.map_query || null
       });
     }
   } catch (err) {

@@ -27,7 +27,7 @@
             <input type="hidden" name="user_id" value="{{ admin.pk }}">
             <button type="submit" class="btn-sm outline">{% if admin.is_active %}Deactivate{% else %}Activate{% endif %}</button>
           </form>
-          <form method="post" style="display:inline;" onsubmit="return confirm('Revoke admin access for {{ admin.username }}? They will become a regular user.');">
+          <form method="post" class="revoke-admin-form" style="display:inline;" data-username="{{ admin.username }}">
             {% csrf_token %}
             <input type="hidden" name="action" value="revoke">
             <input type="hidden" name="user_id" value="{{ admin.pk }}">
@@ -66,5 +66,16 @@
   </form>
   {% endif %}
 </div>
+
+<script>
+document.querySelectorAll('.revoke-admin-form').forEach(function(form) {
+  form.addEventListener('submit', function(e) {
+    var username = form.dataset.username;
+    if (!confirm('Revoke admin access for ' + username + '? They will become a regular user.')) {
+      e.preventDefault();
+    }
+  });
+});
+</script>
 
 {% endblock %}

@@ -110,7 +110,6 @@ def dashboard_home(request):
     answered_count = ConversationLog.objects.filter(status="answered").count()
     clarification_count = ConversationLog.objects.filter(status="clarification").count()
     unanswered_count = ConversationLog.objects.filter(status="unanswered").count()
-    rejected_count = ConversationLog.objects.filter(status="rejected").count()
 
     accuracy = round((answered_count / total_questions) * 100, 2) if total_questions else 0.0
     avg_similarity = ConversationLog.objects.filter(status="answered").aggregate(avg=Avg("similarity_score"))["avg"]
@@ -145,7 +144,6 @@ def dashboard_home(request):
         "answered_count": answered_count,
         "clarification_count": clarification_count,
         "unanswered_count": unanswered_count,
-        "rejected_count": rejected_count,
         "accuracy": accuracy,
         "avg_similarity": avg_similarity,
         "pending_unanswered": pending_unanswered,
@@ -260,6 +258,7 @@ def kb_create(request):
         questions_raw = request.POST.get("questions", "").strip()
         answer = request.POST.get("answer", "").strip()
         category = request.POST.get("category", "").strip() or "general"
+        map_query = request.POST.get("map_query", "").strip()
 
         questions = [q.strip() for q in questions_raw.splitlines() if q.strip()]
 
@@ -277,6 +276,7 @@ def kb_create(request):
                 "questions_raw": questions_raw,
                 "answer": answer,
                 "category": category,
+                "map_query": map_query,
             })
 
         base_slug = _slugify_intent(questions[0][:40])
@@ -291,6 +291,7 @@ def kb_create(request):
             questions="\n".join(questions),
             answer=answer,
             category=category,
+            map_query=map_query,
             is_active=True,
         )
         get_matcher(force_rebuild=True)

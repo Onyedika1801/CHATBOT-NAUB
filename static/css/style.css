@@ -238,6 +238,21 @@ button { font-family: inherit; cursor: pointer; }
   padding: 0 0.2rem;
 }
 
+.map-embed-wrap {
+  margin-top: 0.6rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--naub-border);
+  box-shadow: var(--shadow-sm);
+  max-width: 420px;
+}
+.map-embed {
+  width: 100%;
+  height: 220px;
+  border: none;
+  display: block;
+}
+
 .typing-indicator {
   display: flex; gap: 4px; align-items: center; padding: 0.6rem 1rem;
 }

@@ -21,6 +21,7 @@ class Command(BaseCommand):
                     "questions": questions_text,
                     "answer": item["answer"],
                     "category": item.get("category", "general"),
+                    "map_query": item.get("map_query", ""),
                     "is_active": True,
                 },
             )

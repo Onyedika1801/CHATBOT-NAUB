@@ -11,6 +11,11 @@ class KnowledgeBaseEntry(models.Model):
     )
     answer = models.TextField()
     category = models.CharField(max_length=100, blank=True, default="general")
+    map_query = models.CharField(
+        max_length=255, blank=True,
+        help_text="Optional: an address or place name (e.g. '1 Gombe Road, Biu, Borno State, Nigeria') "
+                   "to show an embedded Google Map alongside this answer. Leave blank for no map."
+    )
     is_active = models.BooleanField(default=True)
     times_matched = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)

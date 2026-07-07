@@ -76,7 +76,8 @@
       "where is naub campus"
     ],
     "answer": "Nigerian Army University Biu (NAUB) is located in Biu, Borno State, Nigeria. The University occupies an area bounded by the Biu–Gombe and Biu–Numan roads, covering approximately 5,000 hectares. Official address: No 1, Gombe Road, PMB 1500, Biu, Borno State, Nigeria. NAUB also has a Liaison Office at the Nigerian Army Resource Centre, Mambilla Barracks Junction, Asokoro, Abuja.",
-    "category": "general"
+    "category": "general",
+    "map_query": "1 Gombe Road, Biu, Borno State, Nigeria"
   },
   {
     "id": "naub_contact",
@@ -193,20 +194,7 @@
       "colleges in naub",
       "how many faculties does naub have"
     ],
-    "answer": "NAUB currently has six (6) Faculties:\n\n1. 🎓 Faculty of Arts and Management Sciences\n2. 💻 Faculty of Computing\n3. ⚙️ Faculty of Engineering & Technology\n4. 🌳 Faculty of Environmental Sciences\n5. 🔬 Faculty of Natural & Applied Sciences\n6. 🏛️ Faculty of Social Sciences\n\nEach faculty houses several departments offering accredited undergraduate programmes. Ask me about a specific faculty's departments and programmes for more detail!",
-    "category": "general"
-  },
-  {
-    "id": "faculty_arts_management",
-    "questions": [
-      "departments in faculty of arts and management sciences",
-      "what courses are in faculty of arts and management sciences",
-      "accounting department naub",
-      "history department naub",
-      "languages department naub",
-      "management department naub"
-    ],
-    "answer": "The Faculty of Arts and Management Sciences has the following departments and programmes:\n\n• Department of Accounting — BSc Accounting\n• Department of History — BA Military History\n• Department of Languages — BA Arabic, BA English\n• Department of Management — BSc Management, BSc Transport & Logistics Management",
+    "answer": "NAUB currently has five (5) Faculties:\n\n1. 🎓 Faculty of Arts, Management and Social Sciences (FAMSS)\n2. 💻 Faculty of Computing\n3. ⚙️ Faculty of Engineering & Technology\n4. 🌳 Faculty of Environmental Sciences\n5. 🔬 Faculty of Natural & Applied Sciences\n\nEach faculty houses several departments offering accredited undergraduate programmes. Ask me about a specific faculty's departments and Dean for more detail!",
     "category": "general"
   },
   {
@@ -217,10 +205,9 @@
       "courses in faculty of computing",
       "computer science department naub",
       "cyber security department naub",
-      "software engineering department naub",
-      "information technology department naub"
+      "information systems department naub"
     ],
-    "answer": "The Faculty of Computing has the following departments and programmes:\n\n• Department of Computer Science — BSc Computer Science\n• Department of Cyber Security — BSc Cyber Security\n• Department of Information Systems — BSc Information Systems\n• Department of Information Technology — BSc Information Technology\n• Department of Software Engineering — BSc Software Engineering",
+    "answer": "The Faculty of Computing (FCOM) has three departments and programmes:\n\n• Department of Computer Science — BSc Computer Science\n• Department of Cyber Security — BSc Cyber Security (HOD: Dr. Abdulkadir Hassan Disina, pioneer HOD)\n• Department of Information Systems — BSc Information Systems (HOD: Samaila Kasimu Ahmad)\n\nThe Dean of the Faculty of Computing is Dr. Habila Mikailu, a Senior Lecturer in the Department of Computer Science specializing in Artificial Intelligence, Machine Learning, and Intelligent Systems.",
     "category": "general"
   },
   {
@@ -232,7 +219,7 @@
       "electrical engineering department naub",
       "mechanical engineering department naub"
     ],
-    "answer": "The Faculty of Engineering & Technology has the following departments and programmes:\n\n• Department of Civil Engineering — B.Eng. Civil Engineering\n• Department of Electrical & Electronics Engineering — B.Eng. Electrical & Electronics Engineering\n• Department of Mechanical Engineering — B.Eng. Mechanical Engineering\n\nEngineering programmes (B.Eng.) run for five (5) years for UTME entry.",
+    "answer": "The Faculty of Engineering & Technology has the following departments and programmes:\n\n• Department of Civil Engineering — B.Eng. Civil Engineering (HOD: Engr. Abdullahi Musa)\n• Department of Electrical & Electronics Engineering — B.Eng. Electrical & Electronics Engineering (HOD: Engr. Nuraini Sunusi Ma'aji)\n• Department of Mechanical Engineering — B.Eng. Mechanical Engineering\n\nEngineering programmes (B.Eng.) run for five (5) years for UTME entry, and four (4) years for Direct Entry. Civil Engineering requires 192 credit units (UTME) or 162 (DE) for graduation, subject to NUC and COREN requirements.",
     "category": "general"
   },
   {
@@ -245,7 +232,7 @@
       "surveying department naub",
       "urban and regional planning naub"
     ],
-    "answer": "The Faculty of Environmental Sciences has the following departments and programmes:\n\n• Department of Building Technology — B.Tech. Building\n• Department of Environmental Management — B.Tech. Environmental Management\n• Department of Estate Management — B.Tech. Estate Management\n• Department of Surveying & Geo-informatics — B.Tech. Surveying & Geo-informatics\n• Department of Urban & Regional Planning — B.Tech. Urban & Regional Planning\n\nB.Tech. programmes in this faculty run for five (5) years for UTME entry.",
+    "answer": "The Faculty of Environmental Sciences has five departments and programmes:\n\n• Department of Building — B.Tech. Building (HOD: Dr. Solomon Maxwell Soji)\n• Department of Environmental Management — B.Tech. Environmental Management (HOD: Dr. Nchedo Nnedi Ubachukwu)\n• Department of Estate Management — B.Tech. Estate Management (HOD: Dr. Mohammed Akilu Umar)\n• Department of Surveying & Geo-informatics — B.Tech. Surveying & Geo-informatics (HOD: Dr. Emmanuel Umaru Peter)\n• Department of Urban & Regional Planning — B.Tech. Urban & Regional Planning (HOD: Tpl. Sajoh Gwary Moda)\n\nThe Dean of the Faculty of Environmental Sciences is Brigadier General Ali Williams Butu, an Associate Professor of Geography. B.Tech. programmes in this faculty run for five (5) years for UTME entry.",
     "category": "general"
   },
   {
@@ -258,20 +245,7 @@
       "mathematics department naub",
       "physics department naub"
     ],
-    "answer": "The Faculty of Natural & Applied Sciences has the following departments and programmes:\n\n• Department of Biology — BSc Biology\n• Department of Chemistry — BSc Chemistry\n• Department of Mathematics — BSc Mathematics\n• Department of Physics — BSc Physics, BSc Electronics\n\nThese are four (4) year programmes for UTME entry.",
-    "category": "general"
-  },
-  {
-    "id": "faculty_social_sciences",
-    "questions": [
-      "departments in faculty of social sciences",
-      "social sciences courses naub",
-      "economics department naub",
-      "political science department naub",
-      "sociology department naub",
-      "geography department naub"
-    ],
-    "answer": "The Faculty of Social Sciences has the following departments and programmes:\n\n• Department of Economics — BSc Economics\n• Department of Political Science — BSc International Relations, BSc Peace Studies & Conflict Resolution, BSc Political Science\n• Department of Sociology — BSc Criminology & Security Studies, BSc Psychology, BSc Sociology\n• Department of Geography — BSc Geography",
+    "answer": "The Faculty of Natural & Applied Sciences has the following departments and programmes:\n\n• Department of Biology — BSc Biology (HOD: Dr. Usman Alhaji Mohammed)\n• Department of Chemistry — BSc Chemistry (HOD: Dr. Ibrahim O. Abdulsalami)\n• Department of Mathematics — BSc Mathematics\n• Department of Physics — BSc Physics, BSc Electronics\n\nThe Dean of the Faculty of Natural & Applied Sciences is Dr. Sunday Olanrewaju Agboola, an Associate Professor of Applied Mathematics/Statistics. These are four (4) year programmes for UTME entry.",
     "category": "general"
   },
   {
@@ -286,7 +260,7 @@
       "what programmes does NAUB offer",
       "courses offered naub"
     ],
-    "answer": "NAUB offers undergraduate programmes across six faculties: Arts and Management Sciences, Computing, Engineering & Technology, Environmental Sciences, Natural & Applied Sciences, and Social Sciences. Degree titles awarded include BSc, BA, B.Eng., and B.Tech. Ask me about a specific faculty (e.g. 'departments in Faculty of Computing') for the full list of departments and programmes in that faculty.",
+    "answer": "NAUB offers undergraduate programmes across five faculties: Arts, Management and Social Sciences; Computing; Engineering & Technology; Environmental Sciences; and Natural & Applied Sciences. Degree titles awarded include BSc, BA, B.Eng., and B.Tech. Ask me about a specific faculty (e.g. 'departments in Faculty of Computing') for the full list of departments, programmes, and Heads of Department.",
     "category": "general"
   },
   {
@@ -1321,6 +1295,52 @@
       "when is registration naub"
     ],
     "answer": "NAUB's academic calendar (semester start/end dates, registration windows, and exam periods) is published separately each session, since it changes from year to year, rather than being fixed in the student handbook. For the current session's official dates, check the student portal (portal.naub.edu.ng), the notice boards on campus, or www.naub.edu.ng.",
+    "category": "general"
+  },
+  {
+    "id": "faculty_arts_management_social_sciences",
+    "questions": [
+      "departments in faculty of arts management and social sciences",
+      "famss departments",
+      "what courses are in faculty of arts management sciences",
+      "accounting department naub",
+      "history department naub",
+      "languages department naub",
+      "management department naub",
+      "social sciences courses naub",
+      "economics department naub",
+      "political science department naub",
+      "sociology department naub",
+      "geography department naub",
+      "who is the dean of famss",
+      "dean of arts management and social sciences"
+    ],
+    "answer": "The Faculty of Arts, Management and Social Sciences (FAMSS) is NAUB's largest faculty, combining Arts, Management, and Social Sciences. It has the following departments:\n\n• Department of Accounting — BSc Accounting (HOD: Dr. S.J. Inyada)\n• Department of Geography — BSc Geography (HOD: Dr. Olusola Samuel Afolayan)\n• Department of Languages — BA English, BA Arabic (HOD: Mahir H. Mahir)\n• Department of Management — BSc Management, BSc Economics, BSc Transport & Logistics Management (HOD: Emmanuel L. Balami)\n• Department of Military History — BA Military History (HOD: Henry Gyang Mang)\n• Department of Political Science — BSc Political Science, BSc International Relations, BSc Peace Studies & Conflict Resolution (HOD: Major Z. Apamshan, PhD)\n• Department of Sociology — BSc Sociology, BSc Criminology & Security Studies, BSc Psychology (HOD: Dr. Oduwole Tajudeen Adebowale)\n\nThe Dean of FAMSS is Associate Professor Abdulsalami Muyideen Deji, a scholar of History and Political Science.",
+    "category": "general"
+  },
+  {
+    "id": "admission_clearance_documents",
+    "questions": [
+      "what do I need to bring after admission",
+      "documents required for registration naub",
+      "what documents do I need for clearance naub",
+      "what to bring for matriculation naub",
+      "registration documents naub",
+      "what do I need after gaining admission",
+      "clearance requirements naub",
+      "fresh student registration documents"
+    ],
+    "answer": "Based on NAUB's most recent official clearance/registration notice, newly admitted candidates (UTME/DE) should come along with ORIGINAL copies of the following documents for clearance:\n\n1. JAMB Admission Letter (Institutional Copy)\n2. JAMB Result Slip (UTME candidates) or JAMB Acknowledgement Slip (DE candidates)\n3. O'Level Certificate/Statement of Result\n4. A'Level Certificate/Statement of Result (DE candidates only)\n5. Certificate of Birth / Declaration of Age\n6. Certificate of Primary Education\n7. Certificate of Origin / Indigene\n8. Post-UTME/DE Screening Form with payment receipt\n9. Two (2) passport photographs\n\n⚠️ Clearance is typically a two-week exercise, with late registration (an extra week) attracting a fine. Exact dates and any fee changes are announced each session via www.naub.edu.ng — always confirm the current session's notice before travelling to campus.",
+    "category": "general"
+  },
+  {
+    "id": "passport_photograph_requirements",
+    "questions": [
+      "passport photograph requirements naub",
+      "what kind of passport photo does naub need",
+      "photo specifications for naub portal"
+    ],
+    "answer": "For your NAUB portal profile (uploaded during online clearance/registration), your passport photograph must have: a white background only, formal attire (shirt or native wear), no glasses, no cap, and no face covering.",
     "category": "general"
   }
 ]

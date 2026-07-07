@@ -90,12 +90,14 @@ def send_message(request):
     )
 
     candidates = []
+    map_query = None
 
     if result["status"] == "answered":
         entry = result["entry"]
         entry.times_matched += 1
         entry.save(update_fields=["times_matched"])
         reply_text = result["answer"]
+        map_query = entry.map_query or None
 
     elif result["status"] == "clarification":
         reply_text = "I found a few things that might match. Which one did you mean?"
@@ -121,6 +123,7 @@ def send_message(request):
         "status": result["status"],
         "similarity_score": result["similarity_score"],
         "candidates": candidates,
+        "map_query": map_query,
         "stored": True,
     })
 

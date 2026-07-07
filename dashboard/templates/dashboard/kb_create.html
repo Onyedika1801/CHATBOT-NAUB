@@ -39,6 +39,17 @@
         style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; font-family:inherit; font-size:0.88rem; box-sizing:border-box;">
     </div>
 
+    <div>
+      <label style="font-size:0.8rem; font-weight:600; color:var(--naub-text-muted); display:block; margin-bottom:0.4rem;">
+        Map Location <span style="font-weight:400; color:var(--naub-text-muted);">(optional — shows an embedded Google Map with the answer)</span>
+      </label>
+      <input type="text" name="map_query" value="{{ map_query|default:'' }}" placeholder="e.g. 1 Gombe Road, Biu, Borno State, Nigeria"
+        style="width:100%; padding:0.65rem 0.8rem; border:1.5px solid var(--naub-border); border-radius:10px; font-family:inherit; font-size:0.88rem; box-sizing:border-box;">
+      <p style="font-size:0.74rem; color:var(--naub-text-muted); margin-top:0.3rem;">
+        Enter a real address or place name. Leave blank if this answer isn't about a physical location.
+      </p>
+    </div>
+
     <div style="display:flex; gap:0.6rem;">
       <button type="submit" class="btn-sm primary">Create Entry</button>
       <a href="{% url 'dashboard:kb_list' %}" class="btn-sm outline" style="text-decoration:none; display:inline-flex; align-items:center;">Cancel</a>
