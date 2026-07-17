@@ -205,9 +205,11 @@
       "courses in faculty of computing",
       "computer science department naub",
       "cyber security department naub",
-      "information systems department naub"
+      "information systems department naub",
+      "information technology department naub",
+      "software engineering department naub"
     ],
-    "answer": "The Faculty of Computing (FCOM) has three departments and programmes:\n\n• Department of Computer Science — BSc Computer Science\n• Department of Cyber Security — BSc Cyber Security (HOD: Dr. Abdulkadir Hassan Disina, pioneer HOD)\n• Department of Information Systems — BSc Information Systems (HOD: Samaila Kasimu Ahmad)\n\nThe Dean of the Faculty of Computing is Dr. Habila Mikailu, a Senior Lecturer in the Department of Computer Science specializing in Artificial Intelligence, Machine Learning, and Intelligent Systems.",
+    "answer": "The Faculty of Computing (FCOM) has five departments and programmes:\n\n• Department of Computer Science — BSc Computer Science\n• Department of Cyber Security — BSc Cyber Security\n• Department of Information Systems — BSc Information Systems\n• Department of Information Technology — BSc Information Technology\n• Department of Software Engineering — BSc Software Engineering\n\nThe Dean of the Faculty of Computing is Dr. Habila Mikailu, a Senior Lecturer in the Department of Computer Science specializing in Artificial Intelligence, Machine Learning, and Intelligent Systems.",
     "category": "general"
   },
   {

@@ -42,9 +42,45 @@
 </div>
 
 <div class="panel">
+  <div class="panel-header"><h3>Revoked Admins</h3></div>
+  {% if revoked_admins %}
+  <p style="font-size:0.78rem; color:var(--naub-text-muted); margin-bottom:0.8rem;">
+    These accounts no longer have admin access, but still exist in the database (so their username/email stay reserved). Reactivate to restore access, or delete permanently to free up the username/email.
+  </p>
+  <table class="data-table">
+    <thead><tr><th>Username</th><th>Email</th><th></th></tr></thead>
+    <tbody>
+      {% for u in revoked_admins %}
+      <tr>
+        <td>{{ u.username }}</td>
+        <td>{{ u.email }}</td>
+        <td>
+          <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="reactivate">
+            <input type="hidden" name="user_id" value="{{ u.pk }}">
+            <button type="submit" class="btn-sm outline">Reactivate</button>
+          </form>
+          <form method="post" class="delete-admin-form" style="display:inline;" data-username="{{ u.username }}">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="user_id" value="{{ u.pk }}">
+            <button type="submit" class="btn-sm danger">Delete Permanently</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="empty-state"><div class="icon">🗑️</div>No revoked admins.</div>
+  {% endif %}
+</div>
+
+<div class="panel">
   <div class="panel-header"><h3>Add New Admin</h3></div>
   {% if slots_used >= max_admins %}
-    <div class="alert-box error">Admin accounts are capped at {{ max_admins }}. Revoke or deactivate an existing admin first to free a slot.</div>
+    <div class="alert-box error">Admin accounts are capped at {{ max_admins }}. Revoke or delete an existing admin first to free a slot.</div>
   {% else %}
   <form method="post" class="form-inline" style="flex-direction:column; align-items:stretch; max-width:420px;">
     {% csrf_token %}
@@ -71,7 +107,15 @@
 document.querySelectorAll('.revoke-admin-form').forEach(function(form) {
   form.addEventListener('submit', function(e) {
     var username = form.dataset.username;
-    if (!confirm('Revoke admin access for ' + username + '? They will become a regular user.')) {
+    if (!confirm('Revoke admin access for ' + username + '? Their account will move to "Revoked Admins" below, where you can reactivate or permanently delete it.')) {
+      e.preventDefault();
+    }
+  });
+});
+document.querySelectorAll('.delete-admin-form').forEach(function(form) {
+  form.addEventListener('submit', function(e) {
+    var username = form.dataset.username;
+    if (!confirm('Permanently delete ' + username + '? This cannot be undone -- their username and email will become available for a new account.')) {
       e.preventDefault();
     }
   });

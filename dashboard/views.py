@@ -91,14 +91,52 @@ def manage_admins(request):
                 target.is_staff = False
                 target.is_superuser = False
                 target.save(update_fields=["is_staff", "is_superuser"])
-                django_messages.success(request, f"Admin access revoked for {target.username}.")
+                django_messages.success(
+                    request,
+                    f"Admin access revoked for {target.username}. Their account still exists "
+                    f"(see 'Revoked Admins' below) -- reactivate it or delete it permanently from there."
+                )
+
+        elif action == "reactivate":
+            target = get_object_or_404(User, pk=request.POST.get("user_id"))
+            current_admin_count = User.objects.filter(is_staff=True).exclude(pk=target.pk).count()
+            if current_admin_count >= MAX_ADMIN_ACCOUNTS:
+                django_messages.error(
+                    request,
+                    f"Cannot reactivate -- admin accounts are capped at {MAX_ADMIN_ACCOUNTS}. "
+                    f"Revoke or delete an existing admin first."
+                )
+            else:
+                target.is_staff = True
+                target.is_active = True
+                target.save(update_fields=["is_staff", "is_active"])
+                django_messages.success(request, f"{target.username} is an admin again.")
+
+        elif action == "delete":
+            target = get_object_or_404(User, pk=request.POST.get("user_id"))
+            if target.pk == request.user.pk:
+                django_messages.error(request, "You cannot delete your own account.")
+            elif target.is_staff:
+                django_messages.error(request, "Revoke this admin's access first, then delete.")
+            else:
+                username = target.username
+                target.delete()
+                django_messages.success(
+                    request,
+                    f"'{username}' permanently deleted. That username and email are now available again."
+                )
 
         return redirect('dashboard:manage_admins')
 
     admins = User.objects.filter(is_staff=True).order_by("-is_superuser", "username")
+    # In this app every account is admin-related (there's no public signup),
+    # so anyone not currently staff is a revoked former admin, not a random
+    # regular user -- safe and correct to surface them here for cleanup.
+    revoked_admins = User.objects.filter(is_staff=False).order_by("-date_joined")
     return render(request, "dashboard/manage_admins.html", {
         "active": "admins",
         "admins": admins,
+        "revoked_admins": revoked_admins,
         "max_admins": MAX_ADMIN_ACCOUNTS,
         "slots_used": admins.count(),
     })
