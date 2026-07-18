@@ -14,4 +14,4 @@ python manage.py collectstatic --noinput
 # If you later add an external Postgres (e.g. Neon/Supabase) and set
 # DATABASE_URL as a Replit Secret, it will be picked up automatically.
 
-gunicorn naub_chatbot.wsgi:application --bind 0.0.0.0:8000
+gunicorn naub_chatbot.wsgi:application --bind 0.0.0.0:5000
