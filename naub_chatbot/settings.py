@@ -96,7 +96,14 @@ DATABASES = {
 _database_url = os.environ.get('DATABASE_URL')
 if _database_url:
     import dj_database_url
-    DATABASES['default'] = dj_database_url.parse(_database_url, conn_max_age=600)
+    # conn_max_age=0 prevents stale-connection SSL errors on serverless databases
+    # (e.g. Neon) that close idle connections before Django's 600-second window.
+    # conn_health_checks=True makes Django verify the connection is alive before reuse.
+    DATABASES['default'] = dj_database_url.parse(
+        _database_url,
+        conn_max_age=0,
+        conn_health_checks=True,
+    )
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
