@@ -1,5 +1,6 @@
 run = "bash replit_start.sh"
 entrypoint = "manage.py"
+modules = ["python-3.12", "web", "bash", "nix"]
 
 [env]
 PYTHONUNBUFFERED = "1"
@@ -9,4 +10,4 @@ localPort = 8000
 externalPort = 80
 
 [nix]
-channel = "stable-24_05"
+channel = "stable-25_05"
