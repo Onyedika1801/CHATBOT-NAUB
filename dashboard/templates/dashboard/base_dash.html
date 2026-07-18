@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block body %}
+<!-- Mobile hamburger button -->
+<button class="dash-hamburger" id="dashHamburger" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
+<!-- Overlay for closing sidebar on mobile -->
+<div class="dash-overlay" id="dashOverlay"></div>
+
 <div class="dash-shell">
-  <aside class="dash-sidebar">
+  <aside class="dash-sidebar" id="dashSidebar">
     <div class="naub-brand">
       <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img">
       <div class="naub-brand-text">
@@ -31,4 +38,23 @@
     {% block dash_content %}{% endblock %}
   </main>
 </div>
+<script>
+const hamburger = document.getElementById('dashHamburger');
+const sidebar = document.getElementById('dashSidebar');
+const overlay = document.getElementById('dashOverlay');
+function openSidebar() {
+  sidebar.classList.add('open');
+  overlay.classList.add('open');
+}
+function closeSidebar() {
+  sidebar.classList.remove('open');
+  overlay.classList.remove('open');
+}
+hamburger.addEventListener('click', () => {
+  sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+});
+overlay.addEventListener('click', closeSidebar);
+// Close sidebar when a nav link is clicked on mobile
+sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeSidebar));
+</script>
 {% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Account Inactive - NAUB Chatbot{% endblock %}
+{% block body %}
+<div class="auth-shell">
+  <div class="auth-card">
+    <img src="{% static 'images/naub_logo.png' %}" alt="NAUB Logo" class="naub-logo-img" style="width:60px;height:60px;margin:0 auto 1.1rem;display:block;">
+    <h1 style="color:var(--naub-danger);">Account Inactive</h1>
+    <p class="sub">This admin account has been deactivated. Please contact the superuser to reactivate your access.</p>
+    <a href="{% url 'account_login' %}" class="btn-pill gold" style="display:block; text-align:center; padding:0.75rem; color:var(--naub-green-dark); background:var(--naub-gold); border:none; margin-top:1rem;">← Back to Sign In</a>
+  </div>
+</div>
+{% endblock %}

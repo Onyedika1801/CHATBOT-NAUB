@@ -517,9 +517,87 @@ table.data-table tr:last-child td { border-bottom: none; }
 .mini-bar-unans { background: var(--naub-gold); width: 100%; }
 .mini-bar-label { font-size: 0.68rem; color: var(--naub-text-muted); font-weight: 600; }
 
+/* ===================== PERMANENT FAQ BAR ===================== */
+.faq-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--naub-border);
+  background: var(--naub-white);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+.faq-bar::-webkit-scrollbar { display: none; }
+.faq-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--naub-text-muted);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.faq-chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.faq-chips::-webkit-scrollbar { display: none; }
+.faq-chips .chip { white-space: nowrap; flex-shrink: 0; }
+
+/* ===================== DASHBOARD MOBILE HAMBURGER ===================== */
+.dash-hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--naub-green-dark);
+  border: none;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+.dash-hamburger span {
+  display: block;
+  width: 20px; height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.dash-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 98;
+}
+
 @media (max-width: 880px) {
-  .dash-sidebar { display: none; }
-  .dash-main { padding: 1.2rem; }
+  .dash-hamburger { display: flex; }
+  .dash-sidebar {
+    display: flex;
+    position: fixed;
+    top: 0; left: -260px;
+    height: 100vh;
+    z-index: 99;
+    transition: left 0.25s ease;
+    flex-direction: column;
+  }
+  .dash-sidebar.open { left: 0; }
+  .dash-overlay.open { display: block; }
+  .dash-main { padding: 1.2rem 1rem 1.2rem 1rem; }
 }
 @media (max-width: 600px) {
   .msg-row { max-width: 100%; }
