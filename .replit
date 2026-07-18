@@ -39,3 +39,8 @@ waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["gunicorn", "naub_chatbot.wsgi:application", "--bind=0.0.0.0:5000", "--reuse-port"]
+build = ["bash", "-c", "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate --noinput && python manage.py load_kb"]
