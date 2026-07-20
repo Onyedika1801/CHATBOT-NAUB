@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% block body %}
-<!-- Mobile hamburger button -->
-<button class="dash-hamburger" id="dashHamburger" aria-label="Open menu">
-  <span></span><span></span><span></span>
-</button>
+<!-- Mobile top bar: sticky, scrolls with the page instead of floating over content -->
+<div class="dash-topbar">
+  <button class="dash-hamburger" id="dashHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="naub-brand-text">
+    <h1>NAUB Admin</h1>
+    <p>Chatbot Dashboard</p>
+  </div>
+</div>
 <!-- Overlay for closing sidebar on mobile -->
 <div class="dash-overlay" id="dashOverlay"></div>
 
@@ -45,10 +51,14 @@ const overlay = document.getElementById('dashOverlay');
 function openSidebar() {
   sidebar.classList.add('open');
   overlay.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
 }
 function closeSidebar() {
   sidebar.classList.remove('open');
   overlay.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
 }
 hamburger.addEventListener('click', () => {
   sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
@@ -56,5 +66,8 @@ hamburger.addEventListener('click', () => {
 overlay.addEventListener('click', closeSidebar);
 // Close sidebar when a nav link is clicked on mobile
 sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeSidebar));
+// Close on Escape, and make sure state always starts closed on page load
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSidebar(); });
+closeSidebar();
 </script>
 {% endblock %}

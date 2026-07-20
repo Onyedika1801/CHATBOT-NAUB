@@ -252,6 +252,23 @@ button { font-family: inherit; cursor: pointer; }
   border: none;
   display: block;
 }
+.map-directions-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  background: var(--naub-green-dark);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+.map-directions-btn:hover {
+  background: var(--naub-green, #1a5c38);
+  opacity: 0.92;
+}
 
 .typing-indicator {
   display: flex; gap: 4px; align-items: center; padding: 0.6rem 1rem;
@@ -550,23 +567,36 @@ table.data-table tr:last-child td { border-bottom: none; }
 .faq-chips .chip { white-space: nowrap; flex-shrink: 0; }
 
 /* ===================== DASHBOARD MOBILE HAMBURGER ===================== */
-.dash-hamburger {
+.dash-topbar {
   display: none;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  width: 40px; height: 40px;
-  border-radius: 10px;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
   background: var(--naub-green-dark);
+  box-shadow: var(--shadow-md);
+}
+.dash-topbar .naub-brand-text h1 { color: white; font-size: 0.9rem; margin: 0; }
+.dash-topbar .naub-brand-text p { color: rgba(255,255,255,0.75); font-size: 0.7rem; margin: 0; }
+.dash-topbar .naub-logo-img { height: 28px; }
+
+.dash-hamburger {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
   border: none;
   color: white;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
 }
 .dash-hamburger span {
   display: block;
@@ -575,6 +605,11 @@ table.data-table tr:last-child td { border-bottom: none; }
   border-radius: 2px;
   transition: all 0.2s ease;
 }
+/* Turn the three bars into an X when the menu is open, so the icon
+   itself reflects state instead of looking "stuck" open. */
+.dash-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.dash-hamburger.open span:nth-child(2) { opacity: 0; }
+.dash-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .dash-overlay {
   display: none;
@@ -585,7 +620,7 @@ table.data-table tr:last-child td { border-bottom: none; }
 }
 
 @media (max-width: 880px) {
-  .dash-hamburger { display: flex; }
+  .dash-topbar { display: flex; }
   .dash-sidebar {
     display: flex;
     position: fixed;
