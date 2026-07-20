@@ -735,14 +735,16 @@
     "map_query": ""
   },
   {
-    "id": "ict_department",
+    "id": "ict_centre",
     "questions": [
+      "ict centre naub",
       "ict department naub",
       "where is ict naub",
       "naub ict directorate",
-      "ict unit naub"
+      "ict unit naub",
+      "ict centre naub location"
     ],
-    "answer": "The ICT Directorate at NAUB manages the University's IT infrastructure, student portal, campus internet, and digital services, including the NELFund Desk Office for loan-related support. For academic Computer Science matters, contact the Department of Computer Science within the Faculty of Computing.",
+    "answer": "The ICT Centre at NAUB is where the University's IT infrastructure, student portal, campus internet, and digital services are managed, including the NELFund Desk Office for loan-related support. Note: it is a centre, not an academic department. For academic Computer Science matters, contact the Department of Computer Science within the Faculty of Computing.",
     "category": "general",
     "map_query": "Nigerian Army University Biu 1 Gombe Rd Biu Borno Nigeria"
   },
