@@ -10,6 +10,7 @@
 
 <div class="panel">
   <div class="panel-header"><h3>Current Admins</h3></div>
+  <div class="table-responsive">
   <table class="data-table">
     <thead><tr><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th></th></tr></thead>
     <tbody>
@@ -21,24 +22,27 @@
         <td>{% if admin.is_active %}<span class="badge answered">Active</span>{% else %}<span class="badge rejected">Deactivated</span>{% endif %}</td>
         <td>
           {% if admin.pk != request.user.pk %}
-          <form method="post" style="display:inline;">
+          <div class="admin-actions">
+          <form method="post">
             {% csrf_token %}
             <input type="hidden" name="action" value="toggle_active">
             <input type="hidden" name="user_id" value="{{ admin.pk }}">
             <button type="submit" class="btn-sm outline">{% if admin.is_active %}Deactivate{% else %}Activate{% endif %}</button>
           </form>
-          <form method="post" class="revoke-admin-form" style="display:inline;" data-username="{{ admin.username }}">
+          <form method="post" class="revoke-admin-form" data-username="{{ admin.username }}">
             {% csrf_token %}
             <input type="hidden" name="action" value="revoke">
             <input type="hidden" name="user_id" value="{{ admin.pk }}">
             <button type="submit" class="btn-sm danger">Revoke</button>
           </form>
+          </div>
           {% endif %}
         </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
+  </div>
 </div>
 
 <div class="panel">
@@ -47,6 +51,7 @@
   <p style="font-size:0.78rem; color:var(--naub-text-muted); margin-bottom:0.8rem;">
     These accounts no longer have admin access, but still exist in the database (so their username/email stay reserved). Reactivate to restore access, or delete permanently to free up the username/email.
   </p>
+  <div class="table-responsive">
   <table class="data-table">
     <thead><tr><th>Username</th><th>Email</th><th></th></tr></thead>
     <tbody>
@@ -55,23 +60,26 @@
         <td>{{ u.username }}</td>
         <td>{{ u.email }}</td>
         <td>
-          <form method="post" style="display:inline;">
+          <div class="admin-actions">
+          <form method="post">
             {% csrf_token %}
             <input type="hidden" name="action" value="reactivate">
             <input type="hidden" name="user_id" value="{{ u.pk }}">
             <button type="submit" class="btn-sm outline">Reactivate</button>
           </form>
-          <form method="post" class="delete-admin-form" style="display:inline;" data-username="{{ u.username }}">
+          <form method="post" class="delete-admin-form" data-username="{{ u.username }}">
             {% csrf_token %}
             <input type="hidden" name="action" value="delete">
             <input type="hidden" name="user_id" value="{{ u.pk }}">
             <button type="submit" class="btn-sm danger">Delete Permanently</button>
           </form>
+          </div>
         </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
+  </div>
   {% else %}
   <div class="empty-state"><div class="icon">🗑️</div>No revoked admins.</div>
   {% endif %}

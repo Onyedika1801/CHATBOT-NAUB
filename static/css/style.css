@@ -446,6 +446,11 @@ button { font-family: inherit; cursor: pointer; }
 .panel-header h3 { font-size: 1rem; color: var(--naub-green-dark); }
 
 table.data-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-responsive table.data-table { min-width: 560px; }
+.admin-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.admin-actions form { display: inline; }
+.admin-actions .btn-sm { white-space: nowrap; }
 table.data-table th {
   text-align: left;
   padding: 0.6rem 0.7rem;
@@ -537,34 +542,50 @@ table.data-table tr:last-child td { border-bottom: none; }
 /* ===================== PERMANENT FAQ BAR ===================== */
 .faq-bar {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.6rem;
-  padding: 0.6rem 0.5rem;
+  padding: 0.9rem 0.8rem;
   border-bottom: 1px solid var(--naub-border);
   background: var(--naub-white);
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
   flex-shrink: 0;
 }
-.faq-bar::-webkit-scrollbar { display: none; }
 .faq-label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--naub-text-muted);
-  white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
 .faq-chips {
   display: flex;
-  gap: 0.4rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 260px;
+  overflow-y: auto;
 }
-.faq-chips::-webkit-scrollbar { display: none; }
-.faq-chips .chip { white-space: nowrap; flex-shrink: 0; }
+.faq-chips .chip {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  text-align: left;
+  white-space: normal;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--naub-cream);
+  border: 1.5px solid var(--naub-border);
+  border-left: 4px solid var(--naub-green);
+  box-shadow: var(--shadow-sm);
+}
+.faq-chips .chip:hover {
+  background: var(--naub-green);
+  color: white;
+  border-color: var(--naub-green);
+  transform: translateX(2px);
+}
 
 /* ===================== DASHBOARD MOBILE HAMBURGER ===================== */
 .dash-topbar {
@@ -624,17 +645,24 @@ table.data-table tr:last-child td { border-bottom: none; }
   .dash-sidebar {
     display: flex;
     position: fixed;
-    top: 0; left: -260px;
-    height: 100vh;
+    top: 64px; left: -260px;
+    height: calc(100vh - 64px);
     z-index: 99;
     transition: left 0.25s ease;
     flex-direction: column;
   }
   .dash-sidebar.open { left: 0; }
+  .dash-overlay {
+    top: 64px;
+    height: calc(100vh - 64px);
+  }
   .dash-overlay.open { display: block; }
   .dash-main { padding: 1.2rem 1rem 1.2rem 1rem; }
 }
 @media (max-width: 600px) {
   .msg-row { max-width: 100%; }
   .chat-container { padding: 0 0.5rem; }
+  .admin-actions { flex-direction: column; align-items: stretch; }
+  .admin-actions form { display: block; }
+  .admin-actions .btn-sm { width: 100%; }
 }
