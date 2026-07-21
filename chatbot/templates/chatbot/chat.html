@@ -21,20 +21,6 @@
   <div class="chat-wrap">
     <div class="chat-container">
 
-      <!-- Permanent FAQ bar - always visible above messages -->
-      <div class="faq-bar">
-        <span class="faq-label">Quick questions:</span>
-        <div class="faq-chips">
-          <button class="chip" data-q="What are the admission requirements?">Admission requirements</button>
-          <button class="chip" data-q="How much is school fees?">School fees</button>
-          <button class="chip" data-q="Tell me about hostel accommodation">Hostel accommodation</button>
-          <button class="chip" data-q="What faculties does NAUB have?">Faculties</button>
-          <button class="chip" data-q="Where is NAUB located?">School location</button>
-          <button class="chip" data-q="What is the academic calendar?">Academic calendar</button>
-          <button class="chip" data-q="What documents do I need after admission?">Clearance documents</button>
-        </div>
-      </div>
-
       <div id="chatMessages" class="chat-messages">
         {% if not messages %}
         <div class="welcome-card" id="welcomeCard">
@@ -43,7 +29,23 @@
           <p>Ask me anything about admissions, school fees, hostel accommodation, academic
              calendar, course registration, and more. I'm available 24/7!</p>
         </div>
-        {% else %}
+        {% endif %}
+
+        <!-- Quick questions - part of the normal scrolling flow, sits right below the welcome message -->
+        <div class="faq-bar">
+          <span class="faq-label">Quick questions:</span>
+          <div class="faq-chips">
+            <button class="chip" data-q="What are the admission requirements?">Admission requirements</button>
+            <button class="chip" data-q="How much is school fees?">School fees</button>
+            <button class="chip" data-q="Tell me about hostel accommodation">Hostel accommodation</button>
+            <button class="chip" data-q="What faculties does NAUB have?">Faculties</button>
+            <button class="chip" data-q="Where is NAUB located?">School location</button>
+            <button class="chip" data-q="What is the academic calendar?">Academic calendar</button>
+            <button class="chip" data-q="What documents do I need after admission?">Clearance documents</button>
+          </div>
+        </div>
+
+        {% if messages %}
           {% for m in messages %}
             <div class="msg-row user">
               <div class="avatar user-avatar">U</div>
